@@ -20,5 +20,10 @@
   "bugs": {
     "url": "https://github.com/nightpaws/ADVE-RTISE/issues"
   },
-  "homepage": "https://github.com/nightpaws/ADVE-RTISE#readme"
+  "homepage": "https://github.com/nightpaws/ADVE-RTISE#readme",
+  "devDependencies": {
+    "del": "^2.2.0",
+    "gulp": "^3.9.0",
+    "gulp-util": "^3.0.7"
+  }
 }
