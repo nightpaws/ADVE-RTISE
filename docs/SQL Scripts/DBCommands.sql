@@ -8,7 +8,6 @@ SELECT id, subject, message, `date` FROM Message;
 SELECT id, forename, surname, username, mail, active FROM Staff;
 SELECT id, forename, surname, username, regnum, mail, active, subscribed FROM Student;
 
-
 -- INSERT STATEMENTS
 INSERT INTO Account(id, website, username, password, year, enabled) VALUES (?, ?, ?, ?, ?, ?);
 INSERT INTO AccountMessages(id, Accountid, Messageid) VALUES (?, ?, ?);

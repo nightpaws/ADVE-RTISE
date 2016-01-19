@@ -5,8 +5,7 @@ CREATE TABLE Account (
   password varchar(255) NOT NULL, 
   year     datetime NOT NULL, 
   enabled  tinyint NOT NULL, 
-  PRIMARY KEY (id), 
-  INDEX (id));
+  PRIMARY KEY (id));
 CREATE TABLE AccountMessages (
   id        int(11) NOT NULL AUTO_INCREMENT, 
   Accountid int(11) NOT NULL, 
