@@ -1,3 +1,4 @@
+#!/usr/bin/env bash
 # echo Performing client build
 # #Starting Client Build
 # cd src/client/src

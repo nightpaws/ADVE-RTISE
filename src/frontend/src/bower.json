@@ -1,0 +1,24 @@
+{
+  "name": "advertise-front-end",
+  "description": "Attention Deficit Virtually Eliminated: the Reintroduction of Teaching Innovation in a Social-networking Environment",
+  "main": "index.js",
+  "authors": [
+    "Craig Morrison"
+  ],
+  "license": "UNLICENSED",
+  "keywords": [
+    "social",
+    "media",
+    "university"
+  ],
+  "homepage": "https://github.com/nightpaws/ADVE-RTISE",
+  "moduleType": [],
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

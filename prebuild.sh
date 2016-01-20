@@ -1,3 +1,4 @@
+#!/usr/bin/env bash
 #Configure Global Requirements. Please note that sudo is required to run this.
 echo Configuring NPM...
 
