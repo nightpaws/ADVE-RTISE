@@ -4,9 +4,17 @@
   "description": "Attention Deficit Virtually Eliminated: the Reintroduction of Teaching Innovation in a Social-networking Environment",
   "main": "index.js",
   "dependencies": {
-
+    "wiredep": "^3.0.0"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "del": "^2.2.0",
+    "gulp": "^3.9.0",
+    "gulp-inject": "^3.0.0",
+    "gulp-load-plugins": "^1.2.0",
+    "gulp-sass": "^2.1.1",
+    "gulp-util": "^3.0.7",
+    "wiredep": "^3.0.0"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/nightpaws/ADVE-RTISE.git"
