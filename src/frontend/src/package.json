@@ -3,9 +3,7 @@
   "version": "0.0.1",
   "description": "Attention Deficit Virtually Eliminated: the Reintroduction of Teaching Innovation in a Social-networking Environment",
   "main": "index.js",
-  "dependencies": {
-    "wiredep": "^3.0.0"
-  },
+  "dependencies": {},
   "devDependencies": {
     "del": "^2.2.0",
     "gulp": "^3.9.0",
