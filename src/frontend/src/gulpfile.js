@@ -9,9 +9,9 @@ var gulp    = require('gulp'),
 //Clear out the Build Folder.
 
 gulp.task('clearbuild', function(cb){
-    log("Cleaning build folder - " + config.build.buildDir);
+    log("Cleaning build folder - " + config.build.dir);
 
-    del(config.build.buildDir + "**/*", {force: true}).then(function () {
+    del(config.build.dir + "**/*", {force: true}).then(function () {
         cb();
     });
 });
@@ -22,7 +22,7 @@ gulp.task('sass', ['clearbuild'], function() {
     log('Compiling SASS...');
 
     return gulp
-        .src(config.sass.srcdir)
+        .src(config.sass.src)
         .pipe($.sass({errLogToConsole: true}))
         .pipe(gulp.dest(config.build.cssDir));
 });
@@ -36,7 +36,7 @@ gulp.task('libcopy',['clearbuild'], function(){
     log("Copying Bower Dependencies to: " + config.build.libDir);
 
     return gulp
-        .src(config.bower.srcDir + '**/*.*')
+        .src(config.bower.src + '**/*.*')
         .pipe(gulp.dest(config.build.libDir));
 
 });
@@ -55,38 +55,38 @@ gulp.task('dep', ['clearbuild', 'libcopy', 'sass', 'copy'], function() {
     return gulp
         .src(config.index)
         .pipe(wiredep(options))
-        .pipe($.inject(gulp.src([config.build.buildDir + 'app/**/*.module.js', config.build.buildDir + 'app/**/*.js', '!' + config.build.buildDir + 'app/app.js']), config.getInjectDefault()))
+        .pipe($.inject(gulp.src([config.build.dir + 'app/**/*.module.js', config.build.dir + 'app/**/*.js', '!' + config.build.dir + 'app/app.js']), config.getInjectDefault()))
         .pipe($.inject(gulp.src(config.build.cssDir + '**/*.css'), config.getInjectDefault()))
-        .pipe(gulp.dest(config.build.buildDir));
+        .pipe(gulp.dest(config.build.dir));
 });
 
 //Copy Full Application
 gulp.task('copy', ['clearbuild', 'copyfavicon', 'copyFonts'], function() {
 
-    log('Copying Application to: ' + config.build.builddir);
+    log('Copying Application to: ' + config.build.dir);
 
     return gulp
-        .src(config.js.srcDir.concat(config.html.srcDir).concat(config.ignore.ignoreDir))
-        .pipe(gulp.dest(config.build.buildDir + "app/"));
+        .src(config.js.src.concat(config.html.dir).concat(config.ignore.dir))
+        .pipe(gulp.dest(config.build.dir + "app/"));
 });
 
 //Copy Favicon
 gulp.task('copyfavicon', ['clearbuild'], function() {
 
-    log('Copying Favicon to: ' + config.build.builddir);
+    log('Copying Favicon to: ' + config.build.dir);
 
     return gulp
         .src(config.favicon.src)
-        .pipe(gulp.dest(config.build.buildDir));
+        .pipe(gulp.dest(config.build.dir));
 });
 
 //Copy Fonts
 gulp.task('copyFonts', ['clearbuild'], function() {
 
-    log('Copying Fonts to: ' + config.build.builddir);
+    log('Copying Fonts to: ' + config.build.dir);
     return gulp
-        .src(config.fonts.src)
-        .pipe(gulp.dest(config.build.buildDir + '/fonts/'));
+        .src(config.fonts.dir)
+        .pipe(gulp.dest(config.build.dir + '/fonts/'));
 });
 
 //Full Build Operation

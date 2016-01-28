@@ -26,13 +26,15 @@ module.exports = function () {
             dir: ['./fonts/**']
         },
         html: {
-            src: ['./app/**/*.html', '!./index.html']
+            dir: ['./app/**/*.html', '!./index.html']
         },
         ignore: {
             dir: ['!./bower_components/**/*', '!./node_modules/**/*']
         },
         index: 'index.html',
-        js: {},
+        js: {
+            src: ['./app/**/*.js']
+        },
         sass: {
             src: './style/style.scss'
         }
