@@ -2,14 +2,14 @@
  * Created by Nightpaws on 20/01/2016.
  */
 
-var gulp    = require('gulp'),
-    $       = require('gulp-load-plugins')({lazy: true}),
-    config  = require('./gulp-config')(),
-    del = require('del');
+// var gulp    = require('gulp'),
+//     $       = require('gulp-load-plugins')({lazy: true}),
+//     config  = require('./gulp-config')(),
+//     del = require('del');
 
-//var  gulp = require('gulp');
-//var del = require('del');
-//var util = require('gulp-util');
+var  gulp = require('gulp');
+var del = require('del');
+var util = require('gulp-util');
 
 gulp.task('clearBuild', function(cb){
 

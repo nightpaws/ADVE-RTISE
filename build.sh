@@ -1,18 +1,20 @@
 #!/usr/bin/env bash
  echo Performing client build
  #Starting Client Build
- cd src/client/src
+ cd src/frontend/src
  npm install
  bower install
  bower update
  gulp build
  cd ../../..
+ echo Client build completed.
 
  #Starting Server Build
  echo Performing server build
- cd src/server
+ cd src/backend
  npm install
  cd ../..
+ echo Server build completed.
 
  echo Performing deployment
  gulp build
