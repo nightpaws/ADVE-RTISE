@@ -1,14 +1,14 @@
 /**
  * Created by Nightpaws on 20/01/2016.
  */
-var gulp    = require('gulp'),
-    $       = require('gulp-load-plugins')({lazy: true}),
-    config  = require('./gulp-config')(),
+var gulp = require('gulp'),
+    $ = require('gulp-load-plugins')({lazy: true}),
+    config = require('./gulp-config')(),
     del = require('del');
 
 //Clear out the Build Folder.
 
-gulp.task('clearbuild', function(cb){
+gulp.task('clearbuild', function (cb) {
     log("Cleaning build folder - " + config.build.dir);
 
     del(config.build.dir + "**/*", {force: true}).then(function () {
@@ -17,7 +17,7 @@ gulp.task('clearbuild', function(cb){
 });
 
 //Build the SASS - (sassiness is imperative)
-gulp.task('sass', ['clearbuild'], function() {
+gulp.task('sass', ['clearbuild'], function () {
 
     log('Compiling SASS...');
 
@@ -28,10 +28,11 @@ gulp.task('sass', ['clearbuild'], function() {
 });
 
 //Bulk dependency handler. Just a function caller...
-gulp.task('handleDep', ['clearbuild', 'libcopy', 'dep'], function(){});
+gulp.task('handleDep', ['clearbuild', 'libcopy', 'dep'], function () {
+});
 
 //Copy Libraries
-gulp.task('libcopy',['clearbuild'], function(){
+gulp.task('libcopy', ['clearbuild'], function () {
 
     log("Copying Bower Dependencies to: " + config.build.libDir);
 
@@ -42,7 +43,7 @@ gulp.task('libcopy',['clearbuild'], function(){
 });
 
 //Inject Dependencies
-gulp.task('dep', ['clearbuild', 'libcopy', 'sass', 'copy'], function() {
+gulp.task('dep', ['clearbuild', 'libcopy', 'sass', 'copy'], function () {
 
     log('Injecting dependencies for:' +
         ' \n\t\t-bower components ' +
@@ -61,7 +62,7 @@ gulp.task('dep', ['clearbuild', 'libcopy', 'sass', 'copy'], function() {
 });
 
 //Copy Full Application
-gulp.task('copy', ['clearbuild', 'copyfavicon', 'copyFonts'], function() {
+gulp.task('copy', ['clearbuild', 'copyfavicon', 'copyFonts'], function () {
 
     log('Copying Application to: ' + config.build.dir);
 
@@ -71,7 +72,7 @@ gulp.task('copy', ['clearbuild', 'copyfavicon', 'copyFonts'], function() {
 });
 
 //Copy Favicon
-gulp.task('copyfavicon', ['clearbuild'], function() {
+gulp.task('copyfavicon', ['clearbuild'], function () {
 
     log('Copying Favicon to: ' + config.build.dir);
 
@@ -81,7 +82,7 @@ gulp.task('copyfavicon', ['clearbuild'], function() {
 });
 
 //Copy Fonts
-gulp.task('copyFonts', ['clearbuild'], function() {
+gulp.task('copyFonts', ['clearbuild'], function () {
 
     log('Copying Fonts to: ' + config.build.dir);
     return gulp
@@ -90,7 +91,7 @@ gulp.task('copyFonts', ['clearbuild'], function() {
 });
 
 //Full Build Operation
-gulp.task('build',['clearbuild', 'sass', 'handleDep', 'copy'], function(){
+gulp.task('build', ['clearbuild', 'sass', 'handleDep', 'copy'], function () {
     log($.util.colors.green('---Build has Completed.---'));
 });
 
@@ -107,16 +108,16 @@ function log(msg) {
     }
 }
 
-    //Apply Polyfill function to add endsWith functionality since endsWith has not yet been implemented in JS.
-    //https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/endsWith
-    if (!String.prototype.endsWith) {
-        String.prototype.endsWith = function(searchString, position) {
-            var subjectString = this.toString();
-            if (typeof position !== 'number' || !isFinite(position) || Math.floor(position) !== position || position > subjectString.length) {
-                position = subjectString.length;
-            }
-            position -= searchString.length;
-            var lastIndex = subjectString.indexOf(searchString, position);
-            return lastIndex !== -1 && lastIndex === position;
-        };
+//Apply Polyfill function to add endsWith functionality since endsWith has not yet been implemented in JS.
+//https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/endsWith
+if (!String.prototype.endsWith) {
+    String.prototype.endsWith = function (searchString, position) {
+        var subjectString = this.toString();
+        if (typeof position !== 'number' || !isFinite(position) || Math.floor(position) !== position || position > subjectString.length) {
+            position = subjectString.length;
+        }
+        position -= searchString.length;
+        var lastIndex = subjectString.indexOf(searchString, position);
+        return lastIndex !== -1 && lastIndex === position;
+    };
 }

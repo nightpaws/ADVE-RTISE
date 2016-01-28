@@ -4,7 +4,7 @@
  */
 
 angular.module('polyfill', [])
-    .run(function(){
+    .run(function () {
 
         if (!String.prototype.trim) {
             String.prototype.trim = function () {
@@ -13,7 +13,7 @@ angular.module('polyfill', [])
         }
 
         if (!String.prototype.startsWith) {
-            String.prototype.startsWith = function(searchString, position) {
+            String.prototype.startsWith = function (searchString, position) {
                 position = position || 0;
                 return this.indexOf(searchString, position) === position;
             };

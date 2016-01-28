@@ -8,7 +8,7 @@ module.exports = function () {
     var buildPath = '../build/';
 
     var config = {
-        bower:{
+        bower: {
             json: require('./bower.json'),
             src: './bower_components/',
             ignorePath: '../..'
@@ -19,7 +19,7 @@ module.exports = function () {
             jsDir: buildPath + 'js/',
             libDir: buildPath + 'lib/'
         },
-        favicon:{
+        favicon: {
             src: ['./favicon.ico']
         },
         fonts: {
@@ -46,7 +46,7 @@ module.exports = function () {
 
 //Configuration for Building with WireDep
 
-    config.getWiredepDefault = function() {
+    config.getWiredepDefault = function () {
 
         var options = {
             bowerJson: config.bower.json,
@@ -55,10 +55,10 @@ module.exports = function () {
             fileTypes: {
                 html: {
                     replace: {
-                        js: function(filePath) {
+                        js: function (filePath) {
                             return '<script src="/dashboard/' + filePath.replace('../build/', '') + '"></script>';
                         },
-                        css: function(filePath) {
+                        css: function (filePath) {
                             return '<link rel="stylesheet" href="/dashboard/' + filePath.replace('../build/', '') + '"/>';
                         }
                     }
@@ -69,13 +69,13 @@ module.exports = function () {
         return options;
     };
 
-    config.getInjectDefault = function() {
+    config.getInjectDefault = function () {
 
         var options = {
             addRootSlash: false,
-            transform: function(filePath, file, i, length) {
+            transform: function (filePath, file, i, length) {
 
-                if(filePath.endsWith('.css')){
+                if (filePath.endsWith('.css')) {
                     return '<link rel="stylesheet" type="text/css" href="/dashboard/' + filePath.replace('../build/', '') + '">';
                 }
 
