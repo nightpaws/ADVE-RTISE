@@ -1,0 +1,23 @@
+{
+  "name": "advertise",
+  "version": "1.0.0",
+  "description": "CS408 - Individual Assignment ADVE:RTISE",
+  "directories": {
+    "doc": "docs"
+  },
+  "dependencies": {},
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://nightpaws@github.com/nightpaws/ADVE-RTISE.git"
+  },
+  "author": "Craig Morrison",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/nightpaws/ADVE-RTISE/issues"
+  },
+  "homepage": "https://github.com/nightpaws/ADVE-RTISE#readme"
+}
