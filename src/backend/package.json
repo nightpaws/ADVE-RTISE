@@ -3,7 +3,16 @@
   "version": "0.0.1",
   "description": "Attention Deficit Virtually Eliminated: the Reintroduction of Teaching Innovation in a Social-networking Environment",
   "main": "index.js",
-  "dependencies": {},
+  "dependencies": {
+    "body-parser": "^1.14.2",
+    "cors": "^2.7.1",
+    "express": "^4.13.4",
+    "jsonwebtoken": "^5.5.4",
+    "morgan": "^1.6.1",
+    "mysql": "^2.10.2",
+    "serve-favicon": "^2.3.0",
+    "string.prototype.startswith": "^0.2.0"
+  },
   "devDependencies": {},
   "repository": {
     "type": "git",

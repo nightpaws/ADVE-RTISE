@@ -1,7 +1,7 @@
 /**
  * Created by Nightpaws on 20/01/2016.
  */
-var app = require('./app/app')(),
+var app = require('./application/app')(),
     config = require('./config'),
     fs = require('fs'),
     http = require('http'),
