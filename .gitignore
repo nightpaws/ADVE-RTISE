@@ -50,7 +50,7 @@ tmp/*
 /src/frontend/build
 
 **/logs
-/src/backend/sslcert
+/src/backend/ssl
 /src/backend/doc
 /src/backend/public
 .idea
