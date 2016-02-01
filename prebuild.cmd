@@ -11,12 +11,13 @@
         CALL npm install --save-dev del
         CALL npm install --save-dev gulp-util
         CALL npm install --global bower
-        exit
+        CALL npm install --global forever
+        echo install complete!
     ) else (
         echo Failure: Administrative permissions required.
-           echo Set UAC = CreateObject^("Shell.Application"^) > "%temp%\getadmin.vbs"
-            echo UAC.ShellExecute "%~s0", "", "", "runas", 1 >> "%temp%\getadmin.vbs"
-            "%temp%\getadmin.vbs"
-            exit /B
+        :: echo Set UAC = CreateObject^("Shell.Application"^) > "%temp%\getadmin.vbs"
+        :: echo UAC.ShellExecute "%~s0", "", "", "runas", 1 >> "%temp%\getadmin.vbs"
+        :: "%temp%\getadmin.vbs"
+        :: exit /B
     )
 
