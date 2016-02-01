@@ -39,7 +39,7 @@ gulp.task('copyApp', ['clearBuild', 'copyServer'], function () {
 
     return gulp
         .src(['./src/frontend/build/**'])
-        .pipe(gulp.dest('./build/public/dashboard'));
+        .pipe(gulp.dest('./build/public/application'));
 
 });
 

@@ -11,23 +11,26 @@
 
  #Starting Server Build
  echo Performing server build
+ #Starting Server Build
  cd src/backend
  npm install
  cd ../..
  echo Server build completed.
 
+#Start Deployment
  echo Performing deployment
  gulp build
 
- echo Performing the failing run of the application
- echo This will fail as it must create files...
+#Create Logging Directory
+ echo establishing log directory...
  cd ./build
- node index.js
- echo It should work now...
+ mkdir ./logs
+ echo touching conn.log
+ touch ./logs/conn.log
+ echo log file created.
 
+#Completion Notice
  echo ------------------------------------------------------------$
- echo DONE
- echo You may now sort the certs out, drop in a custom config and $
- echo run "cd ./build" & "node index.js" to make things go
-
- 
+ echo Setup Completed!\n
+ echo You may now create certificates, insert a custom config or
+ echo run \"cd ./build\" \& \"node index.js\" to launch the application

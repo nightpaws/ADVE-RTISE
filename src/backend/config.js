@@ -4,33 +4,33 @@
 var config = {
     //Constructing the Node Server.
 
-    port: 3001,
+    ports:{
+        https:3001,
+        http:3000
+    },
 
     ssl: {
         format: 'utf8',
         https: true,
-        privateKey: '',
-        publicKey: '',
-        certSrc: ''
+        privateKey: './ssl/server.key',
+        //publicKey: './ssl/server.crt'
+        certSrc: './ssl/server.crt'
     },
 
     favicon: {
-        src: ''
+        src: 'public/application/favicon.ico'
     },
 
     //DB Settings
-    mySQL: {
-
-    },
-
+    mySQL: '',
 
     protect: {
         ignore: '/users/authentication'
     },
 
     userAuth: {
-        privateKey: '',
-        publicKey: ''
+        privateKey: './ssl/server.key',
+        publicKey: './ssl/server.crt'
     },
 
     //Logging Locations...
