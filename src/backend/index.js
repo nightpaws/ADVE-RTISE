@@ -11,15 +11,20 @@ var app = require('./application/app')(),
 //Above two lines specify location and format of secure keys
 
 var path = require('path');
-global.appRoot = path.resolve(__dirname) + "/app/";
+global.appRoot = path.resolve(__dirname) + "/application/";
 
 var credentials = {key: privateKey, cert: certificate};
 
+var httpsServer = https.createServer(credentials, app);
+httpsServer.listen(config.ports.https, '127.0.0.1');
+
+
+
 //Create server and configure for local access only
-if(config.ssl.https){
-    var httpsServer = https.createServer(credentials, app);
-    httpsServer.listen(config.ports.https, '127.0.0.1');
-}else{
-    var httpServer = http.createServer(app);
-    httpServer.listen(config.ports.http, '127.0.0.1');
-}
+//if(config.ssl.https){
+//    var httpsServer = https.createServer(credentials, app);
+//    httpsServer.listen(config.ports.https, '127.0.0.1');
+//}else{
+//    var httpServer = http.createServer(app);
+//    httpServer.listen(config.ports.http, '127.0.0.1');
+//}

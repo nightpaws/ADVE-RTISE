@@ -13,7 +13,6 @@ var config = {
         format: 'utf8',
         https: true,
         privateKey: './ssl/server.key',
-        //publicKey: './ssl/server.crt'
         certSrc: './ssl/server.crt'
     },
 
