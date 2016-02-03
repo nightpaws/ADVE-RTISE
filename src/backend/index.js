@@ -11,7 +11,8 @@ var app = require('./application/app')(),
 //Above two lines specify location and format of secure keys
 
 var path = require('path');
-global.appRoot = path.resolve(__dirname) + "/application/";
+// global.appRoot = path.resolve(__dirname) + "/application/";
+global.appRoot = path.resolve(__dirname) + "/";
 
 var credentials = {key: privateKey, cert: certificate};
 

@@ -3,7 +3,7 @@
  */
 var app = function(){
     //load config, filesystem, express router,
-    var config = require('../config'),
+    var config = require('./../config'),
         fs = require('fs'),
         bodyParser = require('body-parser'),
         express = require('express');
@@ -68,15 +68,17 @@ var app = function(){
 
 
     //Routing API calls
-    // var APIrouter = require('./router/APIrouter')();
+    var APIrouter = require('./router/APIrouter')();
+    app.use('/api', APIrouter);
     // app.use('/application/api', APIrouter);
 
     //catchall
     app.use('*', function(req, res, next){
 
-        if(req.originalUrl.indexOf('application') !== -1){
+        if(req.originalUrl.indexOf('/') !== -1){
             var path = require('path');
-            res.sendFile(path.resolve('public/application/index.html'));
+            // res.sendFile(path.resolve('public/application/index.html'));
+            res.sendFile(path.resolve('public/index.html'));
         }else{
             res.redirect('https://advertise.nightpaws.eu/application/page-not-found');
         }

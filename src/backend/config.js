@@ -17,7 +17,7 @@ var config = {
     },
 
     favicon: {
-        src: 'public/application/favicon.ico'
+        src: 'public/favicon.ico'
     },
 
     //DB Settings

@@ -20,6 +20,7 @@
  echo This will fail as it must create files...
  cd ./build
  call node index.js
+ cd ..
  echo It should work now...
 
  echo ------------------------------------------------------------$
