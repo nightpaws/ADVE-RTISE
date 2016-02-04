@@ -62,7 +62,7 @@ gulp.task('dep', ['clearbuild', 'libcopy', 'sass', 'copy'], function () {
 });
 
 //Copy Full Application
-gulp.task('copy', ['clearbuild', 'copyfavicon', 'copyFonts'], function () {
+gulp.task('copy', ['clearbuild', 'copyfavicon', 'copyFonts', 'copyImage'], function () {
 
     log('Copying Application to: ' + config.build.dir);
 
@@ -90,6 +90,13 @@ gulp.task('copyFonts', ['clearbuild'], function () {
         .pipe(gulp.dest(config.build.dir + '/fonts/'));
 });
 
+gulp.task('copyImage', ['clearbuild'], function () {
+
+    log('Copying Images to: ' + config.build.dir);
+    return gulp
+        .src(config.image.dir)
+        .pipe(gulp.dest(config.build.dir + '/image/'));
+});
 //Full Build Operation
 gulp.task('build', ['clearbuild', 'sass', 'handleDep', 'copy'], function () {
     log($.util.colors.green('---Build has Completed.---'));
