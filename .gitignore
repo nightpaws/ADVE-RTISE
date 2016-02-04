@@ -40,7 +40,7 @@ node_modules
 *.vpp.working-journal
 *.lock
 tmp/*
-
+*.vpp.bak
 
 # Other IntelliJ Stuff
 **/*.iml
@@ -57,3 +57,4 @@ tmp/*
 
 /src/frontend/src/.htaccess
 /build
+
