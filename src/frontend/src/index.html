@@ -11,7 +11,7 @@
     <meta name="keywords" content="social_media,twitter,facebook,integration,platform,api,university,strathclyde">
     <meta name="copyright" content="Craig Morrison">
 
-    <!-- On mobile devices, give the app an icon -->
+    <!-- On mobile devices, serve the app an icon -->
     <link rel="icon" sizes="192x192" href="image/advertise-4x.png">
     <link rel="apple-touch-icon" href="image/advertise-4x.png">
     <link rel="shortcut icon" href="image/advertise-0-75x.png" type="image/x-icon">
@@ -22,14 +22,29 @@
     <!-- inject:css -->
     <!-- endinject -->
 </head>
-<body>
+<body ng-app="advertise-app">
+<div class="full-height" id="app-loaded">
+<header ui-view="header" ng-if="app.showHeader">
+    <div id="body" ng-class="{'full-height cancel-header' : !app.showNav, 'show-menu': app.showMenu}">
+        <nav ui-view="navigation" ng-if="app.showNav">
 
-<div>
 
+        </nav>
+
+        <main ui-view="main" ng-class="{'full-height': !app.showHeader, 'cancel-header': !app.showNav}">
+
+        </main>
+    </div>
+</header>
 </div>
+
+
+
+
+
 <!--Will use angular to make this pretty-->
-<div id="initial-load" class="full-height">
-    <div id="initial-loading-content">
+<div id="initial-load" class="full-height" ng-class="{'fadeout': app.loaded}">
+    <div id="initial-loading-content" ng-class="{'fadeout-quick': app.loaded}">
         <h1 class="border-underline-white">ADVE-RTISE</h1>
         <p>Version 0.0.1</p>
         <div class="loader">Loading...</div>
@@ -42,5 +57,8 @@
 
 <!-- inject:js -->
 <!-- endinject -->
+
+<!--Time for our script-->
+<script src = "/app/app.js"></script>
 </body>
 </html>
