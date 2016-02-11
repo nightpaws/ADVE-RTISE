@@ -24,10 +24,11 @@
     <!-- endinject -->
 </head>
 <body ng-app="advertise">
-<div class="full-height" id="app-loaded">
-<header ui-view="header" ng-if="app.showHeader">
-    <div id="body" ng-class="{'full-height cancel-header' : !app.showNav, 'show-menu': app.showMenu}">
-        <nav ui-view="navigation" ng-if="app.showNav">
+<div class="full-height" id="body-loaded">
+<header ui-view="header" ng-if="app.showHeader"></header>
+    <div id="body-wrapper" ng-class="{'full-height cancel-header' : !app.showNav, 'show-menu': app.showMenu}" >
+
+        <nav ui-view="nav" ng-if="app.showNav">
 
 
         </nav>
@@ -36,7 +37,6 @@
 
         </main>
     </div>
-</header>
 </div>
 
 
@@ -44,8 +44,9 @@
 
 
 <!--Will use angular to make this pretty-->
-<div id="initial-load" class="full-height" ng-class="{'fadeout': app.loaded}">
-    <div id="initial-loading-content" ng-class="{'fadeout-quick': app.loaded}">
+<div id="body-loading" class="full-height" ng-class="{'fadeout': app.loaded}">
+
+    <div id="body-loading-content" ng-class="{'fadeout-quick': app.loaded}">
         <h1 class="border-underline-white">ADVE-RTISE</h1>
         <p>Version 0.0.1</p>
         <div class="loader">Loading...</div>
