@@ -30,6 +30,7 @@
     "angular-animate": "~1.4.9",
     "angular-bootstrap": "~1.1.1",
     "ng-device-detector": "~2.0.3",
-    "ngInfiniteScroll": "~1.2.2"
+    "ngInfiniteScroll": "~1.2.2",
+    "blueimp-md5": "^2.1.0"
   }
 }

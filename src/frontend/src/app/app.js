@@ -1,8 +1,8 @@
 /**
  * Created by Nightpaws on 26/01/2016.
  */
-var app = angular.module('advertise', ['advertise.config', 'pages', 'polyfill', 'header', 'navigation', 'session', 'user', 'ui-router',
-    'ui.bootstrap', 'LocalStorageModule', 'ngAnimate', 'ng.deviceDetector', 'infinite-scroll', 'toastr']);
+var app = angular.module('advertise', ['ui.router','advertise.config' , 'polyfill', 'header', 'navigation', 'session',
+    'ui.bootstrap', 'LocalStorageModule', 'ngAnimate', 'ng.deviceDetector', 'infinite-scroll', 'toastr','user','pages']);
 
 app.config(['$stateProvider', '$locationProvider', '$urlMatcherFactoryProvider', '$urlRouterProvider', function ($stateProvider, $locationProvider, $urlMatcherFactory, $urlRouterProvider) {
 
@@ -22,7 +22,7 @@ app.config(['$stateProvider', '$locationProvider', '$urlMatcherFactoryProvider',
                 },
                 'nav': {
                     templateUrl: 'app/navigation/navigation.html',
-                    controller: 'nav'
+                    controller: 'navigation'
                 },
                 'main': {
                     template: '<div ui-view style="height: 100%"></div> '
@@ -55,7 +55,7 @@ app.config(['$stateProvider', '$locationProvider', '$urlMatcherFactoryProvider',
     $locationProvider.html5Mode(true);
 }]);
 
-app.run(['$rootScope', '$state', '$location', 'user.service', '$timeout', function($rootScope, $state, $location, userService, $timeout){
+app.run(['$rootScope', '$state', '$location', 'user.service', '$timeout', function ($rootScope, $state, $location, userService, $timeout) {
 
     userService.loadUser();
 
@@ -67,26 +67,26 @@ app.run(['$rootScope', '$state', '$location', 'user.service', '$timeout', functi
         showHeader: true
     };
 
-    $timeout(function(){
+    $timeout(function () {
         $rootScope.app.loaded = true;
     }, 3000);
 
-    $rootScope.$on("$stateChangeStart", function(args){
-        if(!userService.getUser()){
+    $rootScope.$on("$stateChangeStart", function (args) {
+        if (!userService.getUser()) {
             $location.path('/user/login');
         }
     });
 
-    $rootScope.$on("$stateChangeSuccess", function(args){
+    $rootScope.$on("$stateChangeSuccess", function (args) {
 
         var name = $state.current.name;
 
-        switch (name){
+        switch (name) {
             case 'application':
                 $rootScope.app.displayBack = false;
                 break;
             default:
-                $rootScope.app.displayBack =  true;
+                $rootScope.app.displayBack = true;
         }
     });
 
