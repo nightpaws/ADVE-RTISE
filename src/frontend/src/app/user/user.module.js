@@ -36,7 +36,7 @@ angular.module('user',['advertise.config']).config(['$stateProvider', function($
         //})
         .state('user.auth.login', {
             url: '/login',
-            templateUrl: 'app/user/User.login.html',
+            templateUrl: 'app/user/user.login.html',
             controller: 'user.login.controller'
         });
 
