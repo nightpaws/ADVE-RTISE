@@ -39,7 +39,6 @@ angular.module('user')
 
         this.loadUser = function(){
             user = localStorageService.get('user');
-            console.log('user loaded');
             return user;
         };
 
