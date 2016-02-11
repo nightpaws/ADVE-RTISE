@@ -59,13 +59,13 @@ module.exports = function () {
                 html: {
                     replace: {
                         js: function (filePath) {
-                            return '<script src="/application/' + filePath.replace('../build/', '') + '"></script>';
-                            //return '<script src="/' + filePath.replace('../build/', '') + '"></script>';
+                            //return '<script src="/application/' + filePath.replace('../build/', '') + '"></script>';
+                            return '<script src="/' + filePath.replace('../build/', '') + '"></script>';
 
                         },
                         css: function (filePath) {
-                            return '<link rel="stylesheet" href="/application/' + filePath.replace('../build/', '') + '"/>';
-                            //return '<link rel="stylesheet" href="/' + filePath.replace('../build/', '') + '"/>';
+                            //return '<link rel="stylesheet" href="/application/' + filePath.replace('../build/', '') + '"/>';
+                            return '<link rel="stylesheet" href="/' + filePath.replace('../build/', '') + '"/>';
 
                         }
                     }
@@ -83,13 +83,13 @@ module.exports = function () {
             transform: function (filePath, file, i, length) {
 
                 if (filePath.endsWith('.css')) {
-                    return '<link rel="stylesheet" type="text/css" href="/application/' + filePath.replace('../build/', '') + '">';
-                    //return '<link rel="stylesheet" type="text/css" href="/' + filePath.replace('../build/', '') + '">';
+                    //return '<link rel="stylesheet" type="text/css" href="/application/' + filePath.replace('../build/', '') + '">';
+                    return '<link rel="stylesheet" type="text/css" href="/' + filePath.replace('../build/', '') + '">';
 
                 }
 
-                return '<script src="/application/' + filePath.replace('../build/', '') + '"></script>';
-                //return '<script src="/' + filePath.replace('../build/', '') + '"></script>';
+                //return '<script src="/application/' + filePath.replace('../build/', '') + '"></script>';
+                return '<script src="/' + filePath.replace('../build/', '') + '"></script>';
 
             }
         };
