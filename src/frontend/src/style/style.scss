@@ -2,13 +2,13 @@
 @import "reset.scss";
 //Begin App Imports
 @import "colours";
-@import "fontstyles";
+@import "toastr"; 
 @import "global";
-@import "toastr";
-@import "header";
-@import "main";
-@import "user";
+@import "fontstyles";
 @import "forms";
 @import "pages";
-@import "navigation";
 @import "application";
+@import "user";
+@import "header";
+@import "main";
+@import "navigation";
