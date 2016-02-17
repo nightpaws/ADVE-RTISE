@@ -1,6 +1,6 @@
-#dashboard-main {
+#application-main {
 
-  #dashboard-welcome {
+  #application-welcome {
 
     background-image: $background-color;
     color: white;
@@ -80,9 +80,9 @@
 
 @media screen and (max-width: 850px) {
 
-  #dashboard-main {
+  #application-main {
 
-    #dashboard-welcome {
+    #application-welcome {
 
       h1 {
         font-size: 1.5rem;
@@ -94,7 +94,7 @@
 
 @media screen and (min-width: 768px) {
 
-  #dashboard-main {
+  #application-main {
     .tile {
       border-bottom: none;
     }

@@ -7,7 +7,7 @@ angular.module('interface')
 
         var requestHelper = {};
 
-        requestHelper.getDashboardInfo = function(){
+        requestHelper.getApplicationInfo = function(){
 
             var url =config.API_URL +  '/interface';
 
