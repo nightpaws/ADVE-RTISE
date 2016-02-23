@@ -12,7 +12,8 @@ var app = function(){
     //Database link
     var mysql = require('mysql');
     //db connect string
-    //mysql.createConnection(config.mySQL.string);
+    var connection = mysql.createConnection(config.mySQL);
+    connection.connect();
 
     //serve favicon before logging for tidiness
     var favicon = require('serve-favicon');
@@ -55,22 +56,22 @@ var app = function(){
 
 
     ////Authentication and other middleware
-    //var auth = require('./middleware/Auth.js');
-	//app.use('/dashboard/api/', auth);
-    //
+    var authentication = require('./privilege/authentication');
+	app.use('/application/api/', authentication);
+
 	////check permissions
-	//var entitlements = require('./middleware/Entitlements');
-	//app.use('/dashboard/api/', entitlements);
+	var entitlements = require('./privilege/entitlements');
+	app.use('/dashboard/api/', entitlements);
 
     //parse the json we have received
-	// app.use(bodyParser.urlencoded({ extended: false }));
-	// app.use(bodyParser.json());
+	 app.use(bodyParser.urlencoded({ extended: false }));
+	 app.use(bodyParser.json());
 
 
     //Routing API calls
     var APIrouter = require('./router/APIrouter')();
-    app.use('/api', APIrouter);
-    // app.use('/application/api', APIrouter);
+    //app.use('/api', APIrouter);
+     app.use('/application/api', APIrouter);
 
     //catchall
     app.use('*', function(req, res, next){
@@ -80,7 +81,7 @@ var app = function(){
             // res.sendFile(path.resolve('public/application/index.html'));
             res.sendFile(path.resolve('public/index.html'));
         }else{
-            res.redirect('https://advertise.nightpaws.eu/application/page-not-found');
+            res.redirect('https://advertise.nightpaws.eu/page-not-found');
         }
 
     });

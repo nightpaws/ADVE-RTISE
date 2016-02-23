@@ -9,14 +9,14 @@ var APIrouter = function(){
 
     var APIrouter = express.Router();
 
-    //var userRouter = require('./Users')();
-    //APIrouter.use('/users', userRouter);
+    var userRouter = require('./Users')();
+    APIrouter.use('/users', userRouter);
 
-    //var dashRouter = require('./App')();
-    //APIrouter.use('/application', dashRouter);
+    var dashRouter = require('./App')();
+    APIrouter.use('/application', dashRouter);
 
-    //var accountRouter = require('./Accounts')();
-    //APIrouter.use('/accounts',accountRouter);
+    var accountRouter = require('./Accounts')();
+    APIrouter.use('/accounts',accountRouter);
 
     APIrouter.use('*', function(req, res){
 
