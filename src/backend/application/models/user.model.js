@@ -1,29 +1,44 @@
 /**
  * Created by Nightpaws on 23/02/2016.
  */
+var mongoose = require('mongoose');
 var config = require('../../config');
 
-
-var user = {
-    username: {
+var user = new mongoose.Schema({
+    uid: {
         type : String,
         required: true,
         unique: true
     },
-    email: {
+    sn: {
+        type : String,
+        required: true,
+        unique: false
+    },
+    givenName: {
+        type : String,
+        required: true,
+        unique: false
+    },
+    cn:{
         type : String,
         required: true,
         unique: true
     },
-    passphrase: {
+    mail:{
         type: String,
-        required: true
+        required: true,
+        unique: true
+    },
+    isAdmin:{
+        type:Boolean,
+        required: true,
+        unique: false
     },
     createdOn: {
         type: Date,
         default: Date.now
-    },
-    fridges: []
-};
+    }
+});
 
-module.exports = user;
+module.exports = mongoose.model('User', user);
