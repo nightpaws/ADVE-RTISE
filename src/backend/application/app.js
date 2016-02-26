@@ -64,7 +64,7 @@ var app = function(){
 
 	////check permissions
 	var entitlements = require('./privilege/entitlements');
-	app.use('/dashboard/api/', entitlements);
+	app.use('/application/api/', entitlements);
 
     //parse the json we have received
 	 app.use(bodyParser.urlencoded({ extended: false }));
@@ -72,7 +72,7 @@ var app = function(){
 
 
     //Routing API calls
-    var APIrouter = require('./router/APIrouter')();
+    var APIrouter = require('./router/apirouter')();
     //app.use('/api', APIrouter);
      app.use('/application/api', APIrouter);
 

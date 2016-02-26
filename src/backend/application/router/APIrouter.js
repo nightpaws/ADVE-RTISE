@@ -5,21 +5,21 @@
 var express = require('express'),
     bodyParser = require('body-parser');
 
-var APIrouter = function(){
+var apirouter = function(){
 
-    var APIrouter = express.Router();
+    var apirouter = express.Router();
 
     var userRouter = require('./users')();
     APIrouter.use('/users', userRouter);
 
-    var dashRouter = require('./app')();
-    APIrouter.use('/application', dashRouter);
+    var appRouter = require('./apps')();
+    APIrouter.use('/application', appRouter);
 
     var accountRouter = require('./accounts')();
     APIrouter.use('/accounts',accountRouter);
 
     var adminRouter = require('./admin')();
-    APIrouter.use('/admin',accountRouter);
+    APIrouter.use('/admin',adminRouter);
 
     APIrouter.use('*', function(req, res){
 
@@ -27,8 +27,8 @@ var APIrouter = function(){
 
     });
 
-    return APIrouter;
+    return apirouter;
 
 };
 
-module.exports = APIrouter;
+module.exports = apirouter;
