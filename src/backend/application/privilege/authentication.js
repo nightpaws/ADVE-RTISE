@@ -29,13 +29,13 @@ var Auth = function(req, res, next){
         if(decoded){
             req.user = decoded;
         }else{
-            var response = require('../response/Response')();
+            var response = require('../response/response')();
             response.setSuccessful(false);
             response.setMessage('Invalid token, please reauth');
             return res.status(403).json(response.getResponse());
         }
     }else{
-        var response = require('../response/Response')();
+        var response = require('../response/response')();
         response.setSuccessful(false);
         response.setMessage('No auth token provided');
         return res.status(403).json(response.getResponse());

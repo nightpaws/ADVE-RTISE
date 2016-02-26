@@ -8,7 +8,7 @@ require('string.prototype.startswith');
 var Entitlements = function(req, res, next){
 
     var noAuth = false;
-    config.secure.ignore.map(function(item){
+    config.protect.ignore.map(function(item){
 
         if(req.path.startsWith(item)){
 
