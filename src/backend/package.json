@@ -4,6 +4,7 @@
   "description": "Attention Deficit Virtually Eliminated: the Reintroduction of Teaching Innovation in a Social-networking Environment",
   "main": "index.js",
   "dependencies": {
+    "bcrypt": "^0.8.5",
     "body-parser": "^1.14.2",
     "cors": "^2.7.1",
     "express": "^4.13.4",
