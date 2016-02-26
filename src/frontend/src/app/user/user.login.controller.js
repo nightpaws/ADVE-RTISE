@@ -19,5 +19,12 @@ angular.module('user')
             userService.login($scope.user.username, $scope.user.password);
 
         };
+        $scope.register = function(isValid){
 
+            if(!isValid){
+                return;
+            }
+
+            userService.register($scope.user.username, $scope.user.email, $scope.user.password);
+        };
     }]);

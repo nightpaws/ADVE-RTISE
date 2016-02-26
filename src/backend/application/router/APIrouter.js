@@ -18,6 +18,9 @@ var APIrouter = function(){
     var accountRouter = require('./Accounts')();
     APIrouter.use('/accounts',accountRouter);
 
+    var adminRouter = require('./Admin')();
+    APIrouter.use('/admin',accountRouter);
+
     APIrouter.use('*', function(req, res){
 
         res.status(404).send('api not found');

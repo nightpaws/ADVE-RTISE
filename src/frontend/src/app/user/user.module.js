@@ -29,11 +29,11 @@ angular.module('user',['advertise.config']).config(['$stateProvider', function($
                 $rootScope.app.showNav = true;
             }
         })
-        //.state('user.auth.reg', {
-        //    url: '/register',
-        //    templateUrl: 'app/user/user.register.html',
-        //    controller: 'user.login.controller'
-        //})
+        .state('user.auth.reg', {
+            url: '/register',
+            templateUrl: 'app/user/user.register.html',
+            controller: 'user.login.controller'
+        })
         .state('user.auth.login', {
             url: '/login',
             templateUrl: 'app/user/user.login.html',

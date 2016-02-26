@@ -14,9 +14,24 @@ angular.module('user')
                 url: config.API_URL + '/users/auth',
                 data: {
                     username: username,
-                    passphrase: password
+                    password: password
                 }
             })
+
+        };
+
+        requestHelper.register = function(username, email, password){
+
+            return $http({
+                method: 'POST',
+                url: config.API_URL + '/users/register',
+                data: {
+                    username: username,
+                    email: email,
+                    password: password
+                }
+            })
+
 
         };
 

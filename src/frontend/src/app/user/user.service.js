@@ -24,6 +24,35 @@ angular.module('user')
                 });
         };
 
+        this.register = function(username, email, password){
+
+            requestHelper.register(username, email, password)
+                .then(function(data){
+
+                    if(data.data.successful === true){
+
+                        var response = data.data;
+
+                        user = response.result;
+
+                        generateGravatar();
+                        saveUser();
+
+                        $location.path('/');
+
+                    }else{
+                        toastr.error(data.data.message, 'Error');
+                    }
+
+                })
+                .catch(function(data){
+
+                    toastr.error('Error reaching server sorry about that', 'Error');
+
+                });
+
+        };
+
         this.logout = function(){
             localStorageService.remove('user');
             $location.path('/user/login');
