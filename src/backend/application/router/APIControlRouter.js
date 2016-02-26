@@ -5,30 +5,30 @@
 var express = require('express'),
     bodyParser = require('body-parser');
 
-var apirouter = function(){
+var APIControl = function(){
 
-    var apirouter = express.Router();
+    var APIControl = express.Router();
 
     var userRouter = require('./users')();
-    apirouter.use('/users', userRouter);
+    APIControl.use('/users', userRouter);
 
     var appRouter = require('./apps')();
-    apirouter.use('/application', appRouter);
+    APIControl.use('/application', appRouter);
 
     var accountRouter = require('./accounts')();
-    apirouter.use('/accounts',accountRouter);
+    APIControl.use('/accounts',accountRouter);
 
     var adminRouter = require('./admin')();
-    apirouter.use('/admin',adminRouter);
+    APIControl.use('/admin',adminRouter);
 
-    apirouter.use('*', function(req, res){
+    APIControl.use('*', function(req, res){
 
         res.status(404).send('api not found');
 
     });
 
-    return apirouter;
+    return APIControl;
 
 };
 
-module.exports = apirouter;
+module.exports = APIControl;

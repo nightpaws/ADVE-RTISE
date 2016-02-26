@@ -5,32 +5,32 @@ var mongoose = require('mongoose');
 var config = require('../../config');
 
 var user = new mongoose.Schema({
-    uid: {
+    username: {
         type : String,
         required: true,
         unique: true
     },
-    sn: {
-        type : String,
-        required: true,
-        unique: false
-    },
+    //sn: {
+    //    type : String,
+    //    required: true,
+    //    unique: false
+    //},
     password: {
         type : String,
         required: true,
         unique: false
     },
-    givenName: {
-        type : String,
-        required: true,
-        unique: false
-    },
-    cn:{
-        type : String,
-        required: true,
-        unique: true
-    },
-    mail:{
+    //givenName: {
+    //    type : String,
+    //    required: true,
+    //    unique: false
+    //},
+    //cn:{
+    //    type : String,
+    //    required: true,
+    //    unique: true
+    //},
+    email:{
         type: String,
         required: true,
         unique: true
@@ -38,7 +38,7 @@ var user = new mongoose.Schema({
     isAdmin:{
         type:Boolean,
         required: true,
-        unique: false
+        default: false
     },
     createdOn: {
         type: Date,
