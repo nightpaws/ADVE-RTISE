@@ -16,11 +16,16 @@ angular.module('user')
                         saveUser();
                         $location.path('/');
                     }else{
-                        toastr.error(data.data.message, 'Error');
+                        if(data.data.message!=null){
+                         toastr.error(data.data.message, 'Error');
+                        }
+                        else{
+                            toastr.error("An unknown error has occurred", 'Error');
+                        }
                     }
                 })
                 .catch(function(data){
-                    toastr.error('Unable to contact the server.', 'Error');
+                    toastr.error('Unable to contact the server.', 'Login Error');
                 });
         };
 
@@ -41,13 +46,18 @@ angular.module('user')
                         $location.path('/');
 
                     }else{
-                        toastr.error(data.data.message, 'Error');
+                        if(data.data.message!=null){
+                         toastr.error(data.data.message, 'Error');
+                        }
+                        else{
+                            toastr.error("An unknown error has occurred", 'Error');
+                        }
                     }
 
                 })
                 .catch(function(data){
 
-                    toastr.error('Error reaching server sorry about that', 'Error');
+                    toastr.error('Unable to contact the server.', 'Registration Error');
 
                 });
 

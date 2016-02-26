@@ -3,6 +3,6 @@
  */
 angular.module('advertise.config', [])
     .constant('config', {
-        //'API_URL': 'https://advertise.nightpaws.eu/application/api'
-        'API_URL': 'https://localhost:3001/application/api'
+        'API_URL': 'https://advertise.nightpaws.eu/application/api'
+        //'API_URL': 'https://localhost:3001/application/api'
     });
