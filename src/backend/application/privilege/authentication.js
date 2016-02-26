@@ -1,7 +1,7 @@
 /**
  * Created by Nightpaws on 23/02/2016.
  */
-var jwt = require('./../modules/auth/jsonwebtoken'),
+var jsonwebtoken = require('./../modules/auth/jsonwebtoken'),
     config = require('../../config');
 
 require('string.prototype.startswith');
@@ -25,7 +25,7 @@ var Auth = function(req, res, next){
     var token = req.headers['x-access-token'];
 
     if(token){
-        var decoded = jwt.validateToken(token);
+        var decoded = jsonwebtoken.validateToken(token);
         if(decoded){
             req.user = decoded;
         }else{

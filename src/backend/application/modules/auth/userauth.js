@@ -4,7 +4,7 @@
 var q = require('q');
 var deferred = q.defer();
 var bcrypt = require('bcrypt');
-var jwt = require('./jwt');
+var jsonwebtoken = require('./jsonwebtoken');
 
 var userModel = require('../../models/user.model.js');
 var mongoose = require('mongoose');
@@ -57,9 +57,9 @@ var Auth = {
                     deferred.resolve({
                         username: doc.username,
                         email: doc.email,
-                        token: jwt.generateAuth({username: doc.username, email: doc.email, type: 'user'})
+                        token: jsonwebtoken.generateAuth({username: doc.username, email: doc.email, type: 'user'})
                     });
-                    //deferred.resolve(jwt.generateAuth({username: doc.username, email: doc.email, type: 'user'}))
+                    //deferred.resolve(jsonwebtoken.generateAuth({username: doc.username, email: doc.email, type: 'user'}))
                 }
             });
         });
@@ -103,7 +103,7 @@ var Auth = {
 
                         }else{
 
-                            deferred.resolve(jwt.generateAuth({username:username, email: email, type: 'user'}));
+                            deferred.resolve(jsonwebtoken.generateAuth({username:username, email: email, type: 'user'}));
                         }
                     });
                 }

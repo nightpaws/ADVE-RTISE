@@ -1,7 +1,7 @@
 /**
  * Created by Nightpaws on 23/02/2016.
  */
-var jwt = require('jsonwebtoken');
+var jsonwebtok = require('jsonwebtoken');
 var fs = require('fs');
 var config = require('../../../config');
 
@@ -11,7 +11,7 @@ var jsonwebtoken = {
 
 
         var cert = fs.readFileSync(config.userAuth.privateKey);
-        return jwt.sign(data, cert, { algorithm: 'RS256'});
+        return jsonwebtok.sign(data, cert, { algorithm: 'RS256'});
 
     },
 
@@ -21,7 +21,7 @@ var jsonwebtoken = {
 
         try {
 
-            return jwt.verify(token, cert, {algorithms: ['RS256']});
+            return jsonwebtok.verify(token, cert, {algorithms: ['RS256']});
 
         }catch(err){
             return;
