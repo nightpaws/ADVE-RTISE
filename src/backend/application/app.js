@@ -72,9 +72,9 @@ var app = function(){
 
 
     //Routing API calls
-    var APIrouter = require('./router/apirouter')();
+    var apirouter = require('./router/apirouter')();
     //app.use('/api', APIrouter);
-     app.use('/application/api', APIrouter);
+     app.use('/application/api', apirouter);
 
     //catchall
     app.use('*', function(req, res, next){
