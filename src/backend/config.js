@@ -32,10 +32,10 @@ var config = {
     //},
 
     protect: {
-        ignore: { 
+        ignore: [ 
             '/users/authentication',
             '/users/register'
-        }
+        ]
     },
 
     userAuth: {
