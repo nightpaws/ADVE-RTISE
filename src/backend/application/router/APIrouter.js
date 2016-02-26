@@ -9,16 +9,16 @@ var APIrouter = function(){
 
     var APIrouter = express.Router();
 
-    var userRouter = require('./Users')();
+    var userRouter = require('./users')();
     APIrouter.use('/users', userRouter);
 
-    var dashRouter = require('./App')();
+    var dashRouter = require('./app')();
     APIrouter.use('/application', dashRouter);
 
-    var accountRouter = require('./Accounts')();
+    var accountRouter = require('./accounts')();
     APIrouter.use('/accounts',accountRouter);
 
-    var adminRouter = require('./Admin')();
+    var adminRouter = require('./admin')();
     APIrouter.use('/admin',accountRouter);
 
     APIrouter.use('*', function(req, res){

@@ -15,6 +15,11 @@ var user = new mongoose.Schema({
         required: true,
         unique: false
     },
+    password: {
+        type : String,
+        required: true,
+        unique: false
+    },
     givenName: {
         type : String,
         required: true,
