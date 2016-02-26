@@ -20,13 +20,16 @@ var config = {
         src: 'public/favicon.ico'
     },
 
-    //DB Settings
-    mySQL: {
-        host     : 'localhost',
-        user     : 'advertise_usr',
-        password : 'ftH7vUe634W5Twx4',
-        database : 'advertise_db'
+    mongoDB:{
+        string: 'mongodb://localhost/advertise'
     },
+    //DB Settings
+    //mySQL: {
+    //    host     : 'localhost',
+    //    user     : 'advertise_usr',
+    //    password : 'ftH7vUe634W5Twx4',
+    //    database : 'advertise_db'
+    //},
 
     protect: {
         ignore: '/users/authentication'

@@ -10,10 +10,13 @@ var app = function(){
     var app = express();//set up express
 
     //Database link
-    var mysql = require('mysql');
-    //db connect string
-    var connection = mysql.createConnection(config.mySQL);
-    connection.connect();
+    var mongoose = require('mongoose');
+    mongoose.connect(config.mongoDB.string);
+
+    //var mysql = require('mysql');
+    ////db connect string
+    //var connection = mysql.createConnection(config.mySQL);
+    //connection.connect();
 
     //serve favicon before logging for tidiness
     var favicon = require('serve-favicon');
