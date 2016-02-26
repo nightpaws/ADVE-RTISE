@@ -1,7 +1,7 @@
 /**
  * Created by Nightpaws on 23/02/2016.
  */
-var jwt = require('./../modules/auth/jasonwebtoken'),
+var jwt = require('./../modules/auth/jsonwebtoken'),
     config = require('../../config');
 
 require('string.prototype.startswith');
