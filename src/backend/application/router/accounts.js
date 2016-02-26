@@ -11,4 +11,4 @@ var accounts = function(){
 return accountRouter;
 };
 
-module.exports = fridges;
+module.exports = accounts;

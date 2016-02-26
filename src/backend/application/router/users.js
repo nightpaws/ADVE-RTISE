@@ -3,7 +3,7 @@
  */
 var express = require('express'),
     bodyParser = require('body-parser'),
-    responseFactory = require('./../response/Response');
+    responseFactory = require('./../response/response');
 
 var users = function(){
 
