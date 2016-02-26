@@ -1,8 +1,6 @@
 /**
  * Created by Nightpaws on 23/02/2016.
  */
-
-
 var q = require('q');
 var deferred = q.defer();
 var bcrypt = require('bcrypt');

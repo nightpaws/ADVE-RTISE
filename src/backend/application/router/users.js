@@ -43,7 +43,7 @@ var users = function(){
 
             var data = req.body;
 
-            var auth = require('../modules/auth/UserAuth');
+            var auth = require('../modules/auth/userauth');
             var tokenPromise = auth.registerUser(data.username, data.email, data.password);
 
             var response = responseFactory();
