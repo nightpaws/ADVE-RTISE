@@ -14,8 +14,8 @@ var users = function(){
 
             var data = req.body;
 
-            var Auth = require('./../modules/auth/UserAuth');
-            var promise = Auth.validateUser(data.username, data.passphrase);
+            var Auth = require('./../modules/auth/userauth');
+            var promise = Auth.validateUser(data.username, data.password);
 
             var response = responseFactory();
 
@@ -44,7 +44,7 @@ var users = function(){
             var data = req.body;
 
             var auth = require('../modules/auth/UserAuth');
-            var tokenPromise = auth.registerUser(data.username, data.email, data.passphrase);
+            var tokenPromise = auth.registerUser(data.username, data.email, data.password);
 
             var response = responseFactory();
 
