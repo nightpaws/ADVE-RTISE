@@ -2,7 +2,7 @@
  * Created by Nightpaws on 26/01/2016.
  */
 var app = angular.module('advertise', ['ui.router', 'advertise.config', 'polyfill', 'header', 'nav', 'session',
-    'ui.bootstrap', 'LocalStorageModule', 'ngAnimate', 'ng.deviceDetector', 'infinite-scroll', 'toastr', 'user', 'pages']);
+    'ui.bootstrap', 'LocalStorageModule', 'ngAnimate', 'ng.deviceDetector','interface', 'infinite-scroll', 'toastr', 'user', 'pages']);
 
 app.config(['$stateProvider', '$locationProvider', '$urlMatcherFactoryProvider', '$urlRouterProvider', function ($stateProvider, $locationProvider, $urlMatcherFactory, $urlRouterProvider) {
 
@@ -82,6 +82,9 @@ app.run(['$rootScope', '$state', '$location', 'user.service', '$timeout', functi
         var name = $state.current.name;
 
         switch (name) {
+            case 'interface':
+            //case 'page.accounts':
+            //case 'page.admin':
             case 'application':
                 $rootScope.app.displayBack = false;
                 break;
