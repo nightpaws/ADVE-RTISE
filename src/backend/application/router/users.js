@@ -30,7 +30,7 @@ var users = function(){
                 .fail(function(data){
 
                     response.setSuccessful(false);
-                    var message = (data.error) ? 'Error resolving password': (data.wrongPass) ? 'Error: wrong username or password' : '';
+                    var message = (data.error) ? 'Error resolving password': (data.wrongPass) ? 'Incorrect username or password' : '';
 
                     response.setMessage(message);
                     res.json(response.getResponse());
