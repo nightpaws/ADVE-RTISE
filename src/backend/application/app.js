@@ -81,8 +81,8 @@ var app = function(){
 
         if(req.originalUrl.indexOf('/') !== -1){
             var path = require('path');
-             res.sendFile(path.resolve('public/application/index.html'));
-            //res.sendFile(path.resolve('public/index.html'));
+             //res.sendFile(path.resolve('public/application/index.html'));
+            res.sendFile(path.resolve('public/index.html'));
         }else{
             res.redirect('https://advertise.nightpaws.eu/page-not-found');
         }
