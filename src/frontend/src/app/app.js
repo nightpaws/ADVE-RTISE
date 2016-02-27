@@ -1,7 +1,7 @@
 /**
  * Created by Nightpaws on 26/01/2016.
  */
-var app = angular.module('advertise', ['ui.router', 'advertise.config', 'polyfill', 'header', 'navigation', 'session',
+var app = angular.module('advertise', ['ui.router', 'advertise.config', 'polyfill', 'header', 'nav', 'session',
     'ui.bootstrap', 'LocalStorageModule', 'ngAnimate', 'ng.deviceDetector', 'infinite-scroll', 'toastr', 'user', 'pages']);
 
 app.config(['$stateProvider', '$locationProvider', '$urlMatcherFactoryProvider', '$urlRouterProvider', function ($stateProvider, $locationProvider, $urlMatcherFactory, $urlRouterProvider) {
@@ -9,7 +9,7 @@ app.config(['$stateProvider', '$locationProvider', '$urlMatcherFactoryProvider',
     $urlMatcherFactory.caseInsensitive(true);
     $urlMatcherFactory.strictMode(false);
 
-    $urlRouterProvider.otherwise('/404');
+    $urlRouterProvider.otherwise('/page-not-found');
 
     $stateProvider
         .state('page', {
@@ -22,7 +22,7 @@ app.config(['$stateProvider', '$locationProvider', '$urlMatcherFactoryProvider',
                 },
                 'nav': {
                     templateUrl: 'app/navigation/navigation.html',
-                    controller: 'navigation'
+                    controller: 'nav'
                 },
                 'main': {
                     template: '<div ui-view style="height: 100%"></div> '
@@ -30,7 +30,7 @@ app.config(['$stateProvider', '$locationProvider', '$urlMatcherFactoryProvider',
             }
         })
         .state('404', {
-            url: '/404',
+            url: '/page-not-found',
             views: {
                 'header': {
                     template: ''
