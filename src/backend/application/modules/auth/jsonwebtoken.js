@@ -17,7 +17,7 @@ var jsonwebtoken = {
 
     validateToken: function(token){
 
-        var cert = fs.readFileSync(config.userAuth.certSrc);
+        var cert = fs.readFileSync(config.userAuth.publicKey);
 
         try {
 
