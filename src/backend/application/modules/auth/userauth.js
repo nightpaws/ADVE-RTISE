@@ -96,7 +96,7 @@ var Auth = {
                         if(err){
 
                             if(err.code === 11000)
-                                deferred.reject('User Already Exists');
+                                deferred.reject('User already exists');
                             else
                                 deferred.reject('Error creating user');
 
