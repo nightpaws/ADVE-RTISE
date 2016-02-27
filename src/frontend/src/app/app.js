@@ -21,7 +21,7 @@ app.config(['$stateProvider', '$locationProvider', '$urlMatcherFactoryProvider',
                     controller: 'header.controller'
                 },
                 'nav': {
-                    templateUrl: 'app/navigation/navigation.html',
+                    templateUrl: 'app/nav/nav.html',
                     controller: 'nav'
                 },
                 'main': {
