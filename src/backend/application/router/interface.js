@@ -5,7 +5,7 @@ var express = require('express'),
     bodyParser = require('body-parser'),
     responseFactory = require('./../response/response');
 
-var app = function() {
+var interface = function() {
 
     var appRouter = express.Router();
 
@@ -13,7 +13,7 @@ var app = function() {
 
         .get(function(req,res){
 
-            var app = require('../modules/app/mainapp');
+            var interface = require('../modules/app/mainapp');
             var promise = app.getApp(req.user);
 
             var response = responseFactory();
@@ -37,8 +37,8 @@ var app = function() {
 
         });
 
-    return appRouter;
+    return interfaceRouter;
 
 };
 
-module.exports = app;
+module.exports = interface;
