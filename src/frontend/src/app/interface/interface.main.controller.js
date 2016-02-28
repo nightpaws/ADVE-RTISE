@@ -9,7 +9,7 @@ angular.module('interface')
             //otherscope: []
         };
 
-        requestHelper.getApplicationInfo()
+        requestHelper.getInterfaceInfo()
             .then(function(data){
 
                 if(!data.data.successful){
