@@ -85,7 +85,6 @@ app.run(['$rootScope', '$state', '$location', 'user.service', '$timeout', functi
             case 'interface':
             //case 'page.accounts':
             //case 'page.admin':
-            case 'application':
                 $rootScope.app.displayBack = false;
                 break;
             default:
