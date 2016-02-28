@@ -13,7 +13,7 @@ var APIControl = function(){
     APIControl.use('/users', userRouter);
 
     var interfaceRouter = require('./interface')();
-    APIControl.use('/interface', appRouter);
+    APIControl.use('/interface', interfaceRouter);
 
     var accountRouter = require('./accounts')();
     APIControl.use('/accounts',accountRouter);
