@@ -12,8 +12,8 @@ var APIControl = function(){
     var userRouter = require('./users')();
     APIControl.use('/users', userRouter);
 
-    var appRouter = require('./apps')();
-    APIControl.use('/application', appRouter);
+    var interfaceRouter = require('./interface')();
+    APIControl.use('/interface', appRouter);
 
     var accountRouter = require('./accounts')();
     APIControl.use('/accounts',accountRouter);
