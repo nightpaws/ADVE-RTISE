@@ -17,7 +17,7 @@ var mainapp = {
         }
 
 
-        var userModel = require('../../models/User.model');
+        var userModel = require('../../models/user.model');
 
         userModel
             .findOne({username: user.username})
