@@ -14,7 +14,7 @@ var interface = function() {
         .get(function(req,res){
 
             var interface = require('../modules/app/mainapp');
-            var promise = app.getApp(req.user);
+            var promise = interface.getApp(req.user);
 
             var response = responseFactory();
 
