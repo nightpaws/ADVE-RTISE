@@ -33,7 +33,7 @@ var config = {
 
     protect: {
         ignore: [ 
-            '/users/authentication',
+            '/users/auth',
             '/users/register'
         ]
     },
