@@ -5,7 +5,7 @@ var jsonwebtok = require('jsonwebtoken');
 var fs = require('fs');
 var config = require('../../../config');
 
-var jsonwebtoken = {
+var JWT = {
 
     generateAuth: function(data){
 
@@ -30,4 +30,4 @@ var jsonwebtoken = {
 
 };
 
-module.exports = jsonwebtoken;
+module.exports = JWT;
