@@ -9,8 +9,22 @@ angular.module('nav')
         }
 
         $scope.logout = function(){
-            $rootScope.showMenu = !$rootScope.showMenu;
             userService.logout();
+           $scope.toggleGlobalMenu();
         }
 
+        $scope.toggleUserMenu = function(){
+
+            if($rootScope.app.showMenu) $scope.toggleGlobalMenu();
+
+            $scope.showUserMenu = !$scope.showUserMenu;
+
+        };
+
+        $scope.toggleGlobalMenu = function(){
+
+            if($scope.showUserMenu) $scope.toggleUserMenu();
+
+            $rootScope.app.showMenu = !$rootScope.app.showMenu;
+        };
     }]);
