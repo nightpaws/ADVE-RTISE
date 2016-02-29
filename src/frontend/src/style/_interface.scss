@@ -1,6 +1,6 @@
-#application-main {
+#interface-main {
 
-  #application-welcome {
+  #interface-welcome {
 
     background-image: $background-color;
     color: white;
@@ -80,9 +80,9 @@
 
 @media screen and (max-width: 850px) {
 
-  #application-main {
+  #interface-main {
 
-    #application-welcome {
+    #interface-welcome {
 
       h1 {
         font-size: 1.5rem;
@@ -94,7 +94,7 @@
 
 @media screen and (min-width: 768px) {
 
-  #application-main {
+  #interface-main {
     .tile {
       border-bottom: none;
     }
