@@ -7,9 +7,9 @@ angular.module('header')
         $scope.imageurl = userService.getUser().imageurl;
 
 
-        $scope.back = function(){
-            window.history.back();
-        };
+        //$scope.back = function(){
+        //    window.history.back();
+        //};
 
         $scope.toggleUserMenu = function(){
 

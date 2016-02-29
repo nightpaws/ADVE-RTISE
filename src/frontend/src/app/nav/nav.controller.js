@@ -9,6 +9,9 @@ angular.module('nav')
         }
 
         $scope.logout = function(){
+            if($rootScope.app.showMenu) $scope.toggleGlobalMenu();
+
+            $scope.showUserMenu = !$scope.showUserMenu;
             userService.logout();
         }
 
