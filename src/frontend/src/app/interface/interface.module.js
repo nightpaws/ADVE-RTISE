@@ -10,7 +10,7 @@ angular.module('interface', [])
                 templateUrl: 'app/interface/interface.main.html',
                 controller: 'interface.main.controller',
                 onEnter: function($rootScope){
-                    $rootScope.app.stateTitle = 'Interface';
+                    $rootScope.app.stateTitle = 'ADVE-RTISE';
                 }
             })
 
