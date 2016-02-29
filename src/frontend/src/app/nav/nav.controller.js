@@ -8,4 +8,8 @@ angular.module('nav')
             $rootScope.app.showMenu = false;
         }
 
+        $scope.logout = function(){
+            userService.logout();
+        }
+
     }]);

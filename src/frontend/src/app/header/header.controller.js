@@ -26,8 +26,4 @@ angular.module('header')
             $rootScope.app.showMenu = !$rootScope.app.showMenu;
         };
 
-        $scope.logout = function(){
-            userService.logout();
-        }
-
     }]);
