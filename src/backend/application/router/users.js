@@ -39,19 +39,12 @@ var users = function(){
             var response = responseFactory();
             tokenPromise
                 .then(function(data){
-                    authPromise
-                        .then(function(data){
-                            response.setSuccessful(true);
-                            response.setMessage('User logged in');
-                            response.setResult({token: data});
-                            res.json(response.getResponse());
-                        })
-                        .fail(function(data){
-                            response.setSuccessful(false);
-                            var message = (data.error) ? 'Error resolving password': (data.wrongPass) ? 'Registration Failed.' : '';
-                            response.setMessage(message);
-                            res.json(response.getResponse());
-                        })
+
+                    response.setSuccessful(true);
+                    response.setMessage('User logged in');
+                    response.setResult({token: data});
+
+                    res.json(response.getResponse());
 
                 })
                 .fail(function(data){
