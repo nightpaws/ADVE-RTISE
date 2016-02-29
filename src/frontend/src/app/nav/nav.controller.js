@@ -9,7 +9,7 @@ angular.module('nav')
         }
 
         $scope.logout = function(){
-            $scope.showUserMenu = !$scope.showUserMenu;
+            $rootScope.showMenu = !$rootScope.showMenu;
             userService.logout();
         }
 
