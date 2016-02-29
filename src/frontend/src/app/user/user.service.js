@@ -37,9 +37,10 @@ angular.module('user')
                     if(data.data.successful === true){
                         var response = data.data;
                         user = response.result;
-                        generateGravatar();
-                        saveUser();
-                        $location.path('/');
+                        // generateGravatar();
+                        // saveUser();
+                        toastr.success('You can now attempt to login!','Registration Complete')
+                        $location.path('/user/login');
                     }else{
                         if(data.data.message!=null){
                          toastr.error(data.data.message, 'Error');

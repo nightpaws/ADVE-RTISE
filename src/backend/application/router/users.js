@@ -35,15 +35,12 @@ var users = function(){
             var data = req.body;
             var auth = require('../modules/auth/userauth');
             var tokenPromise = auth.registerUser(data.username, data.email, data.password);
-            var authPromise = auth.validateUser(data.username, data.password);
             var response = responseFactory();
             tokenPromise
                 .then(function(data){
-
                     response.setSuccessful(true);
                     response.setMessage('User logged in');
                     response.setResult({token: data});
-
                     res.json(response.getResponse());
 
                 })
