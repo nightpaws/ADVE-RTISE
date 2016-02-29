@@ -16,7 +16,7 @@ angular.module('user')
                 return;
             }
 
-            userService.login($scope.user.username, $scope.user.password);
+            userService.login($scope.user.username.toLowerCase(), $scope.user.password);
 
         };
         $scope.register = function(isValid){
@@ -25,6 +25,6 @@ angular.module('user')
                 return;
             }
 
-            userService.register($scope.user.username, $scope.user.email, $scope.user.password);
+            userService.register($scope.user.username.toLowerCase(), $scope.user.email, $scope.user.password);
         };
     }]);
