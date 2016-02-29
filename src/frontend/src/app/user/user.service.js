@@ -1,5 +1,5 @@
 /**
- * Created by Nightpaws on 11/02/2016.
+ *Adapted from ACRONYM - Code by Craig Morrison & Tom Maxwell on 11/02/2016.
  */
 angular.module('user')
     .service('user.service', ['user.request.factory', 'localStorageService','$location', 'toastr', function(requestHelper, localStorageService, $location, toastr){
@@ -56,9 +56,7 @@ angular.module('user')
 
                 })
                 .catch(function(data){
-
                     toastr.error('Unable to contact the server.', 'Registration Error');
-
                 });
 
         };
