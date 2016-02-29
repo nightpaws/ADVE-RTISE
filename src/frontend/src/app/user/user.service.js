@@ -35,16 +35,11 @@ angular.module('user')
                 .then(function(data){
 
                     if(data.data.successful === true){
-
                         var response = data.data;
-
                         user = response.result;
-
                         generateGravatar();
                         saveUser();
-
                         $location.path('/');
-
                     }else{
                         if(data.data.message!=null){
                          toastr.error(data.data.message, 'Error');
@@ -53,12 +48,10 @@ angular.module('user')
                             toastr.error("An unknown error has occurred", 'Error');
                         }
                     }
-
                 })
                 .catch(function(data){
                     toastr.error('Unable to contact the server.', 'Registration Error');
                 });
-
         };
 
         this.logout = function(){
