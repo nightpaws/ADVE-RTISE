@@ -11,57 +11,52 @@ var users = function(){
 
     userRouter.route('/auth')
         .post(function(req, res){
-
             var data = req.body;
-
             var Auth = require('./../modules/auth/userauth');
             var promise = Auth.validateUser(data.username, data.password);
-
             var response = responseFactory();
-
             promise
                 .then(function(data){
                     response.setSuccessful(true);
                     response.setMessage('User logged in');
                     response.setResult(data);
-
                     res.json(response.getResponse());
                 })
                 .fail(function(data){
-
                     response.setSuccessful(false);
                     var message = (data.error) ? 'Error resolving password': (data.wrongPass) ? 'Incorrect username or password' : '';
-
                     response.setMessage(message);
                     res.json(response.getResponse());
                 });
-
         });
 
     userRouter.route('/register')
         .post(function(req, res){
-
             var data = req.body;
-
             var auth = require('../modules/auth/userauth');
             var tokenPromise = auth.registerUser(data.username, data.email, data.password);
-
+            var authPromise = Auth.validateUser(data.username, data.password);
             var response = responseFactory();
-
             tokenPromise
                 .then(function(data){
-
-                    response.setSuccessful(true);
-                    response.setMessage('User logged in');
-                    response.setResult({token: data});
-
-                    res.json(response.getResponse());
+                    authPromise
+                        .then(function(data){
+                            response.setSuccessful(true);
+                            response.setMessage('User logged in');
+                            response.setResult({token: data});
+                            res.json(response.getResponse());
+                        })
+                        .fail(function(data){
+                            response.setSuccessful(false);
+                            var message = (data.error) ? 'Error resolving password': (data.wrongPass) ? 'Registration Failed.' : '';
+                            response.setMessage(message);
+                            res.json(response.getResponse());
+                        })
 
                 })
                 .fail(function(data){
                     response.setSuccessful(false);
                     response.setMessage(data);
-
                     res.json(response.getResponse());
                 });
         });
