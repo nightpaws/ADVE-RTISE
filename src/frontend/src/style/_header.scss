@@ -7,10 +7,11 @@ header {
   top: 0;
   left: 0;
   width: 100%;
-  background: #D0D0D0;
-  border-bottom: 1px solid #aaa;
+  background: #00000F;
+  border-bottom: 2px solid #222;
   height: $header-height;
   z-index: 100;
+  color: whitesmoke;
 
   #header-name {
     display: none;
@@ -23,7 +24,7 @@ header {
     font-size: 2rem;
     font-weight: bold;
     padding: 0.75rem;
-    border-right: 1px solid #eee;
+    border-right: 1px solid #ccc;
   }
 
 /*  #header-back:before {
@@ -46,7 +47,7 @@ header {
     border-left: 1px solid #ccc;
   }
 
-  #header-user {
+  /*#header-user {
     position: absolute;
     top: 0;
     left: calc(100% - #{$header-height});
@@ -55,9 +56,9 @@ header {
       width: $header-height;
       height: calc(#{$header-height} - 1px);
     }
-  }
+  }*/
 
-  #header-user-menu {
+  /*#header-user-menu {
     position: absolute;
     right: 0;
     background: #1F1F1F;
@@ -72,7 +73,7 @@ header {
       background-color: $background-light;
     }
   }
-}
+}*/
 
 @media screen and (min-width: 900px) {
 
