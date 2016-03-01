@@ -2,7 +2,7 @@
  * Created by Nightpaws on 26/01/2016.
  */
 var app = angular.module('advertise', ['advertise.config', 'ui.router', 'ui.bootstrap', 'user', 'pages',
-    'LocalStorageModule', 'ngAnimate', 'toastr','polyfill', 'ng.deviceDetector', 'header', 'session', 'nav', 'interface', 'infinite-scroll']);
+    'LocalStorageModule', 'ngAnimate', 'toastr','polyfill', 'ng.deviceDetector', 'header', 'session', 'nav','account','schedule', 'interface', 'infinite-scroll']);
 
 app.config(['$stateProvider', '$locationProvider', '$urlMatcherFactoryProvider', '$urlRouterProvider', function ($stateProvider, $locationProvider, $urlMatcherFactory, $urlRouterProvider) {
 
