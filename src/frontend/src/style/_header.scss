@@ -47,7 +47,7 @@ header {
     border-left: 1px solid #ccc;
   }
 
-  /*#header-user {
+  #header-user {
     position: absolute;
     top: 0;
     left: calc(100% - #{$header-height});
@@ -56,7 +56,7 @@ header {
       width: $header-height;
       height: calc(#{$header-height} - 1px);
     }
-  }*/
+  }
 
 /*  #header-user-menu {
     position: absolute;
