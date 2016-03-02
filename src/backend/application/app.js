@@ -6,12 +6,19 @@ var app = function(){
     var config = require('./../config'),
         fs = require('fs'),
         bodyParser = require('body-parser'),
-        express = require('express');
+        express = require('express'),
+        csv = require('./csv');
     var app = express();//set up express
 
     //Database link
     var mongoose = require('mongoose');
     mongoose.connect(config.mongoDB.string);
+    var csvHeaders = {
+        classes: {
+            headers: ['code', 'name', 'uid']
+        }
+    };
+    csv.importFile(__dirname + '/classes.csv', csvHeaders.classes.headers, 'classes');
 
     //var mysql = require('mysql');
     ////db connect string

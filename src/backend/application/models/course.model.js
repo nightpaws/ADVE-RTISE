@@ -20,11 +20,6 @@ var course = new mongoose.Schema({
         type: String,
         required: true,
         unique: false
-    },
-    yearGroup:{
-        type: int,
-        required:true,
-        unique:false
     }
 });
 
