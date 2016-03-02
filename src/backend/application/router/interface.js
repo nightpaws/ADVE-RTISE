@@ -5,13 +5,13 @@ var express = require('express'),
     bodyParser = require('body-parser'),
     responseFactory = require('./../response/response');
 
-var interface = function() {
+var interface = function () {
 
     var interfaceRouter = express.Router();
 
     interfaceRouter.route('/')
 
-        .get(function(req,res){
+        .get(function (req, res) {
 
             var interface = require('../modules/app/mainapp');
             var promise = interface.getApp(req.user);
@@ -19,7 +19,7 @@ var interface = function() {
             var response = responseFactory();
 
             promise
-                .then(function(data){
+                .then(function (data) {
 
                     response.setSuccessful(true);
                     response.setMeta(data.meta);
@@ -28,7 +28,7 @@ var interface = function() {
                     res.json(response.getResponse());
 
                 })
-                .fail(function(data){
+                .fail(function (data) {
                     response.setSuccessful(false);
                     response.setMessage(data);
 
