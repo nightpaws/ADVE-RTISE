@@ -20,26 +20,10 @@ var app = function(){
         if (~file.indexOf('.js')) require(models_path + '/' + file)
     });
 
-    //mongoose.connection.db.listCollections({name: 'course'})
-    //    .next(function(err, collinfo) {
-    //        if (collinfo) {
-    //            // The collection exists
-    //            mongoose.connection.db.dropCollection(modelName, function (err, result) {
-    //            });
-    //
-    //        }
-    //    });
-
-    mongoose.connection.db.listCollections().toArray(function(err, names) {
-        if (err) {
-            console.log(err);
-        }
-        else {
-            names.forEach(function(e,i,a) {
-                mongoose.connection.db.dropCollection(e.name);
-                console.log("--->>", e.name);
-            });
-        }
+    var course = mongoose.model('course', course);
+    course.remove({name: {$regex: '^a'}}, function (err) {
+        if (err) return handleError(err);
+        // removed!
     });
 
 
