@@ -13,12 +13,13 @@ var app = function(){
     //Database link
     var mongoose = require('mongoose');
     mongoose.connect(config.mongoDB.string);
+    var classes = require('../../models/course.model.js');
     var csvHeaders = {
         classes: {
             headers: ['code', 'name', 'uid']
         }
     };
-    csv.importFile(__dirname + '/classes.csv', csvHeaders.classes.headers, 'classes');
+    csv.importFile(__dirname + '/classes.csv', csvHeaders.classes.headers, classes);
 
     //var mysql = require('mysql');
     ////db connect string
