@@ -12,8 +12,15 @@ module.exports.importFile = function(filePath, fileHeaders, modelName) {
             //var courseModel = require('./models/course.model.js');
             //var modelName = "";
             var Obj = mongoose.model(modelName);
-            //mongoose.connection.db.dropCollection(modelName, function (err, result) {
-            //});
+
+            mongoose.connection.db.listCollections({name: modelName})
+                .next(function(err, collinfo) {
+                    if (collinfo) {
+                        mongoose.connection.db.dropCollection(modelName, function (err, result) {
+                        });
+                    }
+                });
+
             var obj = new Obj();
 
             Object.keys(data).forEach(function (key) {
