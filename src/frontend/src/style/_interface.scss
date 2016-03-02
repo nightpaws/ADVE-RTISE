@@ -80,6 +80,7 @@
   #posting {
     width: 95%;
     margin-left:2.5%;
+    -webkit-margin-left:2.5%;
   }
 
   textarea {
@@ -89,6 +90,7 @@
   .control-label {
     font-size: 1.25rem;
     padding-top: 0.5rem;
+    -webkit-padding-top: 0.5rem;
   }
   .form-control {
   margin: 0.5rem;
