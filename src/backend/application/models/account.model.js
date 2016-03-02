@@ -11,7 +11,7 @@ var account = new mongoose.Schema({
         unique: false
     },
     yearGroup: {
-        type: int,
+        type: Number,
         required:true,
         unique:false
     },
