@@ -25,4 +25,4 @@ var course = new mongoose.Schema({
 
 course.index({ code: 'text', uid: 'text'});
 
-module.exports = mongoose.model('Course', course);
+module.exports = mongoose.model('course', course);

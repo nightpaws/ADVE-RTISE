@@ -13,6 +13,12 @@ var app = function(){
     //Database link
     var mongoose = require('mongoose');
     mongoose.connect(config.mongoDB.string);
+
+    var models_path = __dirname + '/models'
+    fs.readdirSync(models_path).forEach(function (file) {
+        if (~file.indexOf('.js')) require(models_path + '/' + file)
+    })
+
     var csvHeaders = {
         classes: {
             headers: ['code', 'name', 'uid']
@@ -21,7 +27,7 @@ var app = function(){
             headers: ['something']
         }
     };
-    csv.importFile(__dirname + '/classes.csv', csvHeaders.classes.headers,'csvHeaders');
+    csv.importFile(__dirname + '/classes.csv', csvHeaders.classes.headers,'course');
 
     //var mysql = require('mysql');
     ////db connect string

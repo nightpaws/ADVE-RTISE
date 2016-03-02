@@ -31,4 +31,4 @@ var account = new mongoose.Schema({
     }
 });
 
-module.exports = mongoose.model('Account', account);
+module.exports = mongoose.model('account', account);
