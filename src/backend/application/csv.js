@@ -9,9 +9,10 @@ module.exports.importFile = function(filePath, fileHeaders, modelName) {
     csv
         .fromPath(filePath, {headers: fileHeaders})
         .on('data', function (data) {
-
+            //var courseModel = require('./models/course.model.js');
+            //var modelName = "";
             var Obj = mongoose.model(modelName);
-            mongoose.connection.db.dropCollection(modelName, function (err, result) {
+            //mongoose.connection.db.dropCollection(modelName, function (err, result) {
             });
             var obj = new Obj();
 
