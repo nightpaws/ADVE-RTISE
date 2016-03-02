@@ -11,7 +11,7 @@ var message = new mongoose.Schema({
         unique: false
     },
     username: {
-        type: int,
+        type: Number,
         required:true,
         unique:false
     },
