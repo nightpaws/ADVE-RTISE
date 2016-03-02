@@ -13,16 +13,6 @@ module.exports.importFile = function(filePath, fileHeaders, modelName) {
             //var modelName = "";
             var Obj = mongoose.model(modelName);
 
-            var collectionId = modelName + 's';
-            //Additional check for table reload
-            mongoose.connection.db.listCollections({name: modelName})
-                .next(function(err, collinfo) {
-                    if (collinfo) {
-                        mongoose.connection.db.dropCollection(modelName, function (err, result) {
-                        });
-                    }
-                });
-
             var obj = new Obj();
 
             Object.keys(data).forEach(function (key) {

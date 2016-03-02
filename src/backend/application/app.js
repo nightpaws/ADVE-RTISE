@@ -14,10 +14,22 @@ var app = function(){
     var mongoose = require('mongoose');
     mongoose.connect(config.mongoDB.string);
 
+    //Read in database dependencies
     var models_path = __dirname + '/models'
     fs.readdirSync(models_path).forEach(function (file) {
         if (~file.indexOf('.js')) require(models_path + '/' + file)
-    })
+    });
+
+    mongoose.connection.db.listCollections({name: 'course'})
+        .next(function(err, collinfo) {
+            if (collinfo) {
+                // The collection exists
+                mongoose.connection.db.dropCollection(modelName, function (err, result) {
+                });
+
+            }
+        });
+
 
     var csvHeaders = {
         classes: {
