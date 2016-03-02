@@ -24,8 +24,7 @@ var app = function(){
     var course = mongoose.model('course', course);
     course.remove({__v:'0' }, function (err) {
         if (err) return handleError(err);
-        // removed!
-        console.log("Removed one!")
+        // console.log("TRIGGERED!");
     });
 
 
