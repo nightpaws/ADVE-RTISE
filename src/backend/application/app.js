@@ -22,6 +22,7 @@ var app = function(){
     //populate database
     fs.createReadStream('./sampledata/classes.csv').pipe(sweat(function (err, result) {
         console.log(JSON.stringify(result))
+    }));
 
     //serve favicon before logging for tidiness
     var favicon = require('serve-favicon');
