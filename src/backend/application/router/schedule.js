@@ -5,8 +5,13 @@ var express = require('express'),
     responseFactory = require('./../response/response');
 
 var schedule = function(){
-    var scheduleRouter = express.Router();
+    var scheduleRouter = express.Router()
 
+
+    scheduleRouter.route('/schedule')
+        .post(function(req, res){
+
+        });
 
     return scheduleRouter;
 };

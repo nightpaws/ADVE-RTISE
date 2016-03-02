@@ -7,8 +7,12 @@ var express = require('express'),
 var account = function(){
     var accountRouter = express.Router();
 
+    accountRouter.route('/account')
+        .post(function(req, res){
 
-return accountRouter;
+        });
+
+    return accountRouter;
 };
 
 module.exports = account;
