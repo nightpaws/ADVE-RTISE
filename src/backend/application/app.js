@@ -25,7 +25,7 @@ var app = function(){
     course.remove({__v:'0' }, function (err) {
         if (err) return handleError(err);
         // removed!
-        Console.log("Removed one!")
+        console.log("Removed one!")
     });
 
 
