@@ -4,11 +4,11 @@
 var express = require('express'),
     responseFactory = require('./../response/response');
 
-var accounts = function(){
+var account = function(){
     var accountRouter = express.Router();
 
 
 return accountRouter;
 };
 
-module.exports = accounts;
+module.exports = account;
