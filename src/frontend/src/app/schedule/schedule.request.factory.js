@@ -1,14 +1,14 @@
 /**
- * Created by nightpaws on 01/03/2016.
+ * Created by Nightpaws on 02/03/2016.
  */
-angular.module('account')
-    .factory('account.request.factory', ['$http', 'config', function($http, config){
+angular.module('schedule')
+    .factory('schedule.request.factory', ['$http', 'config', function($http, config){
 
         var requestHelper = {};
 
         requestHelper.getInterfaceInfo = function(){
 
-            var url =config.API_URL +  '/account';
+            var url =config.API_URL +  '/schedule';
 
             //should maybe be using https
             return $http({
