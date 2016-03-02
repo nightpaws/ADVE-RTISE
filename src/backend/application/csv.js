@@ -13,7 +13,7 @@ module.exports.importFile = function(filePath, fileHeaders, modelName) {
             //var modelName = "";
             var Obj = mongoose.model(modelName);
             //mongoose.connection.db.dropCollection(modelName, function (err, result) {
-            });
+            //});
             var obj = new Obj();
 
             Object.keys(data).forEach(function (key) {
