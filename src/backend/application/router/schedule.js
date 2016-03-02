@@ -4,11 +4,11 @@
 var express = require('express'),
     responseFactory = require('./../response/response');
 
-var admin = function(){
-    var adminRouter = express.Router();
+var schedule = function(){
+    var scheduleRouter = express.Router();
 
 
-    return adminRouter;
+    return scheduleRouter;
 };
 
-module.exports = admin;
+module.exports = schedule;

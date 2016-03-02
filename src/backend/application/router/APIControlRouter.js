@@ -15,11 +15,11 @@ var APIControl = function(){
     var interfaceRouter = require('./interface')();
     APIControl.use('/interface', interfaceRouter);
 
-    var accountRouter = require('./accounts')();
-    APIControl.use('/accounts',accountRouter);
+    var accountRouter = require('./account')();
+    APIControl.use('/account',accountRouter);
 
-    var adminRouter = require('./admin')();
-    APIControl.use('/admin',adminRouter);
+    var scheduleRouter = require('./schedule')();
+    APIControl.use('/schedule',scheduleRouter);
 
     APIControl.use('*', function(req, res){
 
