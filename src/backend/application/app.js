@@ -21,7 +21,7 @@ var app = function(){
     });
 
     var course = mongoose.model('course', course);
-    course.remove({name: {$regex: '^a'}}, function (err) {
+    course.remove({code:'CS' }, function (err) {
         if (err) return handleError(err);
         // removed!
     });
