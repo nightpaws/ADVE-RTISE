@@ -6,7 +6,6 @@
   "dependencies": {
     "bcrypt": "^0.8.5",
     "body-parser": "^1.14.2",
-    "cold-sweat": "0.0.2",
     "cors": "^2.7.1",
     "express": "^4.13.4",
     "jsonwebtoken": "^5.5.4",

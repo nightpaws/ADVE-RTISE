@@ -6,8 +6,7 @@ var app = function(){
     var config = require('./../config'),
         fs = require('fs'),
         bodyParser = require('body-parser'),
-        express = require('express'),
-        sweat = require('cold-sweat');
+        express = require('express');
     var app = express();//set up express
 
     //Database link
@@ -19,11 +18,6 @@ var app = function(){
     //var connection = mysql.createConnection(config.mySQL);
     //connection.connect();
 
-    //populate database
-    fs.createReadStream('./sampledata/classes.csv').pipe(sweat(function (err, result) {
-        console.log(JSON.stringify(result))
-    }));
-    
     //serve favicon before logging for tidiness
     var favicon = require('serve-favicon');
     app.use(favicon(config.favicon.src));
