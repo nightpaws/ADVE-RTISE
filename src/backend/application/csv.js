@@ -5,8 +5,9 @@
 var mongoose = require('mongoose')
     , csv = require('fast-csv');
 
-var importFile = function (filePath, fileHeaders, modelName) {
-    csv.fromPath(filePath, {headers: fileHeaders})
+module.exports.importFile = function(filePath, fileHeaders, modelName) {
+    csv
+        .fromPath(filePath, {headers: fileHeaders})
         .on('data', function (data) {
 
             var Obj = mongoose.model(modelName);
@@ -30,5 +31,3 @@ var importFile = function (filePath, fileHeaders, modelName) {
             console.log("done");
         });
 };
-
-module.exports = importFile;
