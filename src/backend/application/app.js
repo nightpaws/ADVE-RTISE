@@ -20,10 +20,12 @@ var app = function(){
         if (~file.indexOf('.js')) require(models_path + '/' + file)
     });
 
+
     var course = mongoose.model('course', course);
-    course.remove({code:'CS' }, function (err) {
+    course.remove({__v:'0' }, function (err) {
         if (err) return handleError(err);
         // removed!
+        Console.log("Removed one!")
     });
 
 
