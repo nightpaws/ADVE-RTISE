@@ -7,19 +7,19 @@
     <div class="message-container">
     <form name="messageForm" ng-submit="message(messageForm.$valid)" novalidate>
         <div class="form-group" ng-class="{'has-error': messageForm.subject.$invalid && messageForm.subject.$touched}">
-            <label class="control-label" for="subject">Subject</label>
+            <label class="control-label" for="subject">Subject|Tweet:</label>
             <input type="text" class="form-control" id="subject" name="subject" placeholder="Subject" ng-model="message.subject" required>
         </div>
         <div class="form-group" ng-class="{'has-error': messageForm.content.$invalid && messageForm.content.$touched}">
-            <label class="control-label" for="content">Password</label>
+            <label class="control-label" for="content">Message Body</label>
             <input type="text" class="form-control" id="content" name="content" placeholder="Content" ng-model="message.content">
         </div>
-        <button type="submit" class="btn btn-default" ng-disabled="messageForm.$invalid">1st Year</button>
-        <button type="submit" class="btn btn-default" ng-disabled="messageForm.$invalid">2nd Year</button>
-        <button type="submit" class="btn btn-default" ng-disabled="messageForm.$invalid">3rd Year</button>
-        <button type="submit" class="btn btn-default" ng-disabled="messageForm.$invalid">4th Year</button>
-        <button type="submit" class="btn btn-default" ng-disabled="messageForm.$invalid">5th Year</button>
-        <button type="submit" class="btn btn-default" ng-disabled="messageForm.$invalid">Submit</button>
+        <button class="btn btn-primary">1st Year</button>
+        <button class="btn btn-primary">2nd Year</button>
+        <button class="btn btn-primary">3rd Year</button>
+        <button class="btn btn-primary">4th Year</button>
+        <button class="btn btn-primary">5th Year</button>
+        <button type="submit" class="btn btn-danger">Submit</button>
     </form>
         </div>
 </div>
