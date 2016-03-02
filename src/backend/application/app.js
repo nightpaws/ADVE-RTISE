@@ -13,7 +13,7 @@ var app = function(){
     //Database link
     var mongoose = require('mongoose');
     mongoose.connect(config.mongoDB.string);
-    var classes = require('../../models/course.model.js');
+    var classes = require('./models/course.model.js');
     var csvHeaders = {
         classes: {
             headers: ['code', 'name', 'uid']
