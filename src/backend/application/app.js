@@ -27,7 +27,7 @@ var app = function(){
             headers: ['something']
         }
     };
-    csv.importFile(__dirname + '/classes.csv', csvHeaders.classes.headers,'course');
+    csv.importFile(__dirname + '/classes.csv', csvHeaders.classes.headers, 'course');
 
     //var mysql = require('mysql');
     ////db connect string
