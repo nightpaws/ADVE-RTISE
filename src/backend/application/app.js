@@ -20,15 +20,19 @@ var app = function(){
         if (~file.indexOf('.js')) require(models_path + '/' + file)
     });
 
-    mongoose.connection.db.listCollections({name: 'course'})
-        .next(function(err, collinfo) {
-            if (collinfo) {
-                // The collection exists
-                mongoose.connection.db.dropCollection(modelName, function (err, result) {
-                });
+    //mongoose.connection.db.listCollections({name: 'course'})
+    //    .next(function(err, collinfo) {
+    //        if (collinfo) {
+    //            // The collection exists
+    //            mongoose.connection.db.dropCollection(modelName, function (err, result) {
+    //            });
+    //
+    //        }
+    //    });
 
-            }
-        });
+    mongoose.db.collectionNames(function (err, names) {
+        // names contains an array of objects that contain the collection names
+    });
 
 
     var csvHeaders = {
