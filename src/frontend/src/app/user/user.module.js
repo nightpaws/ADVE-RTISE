@@ -44,7 +44,7 @@ angular.module('user',['advertise.config']).config(['$stateProvider', function($
         .state('page.userprofile', {
             url: 'user/profile',
             templateUrl: 'app/user/user.profile.html',
-            controller: 'user.profile',
+            controller: 'user.profile.controller',
             onEnter: function($rootScope){
                 $rootScope.app.stateTitle = 'Profile';
             }
