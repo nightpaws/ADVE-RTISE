@@ -101,18 +101,19 @@
     text-align:center;
   }
 
+  .btn-primary {
+    width: 29%;
+  }
+
+  .btn-info .btn-danger{
+    width: 90%;
+  }
   .btn {
     border-radius:0.5rem;
     padding: 1rem;
     margin: 0.1rem;
 
-    .btn-primary {
-      width: 29%;
-    }
 
-    .btn-info .btn-danger{
-      width: 90%;
-    }
   }
 }
 
