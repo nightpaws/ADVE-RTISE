@@ -20,7 +20,7 @@
                           placeholder="Got more to say?" ng-model="message.content"></textarea>
 
             </div>
-            <div class="form-group" ng-class="{'has-error': messageForm.subject.$invalid && messageForm.subject.$touched}">
+            <div id="buttonbox" class="form-group" ng-class="{'has-error': messageForm.subject.$invalid && messageForm.subject.$touched}">
             <button class="btn btn-info">Schedule</button><br>
             <button class="btn btn-primary">1st Year</button>
             <button class="btn btn-primary">2nd Year</button>
