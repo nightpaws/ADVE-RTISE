@@ -13,7 +13,8 @@ var user = new mongoose.Schema({
     sn: {
         type : String,
         required: false,
-        unique: false
+        unique: false,
+        default: 'N.G.'
     },
     password: {
         type : String,
@@ -23,12 +24,14 @@ var user = new mongoose.Schema({
     givenName: {
         type : String,
         required: false,
-        unique: false
+        unique: false,
+        default: 'N.G.'
     },
     cn:{
         type : String,
         required: false,
-        unique: true
+        unique: true,
+        default: 'N.G.'
     },
     email:{
         type: String,
