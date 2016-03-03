@@ -10,26 +10,26 @@ var user = new mongoose.Schema({
         required: true,
         unique: true
     },
-    //sn: {
-    //    type : String,
-    //    required: true,
-    //    unique: false
-    //},
+    sn: {
+        type : String,
+        required: false,
+        unique: false
+    },
     password: {
         type : String,
         required: true,
         unique: false
     },
-    //givenName: {
-    //    type : String,
-    //    required: true,
-    //    unique: false
-    //},
-    //cn:{
-    //    type : String,
-    //    required: true,
-    //    unique: true
-    //},
+    givenName: {
+        type : String,
+        required: false,
+        unique: false
+    },
+    cn:{
+        type : String,
+        required: false,
+        unique: true
+    },
     email:{
         type: String,
         required: true,
