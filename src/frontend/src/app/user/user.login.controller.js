@@ -6,8 +6,13 @@ angular.module('user')
 
         $scope.user = {
             username: null,
+            sn: null,
             password: null,
-            email: null
+            givenNam: null,
+            cn: null,
+            email: null,
+            isAdmin: null,
+            createdOn: null
         };
 
         $scope.login = function(isValid){
