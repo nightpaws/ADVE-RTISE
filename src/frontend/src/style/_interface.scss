@@ -93,13 +93,26 @@
     -webkit-padding-top: 0.5rem;
   }
 
+  table {
+    table-layout: fixed;
+  }
+
   #buttonbox {
     text-align:center;
   }
 
   .btn {
-  border-radius:0.5rem;
+    border-radius:0.5rem;
     padding: 1rem;
+    margin: 0.1rem;
+
+    .btn-primary {
+      width: 29%;
+    }
+
+    .btn-info .btn-danger{
+      width: 90%;
+    }
   }
 }
 
