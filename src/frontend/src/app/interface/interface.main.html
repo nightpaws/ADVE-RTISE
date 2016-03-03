@@ -20,14 +20,17 @@
                           placeholder="Got more to say?" ng-model="message.content"></textarea>
 
             </div>
-            <button class="btn btn-info">Schedule</button>
+            <div class="form-group" ng-class="{'has-error': messageForm.subject.$invalid && messageForm.subject.$touched}">
+            <button class="btn btn-info">Schedule</button><br>
             <button class="btn btn-primary">1st Year</button>
             <button class="btn btn-primary">2nd Year</button>
-            <button class="btn btn-primary">3rd Year</button>
+            <button class="btn btn-primary">3rd Year</button><br>
             <button class="btn btn-primary">4th Year</button>
             <button class="btn btn-primary">5th Year</button>
-            <button class="btn btn-primary">PhD Year</button>
+            <button class="btn btn-primary">PhD Year</button><br>
             <button type="submit" class="btn btn-danger">Submit</button>
+            </div>
+
         </form>
     </div>
 </div>
