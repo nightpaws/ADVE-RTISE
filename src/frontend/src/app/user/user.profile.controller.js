@@ -7,5 +7,8 @@ angular.module('user')
         $scope.username = user.username;
         $scope.email = user.email;
         $scope.imageurl = user.imageurl;
-
+        $scope.sn = user.sn;
+        $scope.giveName = user.givenName;
+        $scope.isAdmin = user.isAdmin;
+        $scope.createdOn = user.createdOn;
     }]);

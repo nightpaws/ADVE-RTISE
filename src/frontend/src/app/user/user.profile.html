@@ -4,6 +4,18 @@
         <img ng-src="{{imageurl}}" alt="User image">
         <ul>
             <li>
+                <p>Common Name</p>
+                <p>{{cn}}</p>
+            </li>
+            <li>
+                <p>Surname</p>
+                <p>{{sn}}</p>
+            </li>
+            <li>
+                <p>Given Name</p>
+                <p>{{givenName}}</p>
+            </li>
+            <li>
                 <p>Username</p>
                 <p>{{username}}</p>
             </li>
@@ -11,10 +23,18 @@
                 <p>Email Address</p>
                 <p>{{email}}</p>
             </li>
+            <li>
+                <p>Is Administrator?</p>
+                <p>{{isAdmin}}</p>
+            </li>
+            <li>
+                <p>Creation Date</p>
+                <p>{{createdOn}}</p>
+            </li>
         </ul>
     </div>
     <div class="tile">
-        <p>We use <a href="http://gravatar.com">Gravatar</a> for user avatars</p>
+        <p>This application uses <a href="http://gravatar.com">Gravatar</a> for user avatars.</p>
     </div>
 
 </div>
