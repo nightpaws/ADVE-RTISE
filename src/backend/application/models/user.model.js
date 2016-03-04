@@ -30,7 +30,7 @@ var user = new mongoose.Schema({
     cn:{
         type : String,
         required: false,
-        unique: true,
+        unique: false,
         default: 'N.G.'
     },
     email:{
