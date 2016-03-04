@@ -20,7 +20,12 @@ var account = new mongoose.Schema({
         required: true,
         unique: false
     },
-    token: {
+    consumerKey: {
+        type: String,
+        required: true,
+        unique: false
+    },
+    consumerSecret: {
         type: String,
         required: true,
         unique: false

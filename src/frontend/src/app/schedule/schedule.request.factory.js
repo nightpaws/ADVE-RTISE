@@ -11,10 +11,10 @@ angular.module('schedule')
             var url =config.API_URL +  '/schedule';
 
             //should maybe be using https
-            return $http({
-                method: 'GET',
-                url: url
-            })
+            //return $http({
+            //    method: 'GET',
+            //    url: url
+            //})
 
         };
 

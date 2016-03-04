@@ -5,7 +5,6 @@ var q = require('q');
 var deferred = q.defer();
 var bcrypt = require('bcrypt');
 var jsonwebtoken = require('./JWT');
-
 var userModel = require('../../models/user.model.js');
 var mongoose = require('mongoose');
 

@@ -11,10 +11,10 @@ angular.module('account')
             var url =config.API_URL +  '/account';
 
             //should maybe be using https
-            return $http({
-                method: 'GET',
-                url: url
-            })
+            //return $http({
+            //    method: 'GET',
+            //    url: url
+            //})
 
         };
 

@@ -23,13 +23,6 @@ var config = {
     mongoDB:{
         string: 'mongodb://localhost/advertise'
     },
-    //DB Settings
-    //mySQL: {
-    //    host     : 'localhost',
-    //    user     : 'advertise_usr',
-    //    password : 'ftH7vUe634W5Twx4',
-    //    database : 'advertise_db'
-    //},
 
     protect: {
         ignore: [ 
@@ -41,6 +34,14 @@ var config = {
     userAuth: {
         privateKey: './ssl/server.key',
         publicKey: './ssl/server.crt'
+    },
+
+    twitter: {
+        app: {
+            consumer_key: 'vO5NiCxKZWa2KmNQaLBFwX2Cj',
+            consumer_secret: 'NlbGlBgPmfMPgViOUo21ylNvfp5kEKYlmpfz03IVD5Ic3geQjY',
+            callbackURL     : '	https://advertise.nightpaws.eu/application/api/authroizetwitter/'
+        }
     },
 
     //Logging Locations...
