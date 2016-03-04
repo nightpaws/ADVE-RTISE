@@ -5,10 +5,11 @@ angular.module('user')
     .controller('user.profile', ['$scope', 'user.service', function($scope, userService){
         const user = userService.getUser();
         $scope.username = user.username;
-        $scope.email = user.email;
-        $scope.imageurl = user.imageurl;
         $scope.sn = user.sn;
-        $scope.giveName = user.givenName;
+        $scope.givenName = user.givenName;
+        $scope.cn = user.cn;
+        $scope.email = user.email;
         $scope.isAdmin = user.isAdmin;
         $scope.createdOn = user.createdOn;
+        $scope.imageurl = user.imageurl;
     }]);

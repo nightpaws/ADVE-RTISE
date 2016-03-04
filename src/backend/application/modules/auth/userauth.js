@@ -57,11 +57,11 @@ var Auth = {
                     deferred.resolve({
                         username: doc.username,
                         email: doc.email,
-                        givenName: doc.givenName,
-                        sn: doc.sn,
-                        cn: doc.cn,
                         createdOn: doc.createdOn,
                         isAdmin: doc.isAdmin,
+                        cn: doc.cn,
+                        givenName: doc.givenName,
+                        sn: doc.sn,
                         token: jsonwebtoken.generateAuth({username: doc.username, email: doc.email, type: 'user'})
                     });
                     //deferred.resolve(jsonwebtoken.generateAuth({username: doc.username, email: doc.email, type: 'user'}))
