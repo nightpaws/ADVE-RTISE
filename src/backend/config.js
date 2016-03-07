@@ -40,7 +40,7 @@ var config = {
         app: {
             consumer_key: 'vO5NiCxKZWa2KmNQaLBFwX2Cj',
             consumer_secret: 'NlbGlBgPmfMPgViOUo21ylNvfp5kEKYlmpfz03IVD5Ic3geQjY',
-            callbackURL     : '	https://advertise.nightpaws.eu/application/api/authroizetwitter/'
+            callbackURL     : '	https://advertise.nightpaws.eu/application/api/auth/twitter/callback'
         }
     },
 
