@@ -67,7 +67,7 @@ angular.module('interface')
             } else {
                 $scope.selectedAll = false;
             }
-            angular.forEach($scope.classes, function (year) {
+            angular.forEach($scope.Years, function (year) {
                 year.Selected = $scope.selectedAll;
             });
         }
