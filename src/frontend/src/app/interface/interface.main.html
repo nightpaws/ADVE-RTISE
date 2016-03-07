@@ -17,15 +17,17 @@
                 <!--<input type="text" class="form-control" id="content" name="content" placeholder="Content" ng-model="message.content">-->
             <textarea type="text" class="form-control" rows="5" id="content" name="content"
                       placeholder="Got more to say?" ng-model="message.content"></textarea>
-            <div id="buttonbox" class="form-group">
-                <button id="actionbtn" class="btn btn-info">Schedule</button><br>
-                <checkbox ng-model="checkboxModel" name="1" class="btn-primary">1st Year</checkbox>
-                <checkbox ng-model="checkboxModel" name="2" class="btn-primary">2nd Year</checkbox>
-                <checkbox ng-model="checkboxModel" name="3" class="btn-primary">3rd Year</checkbox><br>
-                <checkbox ng-model="checkboxModel" name="4" class="btn-primary">4th Year</checkbox>
-                <checkbox ng-model="checkboxModel" name="5" class="btn-primary">5th Year</checkbox>
-                <checkbox ng-model="checkboxModel" name="6" class="btn-primary">PhD Year</checkbox><br>
-                <button id="actionbtn" type="submit" class="btn btn-danger" ng-disabled="!messageForm.$valid">Submit</button>
+            <div id="btnBox" class="form-group">
+                <li>Check All
+                    <input type="checkbox" ng-model="selectedAll" ng-click="checkAll()" />
+                </li>
+                <li ng-repeat="year in Years">
+                    <label>{{year.group}}
+                        <input type="checkbox" ng-model="group.Selected" />
+                    </label>
+                </li>
+                <button id="scheduleBtn" class="btn btn-info">Schedule</button><br>
+                <button id="submitnBtn" type="submit" class="btn btn-danger" ng-disabled="!messageForm.$valid">Submit</button>
             </div>
             <!--<div id="buttonbox" class="form-group">-->
                 <!--<input type="checkbox" id="actionbtn" class="btn btn-info">Schedule</input><br>-->

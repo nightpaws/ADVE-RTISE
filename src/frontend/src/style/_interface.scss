@@ -97,16 +97,16 @@
     table-layout: fixed;
   }
 
-  #buttonbox {
+  #btnBox {
     text-align:center;
   }
 
-  #classbtn {
-    width: 29%;
-  }
+  //#classChk {
+  //  width: 29%;
+  //}
 
- #actionbtn {
-    width: 90%;
+ #submitBtn #scheduleBtn{
+    width: 40%;
   }
   .btn {
     border-radius:0.5rem;
