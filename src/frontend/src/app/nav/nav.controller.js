@@ -4,6 +4,14 @@
 angular.module('nav')
     .controller('nav', ['$rootScope','$scope', 'user.service', function($rootScope, $scope, userService){
 
+        $scope.adminTest = function() {
+            if(userService.getAdmin()){
+                return true;
+            }
+            return false;
+        }
+
+
         $scope.navigate = function(){
             $rootScope.app.showMenu = false;
         }
