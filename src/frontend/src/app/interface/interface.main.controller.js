@@ -43,22 +43,28 @@ angular.module('interface')
         //Checkbox handling
         $scope.Years = [
             {
-                group: "1st Year"
+                group: "1st Year",
+                id: 1
             },
             {
-                group: "2nd Year"
+                group: "2nd Year",
+                id: 2
             },
             {
-                group: "3rd Year"
+                group: "3rd Year",
+                id: 3
             },
             {
-                group: "4th Year"
+                group: "4th Year",
+                id: 4
             },
             {
-                group: "5rd Year"
+                group: "5rd Year",
+                id: 5
             },
             {
-                group: "PhD Year"
+                group: "PhD Year",
+                id: 6
             }
         ];
         $scope.checkAll = function () {

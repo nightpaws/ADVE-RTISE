@@ -17,15 +17,16 @@
                 <!--<input type="text" class="form-control" id="content" name="content" placeholder="Content" ng-model="message.content">-->
             <textarea type="text" class="form-control" rows="5" id="content" name="content"
                       placeholder="Got more to say?" ng-model="message.content"></textarea>
+                </div>
                 <div id="btnBox" class="form-group">
                     <!--https://jsfiddle.net/deeptechtons/TKVH6/-->
                     <ul ng-controller="checkboxController">
                         <li>Check All
-                            <input type="checkbox" ng-model="selectedAll" ng-click="checkAll()"/>
+                            <checkbox ng-model="checkboxModel" ng-model="selectedAll" ng-click="checkAll()" class="btn-warning"/>
                         </li>
                         <li ng-repeat="year in Years">
                             <label>{{year.group}}
-                                <input type="checkbox" ng-model="year.Selected"/>
+                                <checkbox ng-model="checkboxModel" id="{{year.id}}" ng-model="year.Selected" class="btn-primary"/>
                             </label>
                         </li>
                     </ul>
