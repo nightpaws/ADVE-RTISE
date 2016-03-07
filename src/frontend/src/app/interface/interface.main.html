@@ -18,6 +18,7 @@
             <textarea type="text" class="form-control" rows="5" id="content" name="content"
                       placeholder="Got more to say?" ng-model="message.content"></textarea>
                 <div id="btnBox" class="form-group">
+                    <!--https://jsfiddle.net/deeptechtons/TKVH6/-->
                     <ul ng-controller="checkboxController">
                         <li>Check All
                             <input type="checkbox" ng-model="selectedAll" ng-click="checkAll()"/>
@@ -29,8 +30,7 @@
                         </li>
                     </ul>
                     <button id="scheduleBtn" class="btn btn-info">Schedule</button>
-                    <br>
-                    <button id="submitnBtn" type="submit" class="btn btn-danger" ng-disabled="!messageForm.$valid">
+                    <button id="submitBtn" type="submit" class="btn btn-danger" ng-disabled="!messageForm.$valid">
                         Submit
                     </button>
                 </div>
