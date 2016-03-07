@@ -2,13 +2,18 @@
  * Created by nightpaws on 10/02/2016.
  */
 angular.module('interface')
-    .controller('interface.main.controller', ['$scope', 'interface.request.factory', 'toastr', function ($scope, requestHelper, toastr) {
+    .controller('interface.main.controller', ['$scope', '$state', '$stateParams', 'interface.request.factory', 'toastr', function ($scope, $state, $stateParams, requestHelper, toastr) {
 
 
-        $scope.messages = {
+        $scope.message = {
             subject: null,
             message: null,
-            years: null
+            1: null,
+            2: null,
+            3: null,
+            4: null,
+            5: null,
+            6: null
         };
 
         $scope.sendMessage = function () {
@@ -38,7 +43,8 @@ angular.module('interface')
         //    })
 
 
-    }])
+    }
+    ])
     .controller("checkboxController", function checkboxController($scope) {
         //Checkbox handling
         $scope.Years = [
@@ -68,13 +74,13 @@ angular.module('interface')
             }
         ];
         $scope.checkAll = function () {
-            if ($scope.selectedAll) {
-                $scope.selectedAll = true;
+            if ($scope.message.selAll) {
+                $scope.message.selAll = true;
             } else {
-                $scope.selectedAll = false;
+                $scope.message.selAll = false;
             }
-            angular.forEach($scope.Years, function (year) {
-                year.Selected = $scope.selectedAll;
+            angular.forEach($scope.Years, function (message) {
+                message.Selected = $scope.message.selAll;
             });
         }
     });

@@ -13,20 +13,20 @@
                        ng-model="message.subject" required>
             </div>
             <div class="form-group">
-                <label class="control-label" for="content">Message Content:</label>
+                <label class="control-label" for="message">Message Content:</label>
                 <!--<input type="text" class="form-control" id="content" name="content" placeholder="Content" ng-model="message.content">-->
-            <textarea type="text" class="form-control" rows="5" id="content" name="content"
+            <textarea type="text" class="form-control" rows="5" id="message" name="message"
                       placeholder="Got more to say?" ng-model="message.content"></textarea>
                 </div>
                 <div id="btnBox" class="form-group">
                     <!--https://jsfiddle.net/deeptechtons/TKVH6/-->
                     <ul ng-controller="checkboxController">
                         <li>Check All
-                            <checkbox ng-model="checkboxModel" ng-model="selectedAll" ng-click="checkAll()" class="btn-warning"/>
+                            <checkbox ng-model="checkboxModel" ng-model="message.selAll" ng-click="checkAll()" class="btn-warning"/>
                         </li>
                         <li ng-repeat="year in Years">
                             <label>{{year.group}}
-                                <checkbox ng-model="checkboxModel" id="{{year.id}}" ng-model="year.Selected" class="btn-primary"/>
+                                <checkbox ng-model="checkboxModel" id="{{year.id}}" ng-model="message.{{year.id}}" class="btn-primary"/>
                             </label>
                         </li>
                     </ul>
