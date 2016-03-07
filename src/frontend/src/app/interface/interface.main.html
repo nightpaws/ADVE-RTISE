@@ -12,25 +12,31 @@
                 <input type="text" class="form-control" id="subject" name="subject" placeholder="Subject/Tweet"
                        ng-model="message.subject" required>
             </div>
-            <div class="form-group"
-                 ng-class="{'has-error': messageForm.content.$invalid && messageForm.content.$touched}">
+            <div class="form-group">
                 <label class="control-label" for="content">Message Content:</label>
                 <!--<input type="text" class="form-control" id="content" name="content" placeholder="Content" ng-model="message.content">-->
-                <textarea type="text" class="form-control" rows="5" id="content" name="content"
-                          placeholder="Got more to say?" ng-model="message.content"></textarea>
-
+            <textarea type="text" class="form-control" rows="5" id="content" name="content"
+                      placeholder="Got more to say?" ng-model="message.content"></textarea>
+            <div id="buttonbox" class="form-group">
+                <button id="actionbtn" class="btn btn-info">Schedule</button><br>
+                <checkbox class="btn-primary">1st Year</checkbox>
+                <checkbox class="btn-primary">2nd Year</checkbox>
+                <checkbox class="btn-primary">3rd Year</checkbox><br>
+                <checkbox class="btn-primary">4th Year</checkbox>
+                <checkbox class="btn-primary">5th Year</checkbox>
+                <checkbox class="btn-primary">PhD Year</checkbox><br>
+                <button id="actionbtn" type="submit" class="btn btn-danger" ng-disabled="!messageForm.$valid">Submit</button>
             </div>
-            <div id="buttonbox" class="form-group" ng-class="{'has-error': messageForm.subject.$invalid && messageForm.subject.$touched}">
-            <button id="actionbtn" class="btn btn-info">Schedule</button><br>
-            <button id="classbtn" class="btn btn-primary">1st Year</button>
-            <button id="classbtn" class="btn btn-primary">2nd Year</button>
-            <button id="classbtn" class="btn btn-primary">3rd Year</button><br>
-            <button id="classbtn" class="btn btn-primary">4th Year</button>
-            <button id="classbtn" class="btn btn-primary">5th Year</button>
-            <button id="classbtn" class="btn btn-primary">PhD Year</button><br>
-            <button id="actionbtn" type="submit" class="btn btn-danger">Submit</button>
-            </div>
-
+            <!--<div id="buttonbox" class="form-group">-->
+                <!--<input type="checkbox" id="actionbtn" class="btn btn-info">Schedule</input><br>-->
+                <!--<input type="checkbox" id="classbtn" class="btn btn-primary">1st Year</input>-->
+                <!--<input type="checkbox" id="classbtn" class="btn btn-primary">2nd Year</input>-->
+                <!--<input type="checkbox" id="classbtn" class="btn btn-primary">3rd Year</input><br>-->
+                <!--<input type="checkbox" id="classbtn" class="btn btn-primary">4th Year</input>-->
+                <!--<input type="checkbox" id="classbtn" class="btn btn-primary">5th Year</input>-->
+                <!--<input id="classbtn" class="btn btn-primary">PhD Year</input><br>-->
+                <!--<button id="actionbtn" type="submit" class="btn btn-danger" ng-disabled="!messageForm.$valid">Submit</button>-->
+            <!--</div>-->
         </form>
     </div>
 </div>
