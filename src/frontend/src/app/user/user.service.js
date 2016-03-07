@@ -68,6 +68,10 @@ angular.module('user')
             return user.token;
         };
 
+        this.getAdmin = function(){
+            return user.isAdmin;
+        }
+
         this.loadUser = function(){
             user = localStorageService.get('user');
             console.log('user loaded');
