@@ -1,7 +1,7 @@
 /**
  * Created by nightpaws on 10/02/2016.
  */
-angular.module('interface', [])
+angular.module('interface')
     .controller('interface.main.controller', ['$scope', 'interface.request.factory', 'toastr', function ($scope, requestHelper, toastr) {
 
 
