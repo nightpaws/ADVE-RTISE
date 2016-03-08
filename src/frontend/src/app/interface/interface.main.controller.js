@@ -4,24 +4,21 @@
 angular.module('interface')
     .controller('interface.main.controller', ['$scope', '$state', '$stateParams', 'interface.request.factory', 'toastr', function ($scope, $state, $stateParams, requestHelper, toastr) {
 
+        //Need to rethink....
+        $scope = {
 
-        $scope.message = {
-            subject: null,
-            content: null,
-            m1: null,
-            m2: null,
-            m3: null,
-            m4: null,
-            m5: null,
-            m6: null
+            message: {
+                subject: null,
+                content: null,
+            }
         };
 
         $scope.sendMessage = function (isValid) {
 
-            if(!isValid){
+            if (!isValid) {
                 return;
             }
-            requestHelper.sendMessage($scope.message.subject,$scope.message.content,$scope.message.m1,$scope.message.m2,$scope.message.m3,$scope.message.m4,$scope.message.m5,$scope.message.m6);
+            requestHelper.sendMessage($scope.message.subject, $scope.message.content, $scope.message.m1, $scope.message.m2, $scope.message.m3, $scope.message.m4, $scope.message.m5, $scope.message.m6);
         };
 
         //$scope.warnings = {
