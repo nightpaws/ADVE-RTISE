@@ -7,17 +7,21 @@ angular.module('interface')
 
         $scope.message = {
             subject: null,
-            message: null,
-            1: null,
-            2: null,
-            3: null,
-            4: null,
-            5: null,
-            6: null
+            content: null,
+            m1: null,
+            m2: null,
+            m3: null,
+            m4: null,
+            m5: null,
+            m6: null
         };
 
-        $scope.sendMessage = function () {
+        $scope.sendMessage = function (isValid) {
 
+            if(!isValid){
+                return;
+            }
+            requestHelper.sendMessage($scope.message.subject,$scope.message.content,$scope.message.m1,$scope.message.m2,$scope.message.m3,$scope.message.m4,$scope.message.m5,$scope.message.m6);
         };
 
         //$scope.warnings = {

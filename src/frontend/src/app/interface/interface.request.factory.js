@@ -18,7 +18,7 @@ angular.module('interface')
             })
         };
 
-        requestHelper.sendMessage = function (subject, message, years) {
+        requestHelper.sendMessage = function (subject, message,m1,m2,m3,m4,m5,m6) {
             var url = config.API_URL + '/interface/post/';
 
             return $http({
@@ -26,12 +26,12 @@ angular.module('interface')
                 url: url,
                 sub: subject,
                 msg: message,
-                1: 1,
-                2: 2,
-                3: 3,
-                4: 4,
-                5: 5,
-                6: 6
+                m1: 1,
+                m2: 2,
+                m3: 3,
+                m4: 4,
+                m5: 5,
+                m6: 6
             })
         };
 
