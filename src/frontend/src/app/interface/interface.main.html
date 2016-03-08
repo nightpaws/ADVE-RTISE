@@ -22,11 +22,11 @@
                     <!--https://jsfiddle.net/deeptechtons/TKVH6/-->
                     <ul ng-controller="checkboxController">
                         <li>Check All
-                            <checkbox ng-model="checkboxModel" ng-model="message.selAll" ng-click="checkAll()" class="btn-warning"/>
+                            <checkbox ng-model="message.selAll" ng-click="checkAll()" class="btn-warning"/>
                         </li>
                         <li ng-repeat="year in Years">
                             <label>{{year.group}}
-                                <checkbox ng-model="checkboxModel" id="m{{year.id}}" ng-model="message.m{{year.id}}" class="btn-primary"/>
+                                <checkbox id="m{{year.id}}" ng-model="message.m{{year.id}}" class="btn-primary"/>
                             </label>
                         </li>
                     </ul>
