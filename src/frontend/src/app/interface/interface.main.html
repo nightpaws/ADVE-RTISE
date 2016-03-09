@@ -35,7 +35,7 @@
                     <li ng-repeat="year in Years">
                         <label>
                             {{year.group}}
-                            <checkbox ng-model="checkboxModel" id="{{year.id}}" name="{{year.id}}" ng-model="message.Selected" value="{{year.id}}" class="btn-primary"/>
+                            <checkbox id="{{year.id}}" name="{{year.id}}" ng-model="message.Selected" value="{{year.id}}" class="btn-primary"/>
                         </label>
                     </li>
                 </ul>
