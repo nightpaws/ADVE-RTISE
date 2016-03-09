@@ -5,7 +5,7 @@
 <!--</div>-->
 <div id="interface-main" class="scrollable">
     <div class="message-container">
-        <form id="posting" name="messageForm" ng-submit="message(messageForm.$valid)" novalidate>
+        <form id="posting" name="messageForm" ng-submit="sendMessage(messageForm.$valid)" novalidate>
             <div class="form-group"
                  ng-class="{'has-error': messageForm.subject.$invalid && messageForm.subject.$touched}">
                 <label class="control-label" for="subject">Subject:</label>
