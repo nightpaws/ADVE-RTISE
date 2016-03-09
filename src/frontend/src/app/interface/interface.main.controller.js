@@ -9,7 +9,7 @@ angular.module('interface')
 
             message: {
                 subject: null,
-                content: null,
+                content: null
             },
             recipients: []
 
@@ -20,7 +20,23 @@ angular.module('interface')
             if (!isValid) {
                 return;
             }
-            requestHelper.sendMessage($scope.message.subject, $scope.message.content,$scope.recipients);
+
+            angular.forEach($scope.Years, function (message) {
+                if (message.Selected) $scope.recipients.push(Years.id);
+                toastr.info('Hit progress!', 'Development Flag');
+            });
+
+            requestHelper.sendMessage($scope.message.subject, $scope.message.content, $scope.recipients)
+                .then(function (data) {
+                    if (data.data.successful) {
+                        toastr.info('Hit Success!', 'Development Flag');
+                    } else {
+                        toastr.error(data.data.message, 'Error');
+                    }
+                })
+                .catch(function () {
+                    toastr.error('Couldn\'t reach server sorry about that', 'Error');
+                });
         };
 
         //$scope.warnings = {
