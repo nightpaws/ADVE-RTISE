@@ -9,8 +9,10 @@ angular.module('interface')
 
             message: {
                 subject: null,
-                content: null
-            }
+                content: null,
+            },
+            recipients: []
+
         };
 
         $scope.sendMessage = function (isValid) {
@@ -18,7 +20,7 @@ angular.module('interface')
             if (!isValid) {
                 return;
             }
-            requestHelper.sendMessage($scope.message.subject, $scope.message.content, $scope.message.m1, $scope.message.m2, $scope.message.m3, $scope.message.m4, $scope.message.m5, $scope.message.m6);
+            requestHelper.sendMessage($scope.message.subject, $scope.message.content,$scope.recipients);
         };
 
         //$scope.warnings = {
