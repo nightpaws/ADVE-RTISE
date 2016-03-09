@@ -9,7 +9,7 @@ angular.module('interface')
 
             message: {
                 subject: null,
-                content: null,
+                content: null
             }
         };
 
@@ -75,13 +75,13 @@ angular.module('interface')
             }
         ];
         $scope.checkAll = function () {
-            if ($scope.message.selAll) {
-                $scope.message.selAll = true;
+            if ($scope.selAll) {
+                $scope.selAll = true;
             } else {
-                $scope.message.selAll = false;
+                $scope.selAll = false;
             }
             angular.forEach($scope.Years, function (message) {
-                message.Selected = $scope.message.selAll;
+                message.Selected = $scope.selAll;
             });
         }
     });
