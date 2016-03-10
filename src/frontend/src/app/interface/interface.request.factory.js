@@ -6,19 +6,19 @@ angular.module('interface')
     .factory('interface.request.factory', ['$http', 'config', function ($http, config) {
 
         var requestHelper = {};
-
-        requestHelper.getInterfaceInfo = function () {
-
-            var url = config.API_URL + '/interface';
-
-            //should maybe be using https
-            return $http({
-                method: 'GET',
-                url: url
-            })
-        };
-
-        requestHelper.sendMessage = function (subject, message,recipients) {
+        //
+        //requestHelper.getInterfaceInfo = function () {
+        //
+        //    var url = config.API_URL + '/interface';
+        //
+        //    //should maybe be using https
+        //    return $http({
+        //        method: 'GET',
+        //        url: url
+        //    })
+        //};
+        //
+        requestHelper.sendMessage = function (subject, message, recipients) {
             var url = config.API_URL + '/interface/post/';
 
             return $http({
@@ -31,5 +31,6 @@ angular.module('interface')
         };
 
         return requestHelper;
+
 
     }]);
