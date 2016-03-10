@@ -27,11 +27,10 @@
                     <!--</li>-->
                     <li ng-repeat="year in Years">
                         <label>{{year.group}}
-                            <checkbox id="{{year.id}}" name="{{year.id}}" ng-required="recipients.selectedOptions" ng-model="recipients.selected" value="{{year.id}}" ng-change="isOptionsRequired()" class="btn-primary"/>
+                            <checkbox id="{{year.id}}" name="{{year.id}}" ng-model="message.Selected" value="{{year.id}}" class="btn-primary"/>
                         </label>
                     </li>
                 </ul>
-                <span style="color:red;" ng-if="!recipients.selectedOptions ">Required</span>
                 <button id="scheduleBtn" class="btn btn-info">Schedule</button>
                 <button id="submitBtn" type="submit" class="btn btn-danger" ng-disabled="!messageForm.$valid">
                     Submit
