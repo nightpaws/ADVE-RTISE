@@ -92,6 +92,7 @@ angular.module('interface')
                 id: 6
             }
         ];
+
         $scope.checkAll = function () {
             if ($scope.selectedAll) {
                 $scope.selectedAll = true;
@@ -102,5 +103,5 @@ angular.module('interface')
                 year.Selected = $scope.selectedAll;
             });
 
-        }
+        };
     });
