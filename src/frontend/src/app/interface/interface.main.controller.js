@@ -3,7 +3,32 @@
  */
 angular.module('interface')
     .controller('interface.main.controller', ['$scope', '$state', '$stateParams', 'interface.request.factory', 'toastr', function ($scope, $state, $stateParams, requestHelper, toastr) {
-
+        $scope.Years = [
+            {
+                group: "1st Year",
+                id: 1
+            },
+            {
+                group: "2nd Year",
+                id: 2
+            },
+            {
+                group: "3rd Year",
+                id: 3
+            },
+            {
+                group: "4th Year",
+                id: 4
+            },
+            {
+                group: "5rd Year",
+                id: 5
+            },
+            {
+                group: "PhD Year",
+                id: 6
+            }
+        ];
         //Need to rethink....
         $scope = {
 
@@ -63,45 +88,45 @@ angular.module('interface')
 
 
     }
-    ])
-    .controller("checkboxController", function checkboxController($scope) {
-        //Checkbox handling
-        $scope.Years = [
-            {
-                group: "1st Year",
-                id: 1
-            },
-            {
-                group: "2nd Year",
-                id: 2
-            },
-            {
-                group: "3rd Year",
-                id: 3
-            },
-            {
-                group: "4th Year",
-                id: 4
-            },
-            {
-                group: "5rd Year",
-                id: 5
-            },
-            {
-                group: "PhD Year",
-                id: 6
-            }
-        ];
+    ]);
+    //.controller("checkboxController", function checkboxController($scope) {
+        ////Checkbox handling
+        //$scope.Years = [
+        //    {
+        //        group: "1st Year",
+        //        id: 1
+        //    },
+        //    {
+        //        group: "2nd Year",
+        //        id: 2
+        //    },
+        //    {
+        //        group: "3rd Year",
+        //        id: 3
+        //    },
+        //    {
+        //        group: "4th Year",
+        //        id: 4
+        //    },
+        //    {
+        //        group: "5rd Year",
+        //        id: 5
+        //    },
+        //    {
+        //        group: "PhD Year",
+        //        id: 6
+        //    }
+        //];
 
-        $scope.checkAll = function () {
-            if ($scope.selectedAll) {
-                $scope.selectedAll = true;
-            } else {
-                $scope.selectedAll = false;
-            }
-            angular.forEach($scope.Years, function (year) {
-                year.Selected = $scope.selectedAll;
-            });
-
-        };
-    });
+        //$scope.checkAll = function () {
+        //    if ($scope.selectedAll) {
+        //        $scope.selectedAll = true;
+        //    } else {
+        //        $scope.selectedAll = false;
+        //    }
+        //    angular.forEach($scope.Years, function (year) {
+        //        year.Selected = $scope.selectedAll;
+        //    });
+        //
+        //};
+    //});
