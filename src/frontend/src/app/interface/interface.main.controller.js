@@ -3,7 +3,9 @@
  */
 angular.module('interface')
     .controller('interface.main.controller', ['$scope', 'interface.service', function ($scope, interfaceService) {
+
         console.log("main controller called");
+
         $scope.Years = [
             {
                 group: "1st Year",
@@ -30,7 +32,7 @@ angular.module('interface')
                 id: 6
             }
         ];
-        //Need to rethink....
+
         $scope = {
             message: {
                 subject: null,
@@ -44,13 +46,16 @@ angular.module('interface')
             if (!isValid) {
                 return;
             }
+            console.log("send valid!");
 
-
-            $scope.save = function () {
                 angular.forEach($scope.Years, function (year) {
                     if (year.selected) $scope.recipients.push(year.id);
                 });
-            };
+
+            console.log("pass to register!");
+            interfaceService.register($scope.message.subject,$scope.message.content,$scope.recipients);
+        }
+    }]);
 
             //    angular.forEach($scope.Years, function (message) {
             //
@@ -85,8 +90,7 @@ angular.module('interface')
             //    })
 
 
-        }
-    }]);
+
 //.controller("checkboxController", function checkboxController($scope) {
 ////Checkbox handling
 //$scope.Years = [
