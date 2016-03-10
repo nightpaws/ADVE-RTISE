@@ -3,7 +3,7 @@
  */
 angular.module('interface')
     .controller('interface.main.controller', ['$scope', 'interface.service', function ($scope, interfaceService) {
-    console.log("main controller called");
+        console.log("main controller called");
         $scope.Years = [
             {
                 group: "1st Year",
@@ -46,47 +46,47 @@ angular.module('interface')
             }
 
 
-            $scope.save = function(){
-                angular.forEach($scope.Years, function(year){
+            $scope.save = function () {
+                angular.forEach($scope.Years, function (year) {
                     if (year.selected) $scope.recipients.push(year.id);
                 });
             };
 
-        //    angular.forEach($scope.Years, function (message) {
-        //
-        //        if (message.Selected) $scope.recipients.push(Years.id);
-        //
-        //    });
-        //
-        //    interfaceService.sendMessage($scope.message.subject, $scope.message.content, $scope.recipients)
-        //console.log("interfaceService return successful");
-        //};
+            //    angular.forEach($scope.Years, function (message) {
+            //
+            //        if (message.Selected) $scope.recipients.push(Years.id);
+            //
+            //    });
+            //
+            //    interfaceService.sendMessage($scope.message.subject, $scope.message.content, $scope.recipients)
+            //console.log("interfaceService return successful");
+            //};
 
-        //$scope.warnings = {
-        //    //scope: [],
-        //    //otherscope: []
-        //};
-        //
-        //requestHelper.getInterfaceInfo()
-        //    .then(function(data){
-        //
-        //        if(!data.data.successful){
-        //            toastr.error(data.data.message, 'Error');
-        //        }else{
-        //
-        //            //Toastr Messages go here
-        //
-        //            toastr.error('Unknown warning type', 'Error');
-        //        }
-        //
-        //    })
-        //    .catch(function(data){
-        //        toastr.error('An error occurred while connecting to the server.', 'Error');
-        //    })
+            //$scope.warnings = {
+            //    //scope: [],
+            //    //otherscope: []
+            //};
+            //
+            //requestHelper.getInterfaceInfo()
+            //    .then(function(data){
+            //
+            //        if(!data.data.successful){
+            //            toastr.error(data.data.message, 'Error');
+            //        }else{
+            //
+            //            //Toastr Messages go here
+            //
+            //            toastr.error('Unknown warning type', 'Error');
+            //        }
+            //
+            //    })
+            //    .catch(function(data){
+            //        toastr.error('An error occurred while connecting to the server.', 'Error');
+            //    })
 
 
-    }
-    ]);
+        }
+    }]);
 //.controller("checkboxController", function checkboxController($scope) {
 ////Checkbox handling
 //$scope.Years = [
