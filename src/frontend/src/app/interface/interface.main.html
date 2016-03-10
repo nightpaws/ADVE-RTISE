@@ -21,20 +21,12 @@
             <div id="btnBox" class="form-group">
                 <label class="control-label" for="checkboxController">Select Recipients:</label>
                 <!--https://jsfiddle.net/deeptechtons/TKVH6/-->
-                <ul ng-controller="checkboxController" id="checkboxController">
-                    <li>
-                        Check All
-                        <checkbox ng-model="selAll" ng-click="checkAll()" class="btn-warning"/>
-                        <!--<label>1st Year:<checkbox ng-model="checkbox1" id="y1" name="y1" class="btn-primary"/></label>-->
-                        <!--<label>2nd Year:<checkbox ng-model="checkbox2" id="y2" name="y2" class="btn-primary"/></label>-->
-                        <!--<label>3rd Year:<checkbox ng-model="checkbox3" id="y3" name="y3" class="btn-primary"/></label>-->
-                        <!--<label>4th Year:<checkbox ng-model="checkbox4" id="y4" name="y4" class="btn-primary"/></label>-->
-                        <!--<label>5th Year:<checkbox ng-model="checkbox5" id="y5" name="y5" class="btn-primary"/></label>-->
-                        <!--<label>PhD Year:<checkbox ng-model="checkbox6" id="y6" name="y6" class="btn-primary"/></label>-->
+                <ul ng-controller="checkboxController">
+                    <li>Check All
+                        <checkbox ng-model="selectedAll" ng-click="checkAll()" class="btn-warning"/>
                     </li>
                     <li ng-repeat="year in Years">
-                        <label>
-                            {{year.group}}
+                        <label>{{year.group}}
                             <checkbox id="{{year.id}}" name="{{year.id}}" ng-model="message.Selected" value="{{year.id}}" class="btn-primary"/>
                         </label>
                     </li>

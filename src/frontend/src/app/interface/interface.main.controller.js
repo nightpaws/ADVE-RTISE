@@ -93,13 +93,14 @@ angular.module('interface')
             }
         ];
         $scope.checkAll = function () {
-            if ($scope.selAll) {
-                $scope.selAll = true;
+            if ($scope.selectedAll) {
+                $scope.selectedAll = true;
             } else {
-                $scope.selAll = false;
+                $scope.selectedAll = false;
             }
-            angular.forEach($scope.Years, function (message) {
-                message.Selected = $scope.selAll;
+            angular.forEach($scope.Years, function (year) {
+                year.Selected = $scope.selectedAll;
             });
+
         }
     });
