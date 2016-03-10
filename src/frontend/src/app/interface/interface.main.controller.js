@@ -3,7 +3,7 @@
  */
 angular.module('interface')
     .controller('interface.main.controller', ['$scope', 'interface.service', function ($scope, interfaceService) {
-
+    console.log("main controller called");
         $scope.Years = [
             {
                 group: "1st Year",
@@ -32,27 +32,35 @@ angular.module('interface')
         ];
         //Need to rethink....
         $scope = {
-
             message: {
                 subject: null,
                 content: null
             },
             recipients: []
-
         };
 
         $scope.sendMessage = function (isValid) {
+            console.log("send message!");
             if (!isValid) {
                 return;
             }
-            angular.forEach($scope.Years, function (message) {
-                if (message.Selected) $scope.recipients.push(Years.id);
 
-            });
 
-            interfaceService.sendMessage($scope.message.subject, $scope.message.content, $scope.recipients)
+            $scope.save = function(){
+                angular.forEach($scope.Years, function(year){
+                    if (year.selected) $scope.recipients.push(year.id);
+                });
+            };
 
-        };
+        //    angular.forEach($scope.Years, function (message) {
+        //
+        //        if (message.Selected) $scope.recipients.push(Years.id);
+        //
+        //    });
+        //
+        //    interfaceService.sendMessage($scope.message.subject, $scope.message.content, $scope.recipients)
+        //console.log("interfaceService return successful");
+        //};
 
         //$scope.warnings = {
         //    //scope: [],
