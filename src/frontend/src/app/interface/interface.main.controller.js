@@ -75,20 +75,20 @@ angular.module('interface')
             console.log("Not Yet Implemented!")
         };
     }
-        .controller('newMessageModalController', ['$scope', '$uibModalInstance', function ($scope, $uibModalInstance) {
+    ])
+    .controller('newMessageModalController', ['$scope', '$uibModalInstance', function ($scope, $uibModalInstance) {
 
-            $scope.id = null;
+        $scope.id = null;
 
-            $scope.ok = function () {
+        $scope.ok = function () {
 
-                $uibModalInstance.close($scope.id);
-            };
+            $uibModalInstance.close($scope.id);
+        };
 
-            $scope.cancel = function () {
-                $uibModalInstance.dismiss('cancel');
-            };
-        }
+        $scope.cancel = function () {
+            $uibModalInstance.dismiss('cancel');
+        };
+    }
 
 
-        ])
     ]);
