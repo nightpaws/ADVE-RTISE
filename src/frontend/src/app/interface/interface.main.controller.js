@@ -41,14 +41,17 @@ angular.module('interface')
         };
 
         $scope.sendMessage = function (isValid) {
+            toastr.info('Hit progress!', 'Development Flag');
 
             if (!isValid) {
+                toastr.error('isValid=false', 'Development Flag');
                 return;
             }
+            toastr.info('isValid=true', 'Development Flag');
 
             angular.forEach($scope.Years, function (message) {
                 if (message.Selected) $scope.recipients.push(Years.id);
-                toastr.info('Hit progress!', 'Development Flag');
+
             });
 
             requestHelper.sendMessage($scope.message.subject, $scope.message.content, $scope.recipients)
