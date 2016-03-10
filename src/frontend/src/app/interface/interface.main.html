@@ -20,12 +20,12 @@
                          ng-class="{'has-error': messageForm.subject.$invalid && messageForm.subject.$touched}">
                         <label class="control-label" for="subject">Subject:</label>
                         <input type="text" class="form-control" id="subject" name="subject" placeholder="Subject/Tweet"
-                               ng-model="message.subject" required>
+                               ng-model="subject" required>
                     </div>
                     <div class="form-group">
                         <label class="control-label" for="message">Message Content:</label>
                         <textarea type="text" class="form-control" rows="5" id="message" name="message"
-                                  placeholder="Got more to say?" ng-model="message.content"></textarea>
+                                  placeholder="Got more to say?" ng-model="content"></textarea>
                     </div>
                     <div class="checkbox"
                          ng-class="{'has-error': messageForm.accept.$invalid && messageForm.accept.$touched}">
@@ -33,7 +33,7 @@
                         <ul>
                             <li ng-repeat="year in Years">
                                 <label>{{year.group}}
-                                    <checkbox id="{{year.id}}" name="{{year.id}}" ng-model="year.selected"
+                                    <checkbox id="{{year.id}}" name="{{year.id}}" ng-model="recipients"
                                               value="{{year.id}}" class="btn-primary"></checkbox>
                                 </label>
                             </li>
