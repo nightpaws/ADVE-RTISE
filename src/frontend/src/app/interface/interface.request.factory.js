@@ -30,6 +30,17 @@ angular.module('interface')
             })
         };
 
+        requestHelper.get = function(){
+
+            var url =config.API_URL +  '/interface/get/messages';
+
+            return $http({
+                method: 'GET',
+                url: url
+            })
+
+        };
+
         return requestHelper;
 
 

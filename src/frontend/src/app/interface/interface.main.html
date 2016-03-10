@@ -5,31 +5,74 @@
 <!--</div>-->
 <div id="interface-main" class="scrollable">
     <div class="message-container">
-
-        <form name="messageForm" ng-submit="sendMessage(messageForm.$valid)" novalidate>
-
-            <div class="form-group" ng-class="{'has-error': messageForm.subject.$invalid && messageForm.subject.$touched}">
-                <label class="control-label" for="subject">Subject:</label>
-                <input type="text" class="form-control" id="subject" name="subject" placeholder="Subject/Tweet" ng-model="message.subject" required>
+        <div id="btnBox">
+            <button id="new-Post" ng-click="message()">New Post</button>
+            <button id="schedule-Post" ng-click="schedule()">Schedule</button>
+        </div>
+        <script type="text/ng-template" id="newPost.html">
+            <div class="modal-header">
+                <h3 class="modal-header">Submit a Message</h3>
             </div>
+            <form name="messageForm" ng-submit="submit(messageForm.$invalid)" novalidate>
+                <div class="modal-body">
 
-            <div class="form-group">
-                <label class="control-label" for="message">Message Content:</label>
-                <textarea type="text" class="form-control" rows="5" id="message" name="message" placeholder="Got more to say?" ng-model="message.content"></textarea>
-            </div>
+                    <div class="form-group"
+                         ng-class="{'has-error': messageForm.subject.$invalid && messageForm.subject.$touched}">
+                        <label class="control-label" for="subject">Subject:</label>
+                        <input type="text" class="form-control" id="subject" name="subject" placeholder="Subject/Tweet"
+                               ng-model="message.subject" required>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label" for="message">Message Content:</label>
+                        <textarea type="text" class="form-control" rows="5" id="message" name="message"
+                                  placeholder="Got more to say?" ng-model="message.content"></textarea>
+                    </div>
+                    <div class="checkbox"
+                         ng-class="{'has-error': messageForm.accept.$invalid && messageForm.accept.$touched}">
+                        <!--https://jsfiddle.net/deeptechtons/TKVH6/-->
+                        <ul>
+                            <li ng-repeat="year in Years">
+                                <label>{{year.group}}
+                                    <checkbox id="{{year.id}}" name="{{year.id}}" ng-model="year.selected"
+                                              value="{{year.id}}" class="btn-primary"></checkbox>
+                                </label>
+                            </li>
+                        </ul>
+                    </div>
 
-            <div id="btnBox" class="checkbox" ng-class="{'has-error': messageForm.accept.$invalid && messageForm.accept.$touched}">
-                <!--https://jsfiddle.net/deeptechtons/TKVH6/-->
-                <ul>
-                    <li ng-repeat="year in Years">
-                        <label>{{year.group}}
-                            <checkbox id="{{year.id}}" name="{{year.id}}" ng-model="year.selected" value="{{year.id}}" class="btn-primary"></checkbox>
-                        </label>
-                    </li>
-                </ul>
-            </div>
-            <button type="submit" class="btn btn-danger" ng-disabled="!messageForm.$valid">Submit</button>
-        </form>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-danger" type="button" ng-click="ok()" ng-disabled="!messageForm.$valid">
+                        Submit
+                    </button>
+                    <button class="btn btn-primary" type="button" ng-click="cancel()">Cancel</button>
+                </div>
+            </form>
+        </script>
+        <!--<form name="messageForm" ng-submit="sendMessage(messageForm.$valid)" novalidate>-->
+
+        <!--<div class="form-group" ng-class="{'has-error': messageForm.subject.$invalid && messageForm.subject.$touched}">-->
+        <!--<label class="control-label" for="subject">Subject:</label>-->
+        <!--<input type="text" class="form-control" id="subject" name="subject" placeholder="Subject/Tweet" ng-model="message.subject" required>-->
+        <!--</div>-->
+
+        <!--<div class="form-group">-->
+        <!--<label class="control-label" for="message">Message Content:</label>-->
+        <!--<textarea type="text" class="form-control" rows="5" id="message" name="message" placeholder="Got more to say?" ng-model="message.content"></textarea>-->
+        <!--</div>-->
+
+        <!--<div id="btnBox" class="checkbox" ng-class="{'has-error': messageForm.accept.$invalid && messageForm.accept.$touched}">-->
+        <!--&lt;!&ndash;https://jsfiddle.net/deeptechtons/TKVH6/&ndash;&gt;-->
+        <!--<ul>-->
+        <!--<li ng-repeat="year in Years">-->
+        <!--<label>{{year.group}}-->
+        <!--<checkbox id="{{year.id}}" name="{{year.id}}" ng-model="year.selected" value="{{year.id}}" class="btn-primary"></checkbox>-->
+        <!--</label>-->
+        <!--</li>-->
+        <!--</ul>-->
+        <!--</div>-->
+        <!--<button type="submit" class="btn btn-danger" ng-disabled="!messageForm.$valid">Submit</button>-->
+        <!--</form>-->
 
     </div>
 </div>
