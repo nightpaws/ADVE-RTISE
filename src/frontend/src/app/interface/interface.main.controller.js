@@ -8,7 +8,7 @@ angular.module('interface')
 
         console.log("main controller called");
 
-         $scope.message = function () {
+        $scope.message = function () {
 
             var modal = $uibModal.open({
                 animation: true,
@@ -50,18 +50,20 @@ angular.module('interface')
     ])
     .controller('newMessageModalController', ['$scope', '$uibModalInstance', function ($scope, $uibModalInstance) {
 
-        $scope.subject = null;
-        $scope.content = null;
-        $scope.y1 = false;
-        $scope.y2 = false;
-        $scope.y3 = false;
-        $scope.y4 = false;
-        $scope.y5 = false;
-        $scope.y6 = false;
+        $scope.msg = {
+            subject: null,
+            content: null,
+            y1: false,
+            y2: false,
+            y3: false,
+            y4: false,
+            y5: false,
+            y6: false
+        }
 
         $scope.ok = function () {
 
-            $uibModalInstance.close($scope.subject,$scope.content,$scope.y1,$scope.y2,$scope.y3,$scope.y4,$scope.y5,$scope.y6);
+            $uibModalInstance.close($scope.msg.subject, $scope.msg.content, $scope.msg.y1, $scope.msg.y2, $scope.msg.y3, $scope.msg.y4, $scope.msg.y5, $scope.msg.y6);
         };
 
         $scope.cancel = function () {
