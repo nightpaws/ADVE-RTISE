@@ -93,31 +93,10 @@
     -webkit-padding-top: 0.5rem;
   }
 
-  table {
-    table-layout: fixed;
-  }
-
-  td {
-    padding: 0.1rem;
-    width: 50%;
-    text-align:right;
-  }
+  //home
 
   #btnBox {
     text-align:center;
-  }
-
-  //
-
-  .modal-header{
-    background: black;
-    text-align: center;
-    color: whitesmoke;
-    border-radius: 0.75rem;
-  }
-
-  .modal-content {
-    background: #D0D0D0;
   }
 
  #submitBtn #scheduleBtn{
@@ -131,11 +110,14 @@
 
 
   }
+
+
 }
+
 
 @media screen and (max-width: 850px) {
 
-  #interface-main {
+  #interface {
 
     #interface-welcome {
 
