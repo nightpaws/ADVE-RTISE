@@ -24,11 +24,11 @@
                      ng-class="{'has-error': messageForm.subject.$invalid && messageForm.subject.$touched}">
                     <label class="control-label" for="subject">Subject</label>
                     <input type="text" class="form-control" id="subject" name="subject" placeholder="Subject/Tweet"
-                           ng-model="subject" required>
+                           ng-model="msg.subject" required>
                 </div>
                 <div class="form-group">
                     <label class="control-label" for="content">Message Content</label>
-                        <textarea type="text" class="form-control" rows="5" id="content" name="content" placeholder="Got more to say?" ng-model="content"></textarea>
+                        <textarea type="text" class="form-control" rows="5" id="content" name="content" placeholder="Got more to say?" ng-model="msg.content"></textarea>
                 </div>
                 <div class="form-group">
                     <label class="control-label" for="recipients">Recipients</label>
@@ -36,26 +36,26 @@
                     <table id="recipients" name="recipients">
                         <tr>
                             <td><label>First Year</label>
-                                <checkbox ng-model="y1" class="btn-primary"/>
+                                <checkbox ng-model="msg.y1" class="btn-primary"/>
                             </td>
                             <td><label>Second Year</label>
-                                <checkbox ng-model="y2" class="btn-primary"/>
+                                <checkbox ng-model="msg.y2" class="btn-primary"/>
                             </td>
                         </tr>
                         <tr>
                             <td><label>Third Year</label>
-                                <checkbox ng-model="y3" class="btn-primary"/>
+                                <checkbox ng-model="msg.y3" class="btn-primary"/>
                             </td>
                             <td><label>Fourth Year</label>
-                                <checkbox ng-model="y4" class="btn-primary"/>
+                                <checkbox ng-model="msg.y4" class="btn-primary"/>
                             </td>
                         </tr>
                         <tr>
                             <td><label>Fifth Year</label>
-                                <checkbox ng-model="y5" class="btn-primary"/>
+                                <checkbox ng-model="msg.y5" class="btn-primary"/>
                             </td>
                             <td><label>PhD Year</label>
-                                <checkbox ng-model="y6" class="btn-primary"/>
+                                <checkbox ng-model="msg.y6" class="btn-primary"/>
                             </td>
                         </tr>
                     </table>
