@@ -159,8 +159,10 @@ html, body, .full-height {
 .modal-dialog {
   margin-top: 4.2rem;
 
-  button{
+
+  button input textarea{
     border-radius: 0.5rem;
+    resize: none;
   }
 }
 
