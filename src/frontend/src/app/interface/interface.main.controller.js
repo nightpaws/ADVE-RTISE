@@ -16,18 +16,18 @@ angular.module('interface')
                 controller: 'newMessageModalController'
             });
 
-            modal.result.then(function (subject, content, y1, y2, y3, y4, y5, y6) {
-                console.log("subject: " + subject);
-                console.log("content: " + content);
-                console.log("y1: " + y1);
-                console.log("y2: " + y2);
-                console.log("y3: " + y3);
-                console.log("y4: " + y4);
-                console.log("y5: " + y5);
-                console.log("y6: " + y6);
+            modal.result.then(function (msg) {
+                console.log("subject: " + msg.subject);
+                console.log("content: " + msg.content);
+                console.log("y1: " + msg.y1);
+                console.log("y2: " + msg.y2);
+                console.log("y3: " + msg.y3);
+                console.log("y4: " + msg.y4);
+                console.log("y5: " + msg.y5);
+                console.log("y6: " + msg.y6);
 
 
-                requestHelper.sendMessage(subject, content, y1, y2, y3, y4, y5, y6)
+                requestHelper.sendMessage(msg.subject, msg.content, msg.y1, msg.y2, msg.y3, msg.y4, msg.y5, msg.y6)
                     .then(function (data) {
                         if (data.data.successful) {
                             toastr.info("Debug point reached!", "successful!");
@@ -63,7 +63,7 @@ angular.module('interface')
 
         $scope.ok = function () {
 
-            $uibModalInstance.close($scope.msg.subject, $scope.msg.content, $scope.msg.y1, $scope.msg.y2, $scope.msg.y3, $scope.msg.y4, $scope.msg.y5, $scope.msg.y6);
+            $uibModalInstance.close($scope.msg);
         };
 
         $scope.cancel = function () {
