@@ -18,21 +18,22 @@ angular.module('interface')
         //    })
         //};
         //
-        requestHelper.sendMessage = function (subject, message, recipients) {
+        requestHelper.sendMessage = function (subject, content, y1, y2, y3, y4, y5, y6) {
             var url = config.API_URL + '/interface/post/';
+            var recipients = [y1, y2, y3, y4, y5, y6];
 
             return $http({
                 method: 'POST',
                 url: url,
                 sub: subject,
-                msg: message,
+                msg: content,
                 rec: recipients
             })
         };
 
-        requestHelper.get = function(){
+        requestHelper.get = function () {
 
-            var url =config.API_URL +  '/interface/get/messages';
+            var url = config.API_URL + '/interface/get/messages';
 
             return $http({
                 method: 'GET',

@@ -6,32 +6,32 @@ angular.module('interface')
 
         console.log("main controller called");
 
-        $scope.Years = [
-            {
-                group: "1st Year",
-                id: 1
-            },
-            {
-                group: "2nd Year",
-                id: 2
-            },
-            {
-                group: "3rd Year",
-                id: 3
-            },
-            {
-                group: "4th Year",
-                id: 4
-            },
-            {
-                group: "5rd Year",
-                id: 5
-            },
-            {
-                group: "PhD Year",
-                id: 6
-            }
-        ];
+        //$scope.Years = [
+        //    {
+        //        group: "1st Year",
+        //        id: 1
+        //    },
+        //    {
+        //        group: "2nd Year",
+        //        id: 2
+        //    },
+        //    {
+        //        group: "3rd Year",
+        //        id: 3
+        //    },
+        //    {
+        //        group: "4th Year",
+        //        id: 4
+        //    },
+        //    {
+        //        group: "5rd Year",
+        //        id: 5
+        //    },
+        //    {
+        //        group: "PhD Year",
+        //        id: 6
+        //    }
+        //];
 
         //$scope = {
         //    message: {
@@ -50,13 +50,18 @@ angular.module('interface')
                 controller: 'newMessageModalController'
             });
 
-            modal.result.then(function (subject, content, recipients) {
+            modal.result.then(function (subject, content, y1, y2, y3, y4, y5, y6) {
                 console.log("subject: " + subject);
                 console.log("content: " + content);
-                console.log("recipients: " + recipients);
+                console.log("y1: " + y1);
+                console.log("y2: " + y2);
+                console.log("y3: " + y3);
+                console.log("y4: " + y4);
+                console.log("y5: " + y5);
+                console.log("y6: " + y6);
 
 
-                requestHelper.sendMessage(subject, content, recipients)
+                requestHelper.sendMessage(subject, content, y1, y2, y3, y4, y5, y6)
                     .then(function (data) {
                         if (data.data.successful) {
                             toastr.info("Debug point reached!", "successful!");
