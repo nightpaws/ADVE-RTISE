@@ -4,7 +4,7 @@
 angular.module('interface')
     .controller('interface.main.controller', ['$scope', 'interface.request.factory', '$uibModal', 'toastr', '$state', function ($scope, requestHelper, $uibModal, toastr, $state) {
 
-        $scope.interface = [];
+        //$scope.message = [];
 
         console.log("main controller called");
 

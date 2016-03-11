@@ -28,11 +28,9 @@
                 </div>
                 <div class="form-group">
                     <label class="control-label" for="content">Message Content</label>
-                        <textarea type="text" class="form-control" rows="5" id="content" name="content"
-                                  placeholder="Got more to say?" ng-model="content"></textarea>
+                        <textarea type="text" class="form-control" rows="5" id="content" name="content" placeholder="Got more to say?" ng-model="content"></textarea>
                 </div>
-                <div class="form-group"
-                     ng-class="{'has-error': messageForm.accept.$invalid && messageForm.accept.$touched}">
+                <div class="form-group">
                     <label class="control-label" for="recipients">Recipients</label>
                     <!--https://jsfiddle.net/deeptechtons/TKVH6/-->
                     <table id="recipients" name="recipients">
