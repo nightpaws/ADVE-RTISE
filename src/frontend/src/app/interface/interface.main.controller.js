@@ -4,47 +4,13 @@
 angular.module('interface')
     .controller('interface.main.controller', ['$scope', 'interface.request.factory', '$uibModal', 'toastr', '$state', function ($scope, requestHelper, $uibModal, toastr, $state) {
 
+        $scope.interface = [];
+
         console.log("main controller called");
 
-        //$scope.Years = [
-        //    {
-        //        group: "1st Year",
-        //        id: 1
-        //    },
-        //    {
-        //        group: "2nd Year",
-        //        id: 2
-        //    },
-        //    {
-        //        group: "3rd Year",
-        //        id: 3
-        //    },
-        //    {
-        //        group: "4th Year",
-        //        id: 4
-        //    },
-        //    {
-        //        group: "5rd Year",
-        //        id: 5
-        //    },
-        //    {
-        //        group: "PhD Year",
-        //        id: 6
-        //    }
-        //];
-
-        //$scope = {
-        //    message: {
-        //        subject: null,
-        //        content: null
-        //    },
-        //    recipients: []
-        //};
-
-        $scope.message = function () {
+         $scope.message = function () {
 
             var modal = $uibModal.open({
-
                 animation: true,
                 templateUrl: 'newPost.html',
                 controller: 'newMessageModalController'
@@ -77,6 +43,7 @@ angular.module('interface')
             });
         };
         $scope.schedule = function () {
+            toastr.info("Not Yet Implemented!", "Information");
             console.log("Not Yet Implemented!")
         };
     }

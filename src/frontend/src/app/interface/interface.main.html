@@ -3,27 +3,30 @@
 <!--<h1>Home Screen!</h1>-->
 <!--</div>-->
 <!--</div>-->
-<div id="interface-main" class="scrollable">
-    <div class="message-container">
+<div id="interface">
+    <div class="control">
         <div id="btnBox">
             <button class="btn btn-primary" id="new-Post" ng-click="message()">New Post</button>
             <button class="btn btn-info" id="schedule-Post" ng-click="schedule()">Schedule</button>
         </div>
+        <div>
+            <!--Content below the buttons!-->
+        </div>
         <script type="text/ng-template" id="newPost.html">
             <div class="modal-header">
-                <h3 class="modal-header">Submit a Message</h3>
+                <h3 class="modal-title">Submit a Message</h3>
             </div>
             <form name="messageForm" ng-submit="submit(messageForm.$invalid)" novalidate>
                 <div class="modal-body">
 
                     <div class="form-group"
                          ng-class="{'has-error': messageForm.subject.$invalid && messageForm.subject.$touched}">
-                        <label class="control-label" for="subject">Subject:</label>
+                        <label class="control-label" for="subject">Subject</label>
                         <input type="text" class="form-control" id="subject" name="subject" placeholder="Subject/Tweet"
                                ng-model="subject" required>
                     </div>
                     <div class="form-group">
-                        <label class="control-label" for="content">Message Content:</label>
+                        <label class="control-label" for="content">Message Content</label>
                         <textarea type="text" class="form-control" rows="5" id="content" name="content"
                                   placeholder="Got more to say?" ng-model="content"></textarea>
                     </div>
@@ -57,18 +60,6 @@
                                 </td>
                             </tr>
                         </table>
-                        <!--<li><label>First Year</label><checkbox ng-mode="y1" class="btn-primary"/></li>-->
-                        <!--<li><label>Second Year</label><checkbox ng-mode="y2" class="btn-primary"/></li>-->
-                        <!--<li><label>Third Year</label><checkbox ng-mode="y3" class="btn-primary"/></li>-->
-                        <!--<li><label>Fourth Year</label><checkbox ng-mode="y4" class="btn-primary"/></li>-->
-                        <!--<li><label>Fifth Year</label><checkbox ng-mode="y5" class="btn-primary"/></li>-->
-                        <!--<li><label>PhD Year</label><checkbox ng-mode="y6" class="btn-primary"/></li>-->
-                        <!--<li ng-repeat="year in Years">-->
-                        <!--<label>{{year.group}}-->
-                        <!--<checkbox id="{{year.id}}" name="{{year.id}}" ng-model="recipients"-->
-                        <!--value="{{year.id}}" class="btn-primary"></checkbox>-->
-                        <!--</label>-->
-                        <!--</li>-->
                         </ul>
                     </div>
 
