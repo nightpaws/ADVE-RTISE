@@ -50,11 +50,18 @@ angular.module('interface')
     ])
     .controller('newMessageModalController', ['$scope', '$uibModalInstance', function ($scope, $uibModalInstance) {
 
-        $scope.id = null;
+        $scope.subject = null;
+        $scope.content = null;
+        $scope.y1 = false;
+        $scope.y2 = false;
+        $scope.y3 = false;
+        $scope.y4 = false;
+        $scope.y5 = false;
+        $scope.y6 = false;
 
         $scope.ok = function () {
 
-            $uibModalInstance.close($scope.id);
+            $uibModalInstance.close($scope.subject,$scope.content,$scope.y1,$scope.y2,$scope.y3,$scope.y4,$scope.y5,$scope.y6);
         };
 
         $scope.cancel = function () {
