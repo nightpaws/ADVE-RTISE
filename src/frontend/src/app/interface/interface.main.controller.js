@@ -4,11 +4,11 @@
 angular.module('interface')
     .controller('interface.main.controller', ['$scope', 'interface.request.factory', '$uibModal', 'toastr', '$state', function ($scope, requestHelper, $uibModal, toastr, $state) {
 
-        //$scope.message = [];
+        $scope.interface = [];
 
         console.log("main controller called");
 
-         $scope.interface = function () {
+         $scope.message = function () {
 
             var modal = $uibModal.open({
                 animation: true,
