@@ -8,7 +8,7 @@ angular.module('interface')
 
         console.log("main controller called");
 
-         $scope.message = function () {
+         $scope.interface = function () {
 
             var modal = $uibModal.open({
                 animation: true,

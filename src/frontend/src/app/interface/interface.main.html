@@ -33,9 +33,9 @@
                 </div>
                 <div class="form-group"
                      ng-class="{'has-error': messageForm.accept.$invalid && messageForm.accept.$touched}">
-                    <label class="control-label">Message Content:</label>
+                    <label class="control-label" for="recipients">Recipients</label>
                     <!--https://jsfiddle.net/deeptechtons/TKVH6/-->
-                    <table>
+                    <table id="recipients" name="recipients">
                         <tr>
                             <td><label>First Year</label>
                                 <checkbox ng-model="y1" class="btn-primary"/>
@@ -61,7 +61,6 @@
                             </td>
                         </tr>
                     </table>
-                    </ul>
                 </div>
 
             </div>
