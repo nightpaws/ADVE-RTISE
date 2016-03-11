@@ -37,6 +37,12 @@
     font-size: 0.8rem;
   }
 
+  #username #password #login #reg {
+    -webkit-border-radius:0.5rem;
+    -moz-border-radius:0.5rem;
+    border-radius: 0.5rem;
+  }
+
   #user-login-register {
     margin-top: 1rem;
 
