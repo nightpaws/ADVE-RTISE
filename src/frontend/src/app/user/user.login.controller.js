@@ -11,6 +11,7 @@ angular.module('user')
             givenNam: null,
             cn: null,
             email: null,
+            isLecturer: null,
             isAdmin: null,
             createdOn: null
         };

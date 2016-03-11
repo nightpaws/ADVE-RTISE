@@ -53,10 +53,14 @@ var Auth = {
                 }else{
 
 
+
+
+
                     deferred.resolve({
                         username: doc.username,
                         email: doc.email,
                         createdOn: doc.createdOn,
+                        isLecturer: 'boop',
                         isAdmin: doc.isAdmin,
                         cn: doc.cn,
                         givenName: doc.givenName,

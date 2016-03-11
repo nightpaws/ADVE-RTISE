@@ -9,6 +9,7 @@ angular.module('user')
         $scope.givenName = user.givenName;
         $scope.cn = user.cn;
         $scope.email = user.email;
+        $scope.isLecturer = user.isLecturer;
         $scope.isAdmin = user.isAdmin;
         $scope.createdOn = user.createdOn;
         $scope.imageurl = user.imageurl;
