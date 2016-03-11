@@ -161,20 +161,21 @@ html, body, .full-height {
 }
 
 .modal-content {
-  border-radius: 0;
+  border-radius: 0.5rem;
   background: #D0D0D0;
 
 }
 
 .modal-header{
   background: black;
+  border-radius: 0.5rem 0.5rem 0rem 0rem;
   text-align: center;
   color: whitesmoke;
-  border-radius: 0.75rem;
 }
 
 #recipients {
   table-layout: fixed;
+  width: 80%;
 }
 
 #recipients td {
