@@ -10,7 +10,7 @@ angular.module('schedule', [])
                 templateUrl: 'app/schedule/schedule.main.html',
                 controller: 'schedule.main.controller',
                 onEnter: function($rootScope){
-                    $rootScope.app.stateTitle = 'Message Schedule';
+                    $rootScope.app.stateTitle = 'Schedule';
                 }
             })
 
