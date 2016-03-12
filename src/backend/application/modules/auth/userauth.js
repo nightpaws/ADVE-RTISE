@@ -16,6 +16,26 @@ var Auth = {
         deferred = q.defer();
 
 
+        var lecturerStatus = false;
+
+        //check mongodb for permission
+
+        courseModel.findOne({'uid': username}, function (err, res) {
+            console.log("cm0 called");
+            if (err) {
+                console.log("cm1 called");
+                lecturerStatus = false;
+            } else if (!doc) {
+                lecturerStatus = false;
+                console.log("cm2 called");
+            } else {
+                lecturerStatus = true;
+                console.log("cm3 called");
+            }
+        });
+
+
+
         userModel.findOne({'username': username}, function (err, doc) {
 
             if (err) {
@@ -52,22 +72,6 @@ var Auth = {
                         wrongPass: true
                     });
                 } else {
-
-                    var lecturerStatus = null;
-
-                    //check mongodb for permission
-
-                    courseModel.findOne({'uid': username}, function (err, doc) {
-                        if (err) {
-                            lecturerStatus = false;
-                        } else if (!doc) {
-                            lecturerStatus = false;
-                        } else {
-                            lecturerStatus = true;
-                        }
-                    });
-
-
                     deferred.resolve({
                         username: doc.username,
                         email: doc.email,
