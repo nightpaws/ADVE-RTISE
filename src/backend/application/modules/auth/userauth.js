@@ -25,7 +25,7 @@ var Auth = {
             if (err) {
                 console.log("cm1 called");
                 lecturerStatus = false;
-            } else if (!doc) {
+            } else if (!res) {
                 lecturerStatus = false;
                 console.log("cm2 called");
             } else {
