@@ -64,12 +64,11 @@ angular.module('user')
             return user;
         };
 
-        this.getToken = function(){
-            return user.token;
-        };
-
         this.getAdmin = function(){
             return user.isAdmin;
+        }
+        this.getLecturer = function(){
+            return user.isLecturer;
         }
 
         this.loadUser = function(){

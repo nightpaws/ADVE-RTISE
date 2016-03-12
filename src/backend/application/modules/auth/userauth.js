@@ -6,18 +6,19 @@ var deferred = q.defer();
 var bcrypt = require('bcrypt');
 var jsonwebtoken = require('./JWT');
 var userModel = require('../../models/user.model.js');
+var courseModel = require('../../models/course.model.js');
 var mongoose = require('mongoose');
 
 var Auth = {
 
-    validateUser: function(username, password){
+    validateUser: function (username, password) {
 
         deferred = q.defer();
 
 
-        userModel.findOne({'username': username}, function(err, doc){
+        userModel.findOne({'username': username}, function (err, doc) {
 
-            if(err){
+            if (err) {
 
                 deferred.reject({
                     error: true,
@@ -26,7 +27,7 @@ var Auth = {
                 return;
             }
 
-            if(!doc){
+            if (!doc) {
 
                 deferred.reject({
                     error: false,
@@ -35,9 +36,9 @@ var Auth = {
                 return;
             }
 
-            bcrypt.compare(password, doc.password, function(err, res){
+            bcrypt.compare(password, doc.password, function (err, res) {
 
-                if(err){
+                if (err) {
 
                     console.log(err);
 
@@ -45,22 +46,33 @@ var Auth = {
                         error: true,
                         wrongPass: false
                     });
-                }else if(!res){
+                } else if (!res) {
                     deferred.reject({
                         error: false,
                         wrongPass: true
                     });
-                }else{
+                } else {
 
+                    var lecturerStatus = null;
 
+                    //check mongodb for permission
 
+                    courseModel.findOne({'uid': username}, function (err, doc) {
+                        if (err) {
+                            lecturerStatus = false;
+                        } else if (!doc) {
+                            lecturerStatus = false;
+                        } else {
+                            lecturerStatus = true;
+                        }
+                    });
 
 
                     deferred.resolve({
                         username: doc.username,
                         email: doc.email,
                         createdOn: doc.createdOn,
-                        isLecturer: 'boop',
+                        isLecturer: lecturerStatus,
                         isAdmin: doc.isAdmin,
                         cn: doc.cn,
                         givenName: doc.givenName,
@@ -76,7 +88,7 @@ var Auth = {
 
     },
 
-    registerUser: function(username, email, password){
+    registerUser: function (username, email, password) {
 
         var q = require('q');
 
@@ -86,32 +98,36 @@ var Auth = {
         var userModel = require('../../models/user.model.js');
 
         var bcrypt = require('bcrypt');
-        bcrypt.genSalt(10, function(err, salt) {
-            bcrypt.hash(password, salt, function(err, hash) {
+        bcrypt.genSalt(10, function (err, salt) {
+            bcrypt.hash(password, salt, function (err, hash) {
 
-                if(err){
+                if (err) {
                     deferred.reject('Error creating user');
-                }else{
+                } else {
                     var user = new userModel({
                         username: username,
                         email: email,
                         password: hash
                     });
 
-                    user.save(function(err){
+                    user.save(function (err) {
                         console.log(err);
 
-                        if(err){
+                        if (err) {
 
-                            if(err.code === 11000)
+                            if (err.code === 11000)
                                 deferred.reject('User already exists');
                             else
                                 deferred.reject('Error creating user');
 
 
-                        }else{
+                        } else {
 
-                            deferred.resolve(jsonwebtoken.generateAuth({username:username, email: email, type: 'user'}));
+                            deferred.resolve(jsonwebtoken.generateAuth({
+                                username: username,
+                                email: email,
+                                type: 'user'
+                            }));
                         }
                     });
                 }

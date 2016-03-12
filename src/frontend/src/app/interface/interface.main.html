@@ -5,13 +5,15 @@
 <!--</div>-->
 <div id="interface">
     <div class="control">
-        <div id="btnBox">
-            <button class="btn btn-lg btn-primary" id="new-Post" ng-click="message()">New Post</button><br/>
+        <div id="btnBox" ng-if="">
+            <button class="btn btn-lg btn-primary" id="new-Post" ng-click="message()">New Post</button>
+            <br/>
             <button class="btn btn-lg btn-info" id="schedule-Post" ng-click="schedule()">Schedule</button>
         </div>
     </div>
     <div>
-        <!--Content below the buttons!-->
+        <p>If you cannot see any buttons here then it likely means you do not have permission to use this application.
+            If you believe this is in error please contact system support.</p>
     </div>
     <script type="text/ng-template" id="newPost.html">
         <div class="modal-header">
@@ -28,7 +30,8 @@
                 </div>
                 <div class="form-group">
                     <label class="control-label" for="content">Additional Content</label>
-                        <textarea type="text" class="form-control" rows="5" id="content" name="content" placeholder="Got more to say?" ng-model="msg.content"></textarea>
+                    <textarea type="text" class="form-control" rows="5" id="content" name="content"
+                              placeholder="Got more to say?" ng-model="msg.content"></textarea>
                 </div>
                 <div class="form-group">
                     <label class="control-label" for="recipients">Recipients</label>

@@ -2,11 +2,18 @@
  * Created by nightpaws on 10/02/2016.
  */
 angular.module('interface')
-    .controller('interface.main.controller', ['$scope', 'interface.request.factory', '$uibModal', 'toastr', '$state', function ($scope, requestHelper, $uibModal, toastr, $state) {
+    .controller('interface.main.controller', ['$scope', 'interface.request.factory', '$uibModal', 'toastr', '$state','user.service', function ($scope, requestHelper, $uibModal, toastr, $state, userService) {
 
         $scope.interface = [];
 
         console.log("main controller called");
+
+        $scope.lecturerTest = function() {
+            if(userService.getLecturer()){
+                return true;
+            }
+            return false;
+        }
 
         $scope.message = function () {
 
