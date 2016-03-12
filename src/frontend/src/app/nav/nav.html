@@ -1,15 +1,17 @@
 <div id="nav">
     <ul id="nav-parts" class="clickable" ng-click="navigate()">
         <li ui-sref="page.interface" ui-sref-active="current"><p>Home</p></li>
-        <li ui-sref="page.schedule" ui-sref-active="current"><p>Scheduler</p></li>
+        <div ng-if="lecturerTest()">
+            <li ui-sref="page.schedule" ui-sref-active="current"><p>Scheduler</p></li>
+        </div>
         <div ng-if="adminTest()">
-        <li ui-sref="page.account" ui-sref-active="current"><p>[Admin] Account Manager</p></li>
+            <li ui-sref="page.account" ui-sref-active="current"><p>[Admin] Account Manager</p></li>
         </div>
         <li ui-sref="page.userprofile" ui-sref-active="current">My Profile</li>
         <li ng-click="logout()" ui-sref-active="current">Logout</li>
     </ul>
-    <ul id="nav-help" class="clickable" ng-click="navigate()">
-        <li ui-sref="page.about" ui-sref-active="current">About </li>
+    <ul id="nav-help" class="clickable" ng-if="lecturerTest()" ng-click="navigate()">
+        <li ui-sref="page.about" ui-sref-active="current">About</li>
         <li ui-sref="page.help" ui-sref-active="current">Help</li>
         <li><a href="https://github.com/nightpaws/ADVE-RTISE/issues">Bugs</a></li>
     </ul>
