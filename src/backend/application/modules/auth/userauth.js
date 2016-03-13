@@ -56,6 +56,16 @@ var Auth = {
                 return;
             }
 
+            //Manual activation check. Comment this check to bypass
+            if(!doc.isActive){
+
+                deferred.reject({
+                    error:true,
+                    wrongPass:false
+                })
+                return;
+            }
+
             bcrypt.compare(password, doc.password, function (err, res) {
 
                 if (err) {

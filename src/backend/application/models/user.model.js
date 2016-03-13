@@ -48,6 +48,11 @@ var user = new mongoose.Schema({
         required: true,
         default: false
     },
+    isActive:{
+        type: Boolean,
+        required: true,
+        default: false
+    },
     createdOn: {
         type: Date,
         default: Date.now
