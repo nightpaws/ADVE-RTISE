@@ -6,24 +6,29 @@
  call bower update
  call gulp build
  cd ../../..
+ echo Client build completed.
 
 :: Starting Server Build
  echo Performing server build
  cd src/backend
  call npm install
  cd ../..
+ echo Server build completed.
 
+:: Start Deployment
  echo Performing deployment
  call gulp build
 
- echo Performing the failing run of the application
- echo This will fail as it must create files...
+:: Create Logging Directory
+ echo establishing log directory...
  cd ./build
- call node index.js
+ mkdir ./logs
+ echo nul > ./logs/conn.log
+ echo log file created.
  cd ..
- echo It should work now...
 
+#Completion Notice
  echo ------------------------------------------------------------$
- echo DONE
- echo You may now sort the certs out, drop in a custom config and $
- echo run "cd ./build" & "node index.js" to make things go
+ echo Setup Completed!
+ echo You may now create certificates, insert a custom config or $
+ echo run "cd build" & "node index.js" to launch the application.

@@ -28,9 +28,10 @@
  echo touching conn.log
  touch ./logs/conn.log
  echo log file created.
+ cd ..
 
 #Completion Notice
  echo ------------------------------------------------------------$
- echo Setup Completed!\n
+ echo Setup Completed!
  echo You may now create certificates, insert a custom config or
- echo run \"cd ./build\" \& \"node index.js\" to launch the application
+ echo run \"cd build\" \& \"node index.js\" to launch the application.
