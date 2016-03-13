@@ -73,12 +73,44 @@ var accounts = {
         five = recipients[4];
         six = recipients[5];
 
-        if(one){};
-        if(two){};
-        if(three){};
-        if(four){};
-        if(five){};
-        if(six){};
+        if(one){
+            first.post('statuses/update', { status: subject }, function(err, data, response) {
+                console.log('data follows:');
+                console.log(data)
+                console.log('end of data:');
+                console.log('response follows');
+                console.log(response);
+                console.log('end of response:');
+                console.log('err follows');
+                console.log(err);
+                console.log('end of err:');
+            })
+        };
+        if(two){
+            second.post('statuses/update', { status: subject }, function(err, data, response) {
+                console.log(data)
+            })
+        };
+        if(three){
+            third.post('statuses/update', { status: subject }, function(err, data, response) {
+                console.log(data)
+            })
+        };
+        if(four){
+            fourth.post('statuses/update', { status: subject }, function(err, data, response) {
+                console.log(data)
+            })
+        };
+        if(fifth){
+            fifth.post('statuses/update', { status: subject }, function(err, data, response) {
+                console.log(data)
+            })
+        };
+        if(six){
+            phd.post('statuses/update', { status: subject }, function(err, data, response) {
+                console.log(data)
+            })
+        };
 
 
 
