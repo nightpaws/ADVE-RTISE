@@ -25,7 +25,6 @@
  mkdir ./logs
  echo nul > ./logs/conn.log
  echo log file created.
- cd ..
 
 #Completion Notice
  echo ------------------------------------------------------------$

@@ -28,7 +28,6 @@
  echo touching conn.log
  touch ./logs/conn.log
  echo log file created.
- cd ..
 
 #Completion Notice
  echo ------------------------------------------------------------$
