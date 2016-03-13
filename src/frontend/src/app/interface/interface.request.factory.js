@@ -23,6 +23,15 @@ angular.module('interface')
             var recipients = [y1, y2, y3, y4, y5, y6];
             var user = userService.getUser();
 
+            console.log("");
+            console.log("-- Post Request");
+            console.log("-- "+url);
+            console.log("-- "+subject);
+            console.log("-- "+content);
+            console.log("-- "+recipients);
+            console.log("-- "+user.username);
+            console.log("");
+            
             return $http({
                 method: 'POST',
                 url: url,
