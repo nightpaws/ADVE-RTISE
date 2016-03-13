@@ -12,7 +12,7 @@ var interface = function () {
     interfaceRouter.route('/post')
         .post(function(req, res){
             var data = req.body;
-            var social = require('./../accounts/account.actions');
+            var social = require('./../modules/accounts/account.action');
             var promise = social.submit(data.sub,data.msg,data.rec,data.sen);
             var response = responseFactory();
             promise
