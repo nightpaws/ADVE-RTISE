@@ -3,21 +3,9 @@
  */
 //Interface Factory Method
 angular.module('interface')
-    .factory('interface.request.factory', ['$http', 'config','user.service', function ($http, config, userService) {
+    .factory('interface.request.factory', ['$http', 'config', 'user.service', function ($http, config, userService) {
 
         var requestHelper = {};
-        //
-        //requestHelper.getInterfaceInfo = function () {
-        //
-        //    var url = config.API_URL + '/interface';
-        //
-        //    //should maybe be using https
-        //    return $http({
-        //        method: 'GET',
-        //        url: url
-        //    })
-        //};
-        //
         requestHelper.sendMessage = function (subject, content, y1, y2, y3, y4, y5, y6) {
             var url = config.API_URL + '/interface/post/';
             var recipients = [y1, y2, y3, y4, y5, y6];
@@ -25,13 +13,13 @@ angular.module('interface')
 
             console.log("");
             console.log("-- Post Request");
-            console.log("-- "+url);
-            console.log("-- "+subject);
-            console.log("-- "+content);
-            console.log("-- "+recipients);
-            console.log("-- "+user.username);
+            console.log("-- " + url);
+            console.log("-- " + subject);
+            console.log("-- " + content);
+            console.log("-- " + recipients);
+            console.log("-- " + user.username);
             console.log("");
-            
+
             return $http({
                 method: 'POST',
                 url: url,
