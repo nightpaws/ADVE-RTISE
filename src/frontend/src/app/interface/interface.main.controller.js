@@ -44,7 +44,7 @@ angular.module('interface')
 
                     })
                     .catch(function () {
-                        toastr.error('Error. Unable to contact Server', 'Error');
+                        toastr.error('Unable to contact Server', 'Error');
                     });
 
             });
