@@ -9,33 +9,6 @@ var interface = function () {
 
     var interfaceRouter = express.Router();
 
-    interfaceRouter.route('/')
-
-        .get(function (req, res) {
-
-            var interface = require('../modules/app/mainapp');
-            var promise = interface.getApp(req.user);
-
-            var response = responseFactory();
-
-            promise
-                .then(function (data) {
-
-                    response.setSuccessful(true);
-                    response.setMeta(data.meta);
-                    response.setResult(data.warnings);
-
-                    res.json(response.getResponse());
-
-                })
-                .fail(function (data) {
-                    response.setSuccessful(false);
-                    response.setMessage(data);
-
-                    res.json(response.getResponse());
-                });
-
-        });
 
     return interfaceRouter;
 
