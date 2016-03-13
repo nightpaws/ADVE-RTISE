@@ -21,16 +21,12 @@ var Auth = {
         //check mongodb for permission
 
         courseModel.findOne({'uid': username}, function (err, res) {
-            console.log("cm0 called");
             if (err) {
-                console.log("cm1 called");
                 lecturerStatus = false;
             } else if (!res) {
                 lecturerStatus = false;
-                console.log("cm2 called");
             } else {
                 lecturerStatus = true;
-                console.log("cm3 called");
             }
         });
 
@@ -42,7 +38,8 @@ var Auth = {
 
                 deferred.reject({
                     error: true,
-                    wrongPass: false
+                    wrongPass: false,
+                    inactive: false
                 });
                 return;
             }
@@ -51,7 +48,8 @@ var Auth = {
 
                 deferred.reject({
                     error: false,
-                    wrongPass: true
+                    wrongPass: true,
+                    inactive: false
                 });
                 return;
             }
@@ -60,8 +58,9 @@ var Auth = {
             if(!doc.isActive){
 
                 deferred.reject({
-                    error:true,
-                    wrongPass:false
+                    error: false,
+                    wrongPass: false,
+                    inactive: true
                 })
                 return;
             }
@@ -74,12 +73,14 @@ var Auth = {
 
                     deferred.reject({
                         error: true,
-                        wrongPass: false
+                        wrongPass: false,
+                        inactive: false
                     });
                 } else if (!res) {
                     deferred.reject({
                         error: false,
-                        wrongPass: true
+                        wrongPass: true,
+                        inactive: false
                     });
                 } else {
                     deferred.resolve({
