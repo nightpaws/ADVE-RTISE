@@ -3,7 +3,7 @@
  */
 //Interface Factory Method
 angular.module('interface')
-    .factory('interface.request.factory', ['$http', 'config', function ($http, config) {
+    .factory('interface.request.factory', ['$http', 'config','user.service', function ($http, config, userService) {
 
         var requestHelper = {};
         //
@@ -21,13 +21,15 @@ angular.module('interface')
         requestHelper.sendMessage = function (subject, content, y1, y2, y3, y4, y5, y6) {
             var url = config.API_URL + '/interface/post/';
             var recipients = [y1, y2, y3, y4, y5, y6];
+            var user = userService.getUser();
 
             return $http({
                 method: 'POST',
                 url: url,
                 sub: subject,
                 msg: content,
-                rec: recipients
+                rec: recipients,
+                sen: user.username
             })
         };
 
