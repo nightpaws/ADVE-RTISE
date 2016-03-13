@@ -10,7 +10,7 @@ angular.module('account', [])
                 templateUrl: 'app/account/account.main.html',
                 controller: 'account.main.controller',
                 onEnter: function($rootScope){
-                    $rootScope.app.stateTitle = '[Admin] Account Manager';
+                    $rootScope.app.stateTitle = 'Account Manager';
                 }
             })
 

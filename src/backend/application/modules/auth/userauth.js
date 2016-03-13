@@ -28,6 +28,7 @@ var Auth = {
             } else {
                 lecturerStatus = true;
             }
+
         });
 
 
@@ -83,6 +84,12 @@ var Auth = {
                         inactive: false
                     });
                 } else {
+
+                    //Admin Override:
+                    if(doc.isAdmin){
+                        lecturerStatus = true;
+                    }
+
                     deferred.resolve({
                         username: doc.username,
                         email: doc.email,
