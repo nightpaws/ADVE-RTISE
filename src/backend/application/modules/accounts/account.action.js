@@ -5,7 +5,7 @@
 var q = require('q');
 var deferred = q.defer();
 var config = require('../../../config');
-var jsonwebtoken = require('./JWT');
+//var jsonwebtoken = require('./JWT'); //wrong location set
 
 //Database logging components
 var messageModel = require('../../models')
