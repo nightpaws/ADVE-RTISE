@@ -12,7 +12,7 @@ var messageModel = require('../../models/message.model');
 var mongoose = require('mongoose');
 
 //External posting requirements
-var Twit = require('twit')
+var Twit = require('twit');
 
 var first, second, third, fourth, fifth, phd;
 
