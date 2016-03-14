@@ -84,80 +84,80 @@ var accounts = {
 
         if (one) {
             first.post('statuses/update', {status: subject}, function (err, data, response) {
-                console.log('data follows:');
-                console.log(data);
-                console.log('end of data:');
-                console.log('response follows');
-                console.log(response);
-                console.log('end of response:');
-                console.log('err follows');
-                console.log(err);
-                console.log('end of err:');
+                //console.log('data follows:');
+                //console.log(data);
+                //console.log('end of data:');
+                //console.log('response follows');
+                //console.log(response);
+                //console.log('end of response:');
+                //console.log('err follows');
+                //console.log(err);
+                //console.log('end of err:');
             })
         }
         if (two) {
             second.post('statuses/update', {status: subject}, function (err, data, response) {
-                console.log('data follows:');
-                console.log(data);
-                console.log('end of data:');
-                console.log('response follows');
-                console.log(response);
-                console.log('end of response:');
-                console.log('err follows');
-                console.log(err);
-                console.log('end of err:');
+                //console.log('data follows:');
+                //console.log(data);
+                //console.log('end of data:');
+                //console.log('response follows');
+                //console.log(response);
+                //console.log('end of response:');
+                //console.log('err follows');
+                //console.log(err);
+                //console.log('end of err:');
             })
         }
         if (three) {
             third.post('statuses/update', {status: subject}, function (err, data, response) {
-                console.log('data follows:');
-                console.log(data);
-                console.log('end of data:');
-                console.log('response follows');
-                console.log(response);
-                console.log('end of response:');
-                console.log('err follows');
-                console.log(err);
-                console.log('end of err:');
+                //console.log('data follows:');
+                //console.log(data);
+                //console.log('end of data:');
+                //console.log('response follows');
+                //console.log(response);
+                //console.log('end of response:');
+                //console.log('err follows');
+                //console.log(err);
+                //console.log('end of err:');
             })
         }
         if (four) {
             fourth.post('statuses/update', {status: subject}, function (err, data, response) {
-                console.log('data follows:');
-                console.log(data);
-                console.log('end of data:');
-                console.log('response follows');
-                console.log(response);
-                console.log('end of response:');
-                console.log('err follows');
-                console.log(err);
-                console.log('end of err:');
+                //console.log('data follows:');
+                //console.log(data);
+                //console.log('end of data:');
+                //console.log('response follows');
+                //console.log(response);
+                //console.log('end of response:');
+                //console.log('err follows');
+                //console.log(err);
+                //console.log('end of err:');
             })
         }
         if (five) {
             fifth.post('statuses/update', {status: subject}, function (err, data, response) {
-                console.log('data follows:');
-                console.log(data);
-                console.log('end of data:');
-                console.log('response follows');
-                console.log(response);
-                console.log('end of response:');
-                console.log('err follows');
-                console.log(err);
-                console.log('end of err:');
+                //console.log('data follows:');
+                //console.log(data);
+                //console.log('end of data:');
+                //console.log('response follows');
+                //console.log(response);
+                //console.log('end of response:');
+                //console.log('err follows');
+                //console.log(err);
+                //console.log('end of err:');
             })
         }
         if (six) {
             phd.post('statuses/update', {status: subject}, function (err, data, response) {
-                console.log('data follows:');
-                console.log(data);
-                console.log('end of data:');
-                console.log('response follows');
-                console.log(response);
-                console.log('end of response:');
-                console.log('err follows');
-                console.log(err);
-                console.log('end of err:');
+                //console.log('data follows:');
+                //console.log(data);
+                //console.log('end of data:');
+                //console.log('response follows');
+                //console.log(response);
+                //console.log('end of response:');
+                //console.log('err follows');
+                //console.log(err);
+                //console.log('end of err:');
             })
         }
 
