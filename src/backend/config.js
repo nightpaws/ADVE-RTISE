@@ -79,8 +79,8 @@ var config = {
             access_token_secret: '70vNW4K703Et3sx4r9gvYzJ0elMEyrkDdVIA9OPzWCQhK'
         },
         phd: {
-            consumer_key: 'kVNVuJr7hOHyHaCDwCWEyPifb',
-            consumer_secret: 'tDJ1SAvltRzuJGs9pmAewXkFgTOTYwAXhRx5BOvjlVgyZ758r4',
+            consumer_key: 'u0Q7vNBrPlTLxYl3GlJMr51PS',
+            consumer_secret: 'JyFdXh6L72ayELlAXRCDbEjX140sPCUy5eG7UdoSOKy6VuITLe',
             access_token_key: '709408440377073664-Gsow4NWknR6FDhoJggA586T1PsLAzyq',
             access_token_secret: 'TdZqviE9uI3siAOnGxvE3mO6agGQlrmyleoPzFGBgi5Td'
         }
