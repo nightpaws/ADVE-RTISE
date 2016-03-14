@@ -8,7 +8,7 @@ var config = require('../../../config');
 //var jsonwebtoken = require('./JWT'); //wrong location set
 
 //Database logging components
-var messageModel = require('../../models')
+var messageModel = require('../../models/message.model');
 var mongoose = require('mongoose');
 
 //External posting requirements
