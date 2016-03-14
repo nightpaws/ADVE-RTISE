@@ -23,10 +23,10 @@ angular.module('interface')
             return $http({
                 method: 'POST',
                 url: url,
-                sub: subject,
-                msg: content,
-                rec: recipients,
-                sen: user.username
+                subject: subject,
+                message: content,
+                recipients: recipients,
+                sender: user.username
             })
         };
 

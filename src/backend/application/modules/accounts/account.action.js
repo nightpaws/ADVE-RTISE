@@ -76,15 +76,15 @@ if (config.twitter.phd.consumer_key != '') {
 }
 
 var accounts = {
-
-
     submit: function (subject, message, recipients, sender) {
         console.log(subject);
         console.log(message);
         console.log(recipients);
         console.log(sender);
-        
-        deferred = q.defer();
+
+
+        var q = require('q');
+        var deferred = q.defer();
         var one, two, three, four, five, six;
         one = recipients[0];
         two = recipients[1];
@@ -106,37 +106,31 @@ var accounts = {
                 console.log('end of err:');
             })
         }
-        ;
         if (two) {
             second.post('statuses/update', {status: subject}, function (err, data, response) {
                 console.log(data)
             })
         }
-        ;
         if (three) {
             third.post('statuses/update', {status: subject}, function (err, data, response) {
                 console.log(data)
             })
         }
-        ;
         if (four) {
             fourth.post('statuses/update', {status: subject}, function (err, data, response) {
                 console.log(data)
             })
         }
-        ;
-        if (fifth) {
+        if (five) {
             fifth.post('statuses/update', {status: subject}, function (err, data, response) {
                 console.log(data)
             })
         }
-        ;
         if (six) {
             phd.post('statuses/update', {status: subject}, function (err, data, response) {
                 console.log(data)
             })
         }
-        ;
 
 
         return deferred.promise;
