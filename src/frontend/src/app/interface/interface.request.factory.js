@@ -7,7 +7,9 @@ angular.module('interface')
 
         var requestHelper = {};
         requestHelper.sendMessage = function (subject, content, y1, y2, y3, y4, y5, y6) {
+
             var url = config.API_URL + '/interface/post/';
+
             var recipients = [y1, y2, y3, y4, y5, y6];
             var user = userService.getUser();
 
@@ -23,10 +25,12 @@ angular.module('interface')
             return $http({
                 method: 'POST',
                 url: url,
-                subject: subject,
-                message: content,
-                recipients: recipients,
-                sender: user.username
+                data: {
+                    subject: subject,
+                    message: content,
+                    recipients: recipients,
+                    sender: user.username
+                }
             })
         };
 
