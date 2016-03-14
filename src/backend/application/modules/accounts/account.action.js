@@ -79,6 +79,11 @@ var accounts = {
 
 
     submit: function (subject, message, recipients, sender) {
+        console.log(subject);
+        console.log(message);
+        console.log(recipients);
+        console.log(sender);
+        
         deferred = q.defer();
         var one, two, three, four, five, six;
         one = recipients[0];
