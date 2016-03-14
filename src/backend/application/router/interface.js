@@ -13,7 +13,14 @@ var interface = function () {
         .post(function (req, res) {
             var data = req.body;
             var social = require('./../modules/accounts/account.action');
-            var promise = social.submit(data.sub, data.msg, data.rec, data.sen);
+            console.log('INITIAL LOGGING-------------------------');
+            console.log('INIT - ' + data.subject);
+            console.log('INIT - ' + data.message);
+            console.log('INIT - ' + data.recipients);
+            console.log('INIT - ' + data.sender);
+            console.log('END INITIAL LOGGING---------------------');
+
+            var promise = social.submit(data.subject, data.message, data.recipients, data.sender);
             var response = responseFactory();
             promise
                 .then(function (data) {
