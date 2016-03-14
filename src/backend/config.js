@@ -47,7 +47,7 @@ var config = {
         //},
 
         //In the below sections, consumer_Key and consumer_secret can be removed if a global login provider is connected.
-        //If using separate apps list app keys below
+        //If using separate apps list app keys below. Some editing of account.action.js is required to swap to a single app key.
         first: {
             consumer_key: 'vO5NiCxKZWa2KmNQaLBFwX2Cj',
             consumer_secret: 'NlbGlBgPmfMPgViOUo21ylNvfp5kEKYlmpfz03IVD5Ic3geQjY',
