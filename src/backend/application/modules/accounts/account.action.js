@@ -66,12 +66,8 @@ var phd = new Twit({
 
 var accounts = {
     submit: function (subject, message, recipients, sender) {
-        console.log(subject);
-        console.log(message);
-        console.log(recipients);
-        console.log(sender);
 
-
+        //Initialise variables needed for submissions
         var q = require('q');
         var deferred = q.defer();
         var one, two, three, four, five, six;
@@ -82,86 +78,108 @@ var accounts = {
         five = recipients[4];
         six = recipients[5];
 
-        if (one) {
-            first.post('statuses/update', {status: subject}, function (err, data, response) {
-                console.log('data follows:');
-                console.log(data);
-                console.log('end of data:');
-                console.log('response follows');
-                console.log(response);
-                console.log('end of response:');
-                console.log('err follows');
-                console.log(err);
-                console.log('end of err:');
-            })
-        }
-        if (two) {
-            second.post('statuses/update', {status: subject}, function (err, data, response) {
-                console.log('data follows:');
-                console.log(data);
-                console.log('end of data:');
-                console.log('response follows');
-                console.log(response);
-                console.log('end of response:');
-                console.log('err follows');
-                console.log(err);
-                console.log('end of err:');
-            })
-        }
-        if (three) {
-            third.post('statuses/update', {status: subject}, function (err, data, response) {
-                console.log('data follows:');
-                console.log(data);
-                console.log('end of data:');
-                console.log('response follows');
-                console.log(response);
-                console.log('end of response:');
-                console.log('err follows');
-                console.log(err);
-                console.log('end of err:');
-            })
-        }
-        if (four) {
-            fourth.post('statuses/update', {status: subject}, function (err, data, response) {
-                console.log('data follows:');
-                console.log(data);
-                console.log('end of data:');
-                console.log('response follows');
-                console.log(response);
-                console.log('end of response:');
-                console.log('err follows');
-                console.log(err);
-                console.log('end of err:');
-            })
-        }
-        if (five) {
-            fifth.post('statuses/update', {status: subject}, function (err, data, response) {
-                console.log('data follows:');
-                console.log(data);
-                console.log('end of data:');
-                console.log('response follows');
-                console.log(response);
-                console.log('end of response:');
-                console.log('err follows');
-                console.log(err);
-                console.log('end of err:');
-            })
-        }
-        if (six) {
-            phd.post('statuses/update', {status: subject}, function (err, data, response) {
-                console.log('data follows:');
-                console.log(data);
-                console.log('end of data:');
-                console.log('response follows');
-                console.log(response);
-                console.log('end of response:');
-                console.log('err follows');
-                console.log(err);
-                console.log('end of err:');
-            })
-        }
+        //Message posting attempted! Log to database
+        var msg = new messageModel({
+            uid: sender,
+            subject: subject,
+            message: message
+        });
+
+        msg.save(function (err) {
+            console.log(err);
+
+            if (err) {
+
+                if (err.code === 11000)
+                    deferred.reject('Post flooding detected');
+                else
+                    deferred.reject('Error posting message');
 
 
+            } else {
+
+                //Perform submissions to Social Media
+                if (one) {
+                    first.post('statuses/update', {status: subject}, function (err, data, response) {
+                        console.log('data follows:');
+                        console.log(data);
+                        console.log('end of data:');
+                        console.log('response follows');
+                        console.log(response);
+                        console.log('end of response:');
+                        console.log('err follows');
+                        console.log(err);
+                        console.log('end of err:');
+                    })
+                }
+                if (two) {
+                    second.post('statuses/update', {status: subject}, function (err, data, response) {
+                        console.log('data follows:');
+                        console.log(data);
+                        console.log('end of data:');
+                        console.log('response follows');
+                        console.log(response);
+                        console.log('end of response:');
+                        console.log('err follows');
+                        console.log(err);
+                        console.log('end of err:');
+                    })
+                }
+                if (three) {
+                    third.post('statuses/update', {status: subject}, function (err, data, response) {
+                        console.log('data follows:');
+                        console.log(data);
+                        console.log('end of data:');
+                        console.log('response follows');
+                        console.log(response);
+                        console.log('end of response:');
+                        console.log('err follows');
+                        console.log(err);
+                        console.log('end of err:');
+                    })
+                }
+                if (four) {
+                    fourth.post('statuses/update', {status: subject}, function (err, data, response) {
+                        console.log('data follows:');
+                        console.log(data);
+                        console.log('end of data:');
+                        console.log('response follows');
+                        console.log(response);
+                        console.log('end of response:');
+                        console.log('err follows');
+                        console.log(err);
+                        console.log('end of err:');
+                    })
+                }
+                if (five) {
+                    fifth.post('statuses/update', {status: subject}, function (err, data, response) {
+                        console.log('data follows:');
+                        console.log(data);
+                        console.log('end of data:');
+                        console.log('response follows');
+                        console.log(response);
+                        console.log('end of response:');
+                        console.log('err follows');
+                        console.log(err);
+                        console.log('end of err:');
+                    })
+                }
+                if (six) {
+                    phd.post('statuses/update', {status: subject}, function (err, data, response) {
+                        console.log('data follows:');
+                        console.log(data);
+                        console.log('end of data:');
+                        console.log('response follows');
+                        console.log(response);
+                        console.log('end of response:');
+                        console.log('err follows');
+                        console.log(err);
+                        console.log('end of err:');
+                    })
+                }
+
+            }
+        });
         return deferred.promise;
     }
 

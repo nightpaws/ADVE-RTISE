@@ -9,12 +9,14 @@ var interface = function () {
 
     var interfaceRouter = express.Router();
 
+
+    //Possible placement for splitting social media
     interfaceRouter.route('/post')
         .post(function (req, res) {
             var data = req.body;
-            var social = require('./../modules/accounts/account.action');
+            var twitter = require('./../modules/accounts/account.action');
 
-            var promise = social.submit(data.subject, data.message, data.recipients, data.sender);
+            var promise = twitter.submit(data.subject, data.message, data.recipients, data.sender);
             var response = responseFactory();
             promise
                 .then(function (data) {

@@ -5,22 +5,12 @@ var mongoose = require('mongoose');
 var config = require('../../config');
 
 var message = new mongoose.Schema({
-    network: {
-        type: String,
-        required: true,
-        unique: false
-    },
-    username: {
-        type: Number,
-        required:true,
-        unique:false
-    },
     uid:{
         type: String,
         required: true,
         unique: false
     },
-    heading: {
+    subject: {
         type:String,
         required:true,
         unique:false
@@ -30,7 +20,12 @@ var message = new mongoose.Schema({
         required: true,
         unique: false
     },
-    createdOn: {
+    recipients: {
+        type: String,
+        required:true,
+        unique:false
+    },
+    postDate: {
         type: Date,
         default: Date.now
     }
