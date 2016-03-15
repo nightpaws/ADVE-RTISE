@@ -82,7 +82,8 @@ var accounts = {
         var msg = new messageModel({
             uid: sender,
             subject: subject,
-            message: message
+            message: message,
+            recipients:recipients
         });
 
         msg.save(function (err) {
