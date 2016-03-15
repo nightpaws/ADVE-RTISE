@@ -28,7 +28,8 @@
                     <input type="text" class="form-control" id="subject" name="subject" placeholder="Subject/Tweet"
                            ng-model="msg.subject" ng-maxlength="140" required>
                 </div>
-                <div class="form-group">
+                <div class="form-group"
+                     ng-class="{'has-error': messageForm.subject.$invalid">
                     <label class="control-label" for="content">Additional Content</label>
                     <textarea type="text" class="form-control" rows="5" id="content" name="content"
                               placeholder="Got more to say?" ng-model="msg.content" ng-maxlength="60000"></textarea>
