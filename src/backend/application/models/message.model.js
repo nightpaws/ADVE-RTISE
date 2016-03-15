@@ -18,7 +18,8 @@ var message = new mongoose.Schema({
     message: {
         type: String,
         required: true,
-        unique: false
+        unique: false,
+        default: "No Message Provided"
     },
     recipients: {
         type: String,
