@@ -32,6 +32,7 @@ var message = new mongoose.Schema({
     }
 
 });
-message.index({ uid: 'text', createdOn: 'text'});
+message.set('autoIndex',false);
+message.index({ uid: 1, createdOn: 2});
 
 module.exports = mongoose.model('Message', message);
