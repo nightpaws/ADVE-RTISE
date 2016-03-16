@@ -9,69 +9,66 @@
             <button class="btn btn-lg btn-primary" id="new-Post" ng-click="message()">New Post</button>
             <br/>
             <button class="btn btn-lg btn-info" id="schedule-Post" ng-click="schedule()">Schedule</button>
+            <p>If you cannot see any buttons here then it likely means you do not have permission to use this
+                application. If you believe this is in error please contact <a href="mailto:cis-support@strath.ac.uk?subject=ADVE:RTISE App Help">system support.</a></p>
         </div>
-    </div>
-    <div>
-        <p>If you cannot see any buttons here then it likely means you do not have permission to use this application.
-            If you believe this is in error please contact system support.</p>
-    </div>
-    <script type="text/ng-template" id="newPost.html">
-        <div class="modal-header">
-            <h3 class="modal-title">Submit a Message</h3>
-        </div>
-        <form name="messageForm" ng-submit="submit(messageForm.$invalid)" novalidate>
-            <div class="modal-body">
+        <script type="text/ng-template" id="newPost.html">
+            <div class="modal-header">
+                <h3 class="modal-title">Submit a Message</h3>
+            </div>
+            <form name="messageForm" ng-submit="submit(messageForm.$invalid)" novalidate>
+                <div class="modal-body">
 
-                <div class="form-group"
-                     ng-class="{'has-error': messageForm.subject.$invalid && messageForm.subject.$touched}">
-                    <label class="control-label" for="subject">Short Message/Title</label>
-                    <input type="text" class="form-control" id="subject" name="subject" placeholder="Subject/Tweet"
-                           ng-model="msg.subject" ng-maxlength="140" required>
-                </div>
-                <div class="form-group"
-                     ng-class="{'has-error': messageForm.content.$invalid}">
-                    <label class="control-label" for="content">Additional Content</label>
+                    <div class="form-group"
+                         ng-class="{'has-error': messageForm.subject.$invalid && messageForm.subject.$touched}">
+                        <label class="control-label" for="subject">Short Message/Title</label>
+                        <input type="text" class="form-control" id="subject" name="subject" placeholder="Subject/Tweet"
+                               ng-model="msg.subject" ng-maxlength="140" required>
+                    </div>
+                    <div class="form-group"
+                         ng-class="{'has-error': messageForm.content.$invalid}">
+                        <label class="control-label" for="content">Additional Content</label>
                     <textarea type="text" class="form-control" rows="5" id="content" name="content"
                               placeholder="Got more to say?" ng-model="msg.content" ng-maxlength="60000"></textarea>
-                </div>
-                <div class="form-group">
-                    <label class="control-label" for="recipients">Recipients</label>
-                    <!--https://jsfiddle.net/deeptechtons/TKVH6/-->
-                    <table id="recipients" name="recipients">
-                        <tr>
-                            <td><label>1st Year</label>
-                                <checkbox ng-model="msg.y1" class="btn-primary"/>
-                            </td>
-                            <td><label>2nd Year</label>
-                                <checkbox ng-model="msg.y2" class="btn-primary"/>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td><label>3rd Year</label>
-                                <checkbox ng-model="msg.y3" class="btn-primary"/>
-                            </td>
-                            <td><label>4th Year</label>
-                                <checkbox ng-model="msg.y4" class="btn-primary"/>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td><label>5th Year</label>
-                                <checkbox ng-model="msg.y5" class="btn-primary"/>
-                            </td>
-                            <td><label>PhD Year</label>
-                                <checkbox ng-model="msg.y6" class="btn-primary"/>
-                            </td>
-                        </tr>
-                    </table>
-                </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label" for="recipients">Recipients</label>
+                        <!--https://jsfiddle.net/deeptechtons/TKVH6/-->
+                        <table id="recipients" name="recipients">
+                            <tr>
+                                <td><label>1st Year</label>
+                                    <checkbox ng-model="msg.y1" class="btn-primary"/>
+                                </td>
+                                <td><label>2nd Year</label>
+                                    <checkbox ng-model="msg.y2" class="btn-primary"/>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><label>3rd Year</label>
+                                    <checkbox ng-model="msg.y3" class="btn-primary"/>
+                                </td>
+                                <td><label>4th Year</label>
+                                    <checkbox ng-model="msg.y4" class="btn-primary"/>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><label>5th Year</label>
+                                    <checkbox ng-model="msg.y5" class="btn-primary"/>
+                                </td>
+                                <td><label>PhD Year</label>
+                                    <checkbox ng-model="msg.y6" class="btn-primary"/>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
 
-            </div>
-            <div class="modal-footer">
-                <button class="btn btn-danger" type="button" ng-click="ok()" ng-disabled="!messageForm.$valid">
-                    Submit
-                </button>
-                <button class="btn btn-primary" type="button" ng-click="cancel()">Cancel</button>
-            </div>
-        </form>
-    </script>
-</div>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-danger" type="button" ng-click="ok()" ng-disabled="!messageForm.$valid">
+                        Submit
+                    </button>
+                    <button class="btn btn-primary" type="button" ng-click="cancel()">Cancel</button>
+                </div>
+            </form>
+        </script>
+    </div>
