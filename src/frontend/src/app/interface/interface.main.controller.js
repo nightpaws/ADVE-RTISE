@@ -27,9 +27,17 @@ angular.module('interface')
                 requestHelper.sendMessage(msg.subject, msg.content, msg.y1, msg.y2, msg.y3, msg.y4, msg.y5, msg.y6)
                     .then(function (data) {
                         if (data.data.successful) {
-                            toastr.info("Debug point reached!", "successful!");
+                            //toastr.info("Debug point reached!", "successful!");
+                            var year = 1;
+                            for (var yearval in data.data.result){
+                                if(!yearval){
+                                    toastr.error("Sending to "+year+" failed","Submission Error");
+                                }
+                                year++;
+                            }
+                            toastr.info("Message Processing Completed","Information");
                         } else {
-                            toastr.error(data.data.message, 'Error');
+                            toastr.error("Server response: " + data.data.message, 'Error');
                         }
 
                     })

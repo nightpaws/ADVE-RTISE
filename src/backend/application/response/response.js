@@ -1,7 +1,7 @@
 /**
  * Created by Nightpaws on 23/02/2016.
  */
-var response = function(){
+var response = function () {
 
     var responseGen = {
 
@@ -11,19 +11,19 @@ var response = function(){
             meta: null,
             result: null
         },
-        setSuccessful:  function (successful) {
+        setSuccessful: function (successful) {
             this.response.successful = successful;
         },
         setMessage: function (message) {
             this.response.message = message;
         },
-        setMeta:  function (meta) {
+        setMeta: function (meta) {
             this.response.meta = meta;
         },
-        setResult:  function (result) {
+        setResult: function (result) {
             this.response.result = result;
         },
-        getResponse:  function () {
+        getResponse: function () {
             return this.response;
         }
 
