@@ -1,8 +1,8 @@
 /**
  * Created by nightpaws on 01/03/2016.
  */
-angular.module('account')
-    .controller('account.main.controller', ['$scope', 'account.request.factory', 'toastr', function($scope, requestHelper, toastr){
+angular.module('admin')
+    .controller('admin.main.controller', ['$scope', 'admin.request.factory', 'toastr', function($scope, requestHelper, toastr){
 
         //$scope.warnings = {
         //    //scope: [],

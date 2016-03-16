@@ -2,7 +2,7 @@
  * Created by Nightpaws on 26/01/2016.
  */
 var app = angular.module('advertise', ['advertise.config', 'ui.router', 'ui.bootstrap','ui.checkbox', 'user', 'pages',
-    'LocalStorageModule', 'ngAnimate', 'toastr','polyfill', 'ng.deviceDetector', 'header', 'session', 'nav','account','schedule', 'interface', 'infinite-scroll']);
+    'LocalStorageModule', 'ngAnimate', 'toastr','polyfill', 'ng.deviceDetector', 'header', 'session', 'nav', 'admin','schedule', 'interface', 'infinite-scroll']);
 
 app.config(['$stateProvider', '$locationProvider', '$urlMatcherFactoryProvider', '$urlRouterProvider', function ($stateProvider, $locationProvider, $urlMatcherFactory, $urlRouterProvider) {
 
@@ -83,7 +83,7 @@ app.run(['$rootScope', '$state', '$location', 'user.service', '$timeout', functi
 
         switch (name) {
             case 'interface':
-            //case 'page.accounts':
+            //case 'page.admin':
             //case 'page.admin':
                 $rootScope.app.displayBack = false;
                 break;
