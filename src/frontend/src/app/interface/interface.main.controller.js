@@ -24,6 +24,7 @@ angular.module('interface')
             });
 
             modal.result.then(function (msg) {
+                toastr.info("Message Processing...","Information");
                 requestHelper.sendMessage(msg.subject, msg.content, msg.y1, msg.y2, msg.y3, msg.y4, msg.y5, msg.y6)
                     .then(function (data) {
                         if (data.data.successful) {
@@ -35,7 +36,7 @@ angular.module('interface')
                                 }
                                 year++;
                             }
-                            toastr.info("Message Processing Completed","Information");
+                            toastr.successful("Processing Completed","Information");
                         } else {
                             toastr.error("Server response: " + data.data.message, 'Error');
                         }
