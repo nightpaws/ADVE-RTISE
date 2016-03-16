@@ -71,6 +71,8 @@ var accounts = {
         var q = require('q');
         var deferred = q.defer();
         var one, two, three, four, five, six;
+        var s1 = true, s2 = true, s3 = true, s4 = true, s5 = true, s6 = true;
+
         one = recipients[0];
         two = recipients[1];
         three = recipients[2];
@@ -94,7 +96,6 @@ var accounts = {
         });
 
         msg.save(function (err) {
-            console.log(err);
 
             if (err) {
 
@@ -108,86 +109,72 @@ var accounts = {
 
                 //Perform submissions to Social Media
                 if (one) {
-                    first.post('statuses/update', {status: subject}, function (err, data, response) {
-                        console.log('data follows:');
-                        console.log(data);
-                        console.log('end of data:');
-                        console.log('response follows');
-                        console.log(response);
-                        console.log('end of response:');
-                        console.log('err follows');
-                        console.log(err);
-                        console.log('end of err:');
-                    })
+                    first.post('statuses/update', {status: subject})
+                        .catch(function (err) {
+                            s1 = false;
+                            console.log(err);
+                        })
+                        .then(function (result) {
+                            s1 = true;
+                        })
                 }
                 if (two) {
-                    second.post('statuses/update', {status: subject}, function (err, data, response) {
-                        console.log('data follows:');
-                        console.log(data);
-                        console.log('end of data:');
-                        console.log('response follows');
-                        console.log(response);
-                        console.log('end of response:');
-                        console.log('err follows');
-                        console.log(err);
-                        console.log('end of err:');
-                    })
+                    second.post('statuses/update', {status: subject})
+                        .catch(function (err) {
+                            s1 = false;
+                            console.log(err);
+                        })
+                        .then(function (result) {
+                            s1 = true;
+                        })
                 }
                 if (three) {
-                    third.post('statuses/update', {status: subject}, function (err, data, response) {
-                        console.log('data follows:');
-                        console.log(data);
-                        console.log('end of data:');
-                        console.log('response follows');
-                        console.log(response);
-                        console.log('end of response:');
-                        console.log('err follows');
-                        console.log(err);
-                        console.log('end of err:');
-                    })
+                    third.post('statuses/update', {status: subject})
+                        .catch(function (err) {
+                            s2 = false;
+                            console.log(err);
+                        })
+                        .then(function (result) {
+                            s3 = true;
+                        })
                 }
                 if (four) {
-                    fourth.post('statuses/update', {status: subject}, function (err, data, response) {
-                        console.log('data follows:');
-                        console.log(data);
-                        console.log('end of data:');
-                        console.log('response follows');
-                        console.log(response);
-                        console.log('end of response:');
-                        console.log('err follows');
-                        console.log(err);
-                        console.log('end of err:');
-                    })
+                    fourth.post('statuses/update', {status: subject})
+                        .catch(function (err) {
+                            s4 = false;
+                            console.log(err);
+                        })
+                        .then(function (result) {
+                            s4 = true;
+                        })
                 }
                 if (five) {
-                    fifth.post('statuses/update', {status: subject}, function (err, data, response) {
-                        console.log('data follows:');
-                        console.log(data);
-                        console.log('end of data:');
-                        console.log('response follows');
-                        console.log(response);
-                        console.log('end of response:');
-                        console.log('err follows');
-                        console.log(err);
-                        console.log('end of err:');
-                    })
+                    fifth.post('statuses/update', {status: subject})
+                        .catch(function (err) {
+                            s5 = false;
+                            console.log(err);
+                        })
+                        .then(function (result) {
+                            s5 = true;
+                        })
                 }
                 if (six) {
-                    phd.post('statuses/update', {status: subject}, function (err, data, response) {
-                        console.log('data follows:');
-                        console.log(data);
-                        console.log('end of data:');
-                        console.log('response follows');
-                        console.log(response);
-                        console.log('end of response:');
-                        console.log('err follows');
-                        console.log(err);
-                        console.log('end of err:');
-                    })
+                    phd.post('statuses/update', {status: subject})
+                        .catch(function (err) {
+                            s6 = false;
+                            console.log(err);
+                        })
+                        .then(function (result) {
+                            s6 = true;
+                        })
                 }
 
             }
         });
+
+        var successState = [s1, s2, s3, s4, s5, s6];
+        deferred.resolve(successState);
+
         return deferred.promise;
     }
 
