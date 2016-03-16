@@ -83,7 +83,14 @@ var accounts = {
             uid: sender,
             subject: subject,
             message: message,
-            recipients:recipients
+            year: {
+                first: recipients[0],
+                second: recipients[1],
+                third: recipients[2],
+                fourth: recipients[3],
+                fifth: recipients[4],
+                phd: recipients[5]
+            }
         });
 
         msg.save(function (err) {
