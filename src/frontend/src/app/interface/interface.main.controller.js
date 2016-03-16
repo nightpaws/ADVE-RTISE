@@ -36,7 +36,7 @@ angular.module('interface')
                                 }
                                 year++;
                             }
-                            toastr.successful("Processing Completed","Information");
+                            toastr.success("Processing Completed","Information");
                         } else {
                             toastr.error("Server response: " + data.data.message, 'Error');
                         }
