@@ -134,10 +134,10 @@ var accounts = {
                             console.log("error: " + error); //json response
                         }
                         console.log("response: "+ res);
-
+                        var fbout = JSON.parse(res);
 
                         //Twitter Posting
-                        first.post('statuses/update', {status: subject + " https://facebook.com/"+ res.id})
+                        first.post('statuses/update', {status: subject + " https://facebook.com/"+ fbout.id})
                             .catch(function (err) {
                                 s1 = false;
                                 console.log(err);
