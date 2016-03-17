@@ -91,14 +91,28 @@ var config = {
     // Then click Debug, and Extend Access Token by clicking debug and then clicking the extend button.
     //
     //The PageID can be found in the About Section of the profile you wish to post to.
+    //Requires manage_pages & publish_pages permissions
     facebook: {
-        accessToken: 'CAAWYaD6yiUsBANKCWrDgfPZBYZCrXqH7bKhTHYyfEyhKJPurqdDZAQNZAaru4JQTuv04pA8BC5MPiVqmE4OJ6e1vaOJ8yebmVSK1iZBoKZBAENMVcxl81LI37pjUPaWA3HoaWQZBiAZBdSPtfZBAwUgg2IUpX0E7Crn4Sc2fFWwB6ZAIpmO6Vac9JG',
-        pageID_year1: '1732378580331236',
-        pageID_year2: '488705257985804',
-        pageID_year3: '1685169308429577',
-        pageID_year4: '638563382949018',
-        pageID_year5: '630325497118033',
-        pageID_yearPhD: '635097563323951'
+        //Prod Token
+        accessToken: 'CAAWYaD6yiUsBAAhsjoedbtJrEbYXb8EBBNEXuDhIE5DXvNtIId9FOR5EFfZBe87ZArkB5SG0SOurZAyxp5aOB1oGK1RhzOnoOlHZBx2ZCbaiV0VvDCnndtzZB4kXxKTZBuCFdNmEusW3lCDHmcid4o4s2yLe2WtReOjTZBAndWkm8R5hhTT9q3CoXeeY2jepkY4ZD',
+
+        //Prod Pages
+        pageID_year1: '762007797268470',
+        pageID_year2: '',
+        pageID_year3: '',
+        pageID_year4: '',
+        pageID_year5: '',
+        pageID_yearPhD: ''
+
+        //Dev Token
+        //accessToken: 'CAAWYaD6yiUsBAAhsjoedbtJrEbYXb8EBBNEXuDhIE5DXvNtIId9FOR5EFfZBe87ZArkB5SG0SOurZAyxp5aOB1oGK1RhzOnoOlHZBx2ZCbaiV0VvDCnndtzZB4kXxKTZBuCFdNmEusW3lCDHmcid4o4s2yLe2WtReOjTZBAndWkm8R5hhTT9q3CoXeeY2jepkY4ZD',
+        //Dev Pages
+        //pageID_year1: '1732378580331236',
+        //pageID_year2: '488705257985804',
+        //pageID_year3: '1685169308429577',
+        //pageID_year4: '638563382949018',
+        //pageID_year5: '630325497118033',
+        //pageID_yearPhD: '635097563323951'
     },
 
     //Telegram is not supported at this time as their Application is undergoing major changes.
