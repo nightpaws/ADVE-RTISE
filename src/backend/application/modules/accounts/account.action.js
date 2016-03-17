@@ -137,7 +137,7 @@ var accounts = {
                         var fbout = JSON.parse(res);
 
                         //Twitter Posting
-                        first.post('statuses/update', {status: subject + " https://facebook.com/"+ fbout.id})
+                        first.post('statuses/update', {status: subject + "... https://facebook.com/"+ fbout.id})
                             .catch(function (err) {
                                 s1 = false;
                                 console.log(err);
@@ -151,39 +151,42 @@ var accounts = {
                 if (two) {
 
 
-                    second.post('statuses/update', {status: subject})
-                        .catch(function (err) {
-                            s2 = false;
-                            console.log(err);
-                        });
-
                     //Facebook Posting
-                    facebook.post('/'+config.facebook.pageID_year2+'/feed', accessToken2, {message: subject + " " + message}, function (error, res) {
+                    facebook.post('/'+config.facebook.pageID_year2+'/feed', accessToken2, {message: message}, function (error, res) {
                         if (error) {
                             s2 = false;
                             console.log("error: " + error); //json response
-                            console.log("response: "+ res);
                         }
+                        console.log("response: "+ res);
+                        var fbout = JSON.parse(res);
+
+                        //Twitter Posting
+                        second.post('statuses/update', {status: subject + "... https://facebook.com/"+ fbout.id})
+                            .catch(function (err) {
+                                s2 = false;
+                                console.log(err);
+                            });
                     });
 
 
                 }
                 if (three) {
 
-
-                    third.post('statuses/update', {status: subject})
-                        .catch(function (err) {
-                            s3 = false;
-                            console.log(err);
-                        });
-
                     //Facebook Posting
-                    facebook.post('/'+config.facebook.pageID_year3+'/feed', accessToken3, {message: subject + " " + message}, function (error, res) {
+                    facebook.post('/'+config.facebook.pageID_year3+'/feed', accessToken3, {message: message}, function (error, res) {
                         if (error) {
                             s3 = false;
                             console.log("error: " + error); //json response
-                            console.log("response: "+ res);
                         }
+                        console.log("response: "+ res);
+                        var fbout = JSON.parse(res);
+
+                        //Twitter Posting
+                        third.post('statuses/update', {status: subject + "... https://facebook.com/"+ fbout.id})
+                            .catch(function (err) {
+                                s3 = false;
+                                console.log(err);
+                            });
                     });
 
 
@@ -191,19 +194,21 @@ var accounts = {
                 if (four) {
 
 
-                    fourth.post('statuses/update', {status: subject})
-                        .catch(function (err) {
-                            s4 = false;
-                            console.log(err);
-                        });
-
                     //Facebook Posting
-                    facebook.post('/'+config.facebook.pageID_year4+'/feed', accessToken4, {message: subject + " " + message}, function (error, res) {
+                    facebook.post('/'+config.facebook.pageID_year4+'/feed', accessToken4, {message: message}, function (error, res) {
                         if (error) {
                             s4 = false;
                             console.log("error: " + error); //json response
-                            console.log("response: "+ res);
                         }
+                        console.log("response: "+ res);
+                        var fbout = JSON.parse(res);
+
+                        //Twitter Posting
+                        fourth.post('statuses/update', {status: subject + "... https://facebook.com/"+ fbout.id})
+                            .catch(function (err) {
+                                s4 = false;
+                                console.log(err);
+                            });
                     });
 
 
@@ -211,19 +216,21 @@ var accounts = {
                 if (five) {
 
 
-                    fifth.post('statuses/update', {status: subject})
-                        .catch(function (err) {
-                            s5 = false;
-                            console.log(err);
-                        });
-
                     //Facebook Posting
-                    facebook.post('/'+config.facebook.pageID_year5+'feed', accessToken5, {message: subject + " " + message}, function (error, res) {
+                    facebook.post('/'+config.facebook.pageID_year5+'/feed', accessToken5, {message: message}, function (error, res) {
                         if (error) {
                             s5 = false;
                             console.log("error: " + error); //json response
-                            console.log("response: "+ res);
                         }
+                        console.log("response: "+ res);
+                        var fbout = JSON.parse(res);
+
+                        //Twitter Posting
+                        fifth.post('statuses/update', {status: subject + "... https://facebook.com/"+ fbout.id})
+                            .catch(function (err) {
+                                s5 = false;
+                                console.log(err);
+                            });
                     });
 
 
@@ -231,19 +238,21 @@ var accounts = {
                 if (six) {
 
 
-                    phd.post('statuses/update', {status: subject})
-                        .catch(function (err) {
-                            s6 = false;
-                            console.log(err);
-                        });
-
                     //Facebook Posting
-                    facebook.post('/'+config.facebook.pageID_yearPhD+'/feed', accessTokenPhD, {message: subject + " " + message}, function (error, res) {
+                    facebook.post('/'+config.facebook.pageID_yearPhD+'/feed', accessTokenPhD, {message: message}, function (error, res) {
                         if (error) {
                             s6 = false;
                             console.log("error: " + error); //json response
-                            console.log("response: "+ res);
                         }
+                        console.log("response: "+ res);
+                        var fbout = JSON.parse(res);
+
+                        //Twitter Posting
+                        phd.post('statuses/update', {status: subject + "... https://facebook.com/"+ fbout.id})
+                            .catch(function (err) {
+                                s6 = false;
+                                console.log(err);
+                            });
                     });
 
 
