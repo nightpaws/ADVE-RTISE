@@ -114,26 +114,37 @@ var accounts = {
 
             } else {
 
+                if(message!=null){
+                    var t = subject + "\n\n" + message;
+                    message = t;
+
+                    if(subject.length>100)
+                    subject = subject.substring(0,subject.length - 40);
+                }
+
+
+
                 //Perform submissions to Social Media
                 if (one) {
 
-
-                    //Twitter Posting
-                    first.post('statuses/update', {status: subject})
-                        .catch(function (err) {
-                            s1 = false;
-                            console.log(err);
-                        });
-
                     //Facebook Posting
-                    facebook.post('/'+config.facebook.pageID_year1+'/feed', accessToken1, {message: subject + " " + message}, function (error, res) {
+                    facebook.post('/'+config.facebook.pageID_year1+'/feed', accessToken1, {message: message}, function (error, res) {
                         if (error) {
                             s1 = false;
                             console.log("error: " + error); //json response
                         }
                         console.log("response: "+ res);
 
+
+                        //Twitter Posting
+                        first.post('statuses/update', {status: subject + " https://facebook.com/"+ res.id})
+                            .catch(function (err) {
+                                s1 = false;
+                                console.log(err);
+                            });
                     });
+
+
 
 
                 }
