@@ -92,13 +92,13 @@ var config = {
     //
     //The PageID can be found in the About Section of the profile you wish to post to.
     facebook: {
-        accessToken: 'CAAIkXjVZCZCkYBAJgpL93rHV0hX1TONK6Du63Rqsuu0GWN5SNxNGcLCT1ax9SW4qZAM7k0mt67BQOgxySJyY2ZBwe1AJvHQuq7Sl6ohYbJoszfik6cy7b1k8Hg61DVbnrjYi2OPkvdsBlO9RlyKQeZBVOZCZCwVkPNWnpvGLhOlIZB7T5ViwTC8s',
-        pageID_year1: '826175544159232',
-        pageID_year2: '',
-        pageID_year3: '',
-        pageID_year4: '',
-        pageID_year5: '',
-        pageID_yearPhD: ''
+        accessToken: 'CAAWYaD6yiUsBANKCWrDgfPZBYZCrXqH7bKhTHYyfEyhKJPurqdDZAQNZAaru4JQTuv04pA8BC5MPiVqmE4OJ6e1vaOJ8yebmVSK1iZBoKZBAENMVcxl81LI37pjUPaWA3HoaWQZBiAZBdSPtfZBAwUgg2IUpX0E7Crn4Sc2fFWwB6ZAIpmO6Vac9JG',
+        pageID_year1: '1732378580331236',
+        pageID_year2: '488705257985804',
+        pageID_year3: '1685169308429577',
+        pageID_year4: '638563382949018',
+        pageID_year5: '630325497118033',
+        pageID_yearPhD: '635097563323951'
     },
 
     //Telegram is not supported at this time as their Application is undergoing major changes.
