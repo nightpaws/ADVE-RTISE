@@ -94,7 +94,7 @@ var config = {
     //Requires manage_pages & publish_pages permissions
     facebook: {
         //Prod Token
-        accessToken: 'CAAWYaD6yiUsBAAhsjoedbtJrEbYXb8EBBNEXuDhIE5DXvNtIId9FOR5EFfZBe87ZArkB5SG0SOurZAyxp5aOB1oGK1RhzOnoOlHZBx2ZCbaiV0VvDCnndtzZB4kXxKTZBuCFdNmEusW3lCDHmcid4o4s2yLe2WtReOjTZBAndWkm8R5hhTT9q3CoXeeY2jepkY4ZD',
+        accessToken: 'CAACEdEose0cBAD45juCxHZCeQ8UfCjE0VU59MRBTReqla8sbLZBv5zzqt2zFvpiRD3z5yCA6OFLgjQIpHncFnmXhhmNAeY2WpfZCM8wHqc9oZAlWYODl0abp2pDatvkFpmOETfRo7IbQ2WejPoHOUu6VrZAxhSvxvRhfKY6ORWZAG4pNDJPvoZAUtslfYtlKQ5vGcGvmcZBdPCILnMy0LBZAo',
 
         //Prod Pages
         pageID_year1: '762007797268470',
