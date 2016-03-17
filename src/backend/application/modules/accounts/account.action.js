@@ -13,6 +13,7 @@ var mongoose = require('mongoose');
 
 //External posting requirements
 var Twit = require('twit');
+var facebook = require('tiny-facebook-wrapper');
 
 //Twitter accounts for Twit
 var first = new Twit({
@@ -63,6 +64,8 @@ var phd = new Twit({
     timeout_ms: 60 * 1000  // optional HTTP request timeout to apply to all requests.
 });
 
+//Access Token for Facebook
+var accessToken = config.facebook.accessToken;
 
 var accounts = {
     submit: function (subject, message, recipients, sender) {
@@ -109,64 +112,119 @@ var accounts = {
 
                 //Perform submissions to Social Media
                 if (one) {
+
+
+                    //Twitter Posting
                     first.post('statuses/update', {status: subject})
                         .catch(function (err) {
                             s1 = false;
                             console.log(err);
-                        })
-                        .then(function (result) {
-                            s1 = true;
-                        })
+                        });
+
+                    //Facebook Posting
+                    facebook.post('/'+config.facebook.pageID_year1+'/feed', accessToken, {message: subject + " " + message}, function (error, res) {
+                        if (error) {
+                            s1 = false;
+                            console.log(res); //json response
+                        }
+                    });
+
+
                 }
                 if (two) {
+
+
                     second.post('statuses/update', {status: subject})
-                        .catch(function (err) {
-                            s1 = false;
-                            console.log(err);
-                        })
-                        .then(function (result) {
-                            s1 = true;
-                        })
-                }
-                if (three) {
-                    third.post('statuses/update', {status: subject})
                         .catch(function (err) {
                             s2 = false;
                             console.log(err);
-                        })
-                        .then(function (result) {
-                            s3 = true;
-                        })
+                        });
+
+                    //Facebook Posting
+                    facebook.post('/'+config.facebook.pageID_year2+'/feed', accessToken, {message: subject + " " + message}, function (error, res) {
+                        if (error) {
+                            s2 = false;
+                            console.log(res); //json response
+                        }
+                    });
+
+
+                }
+                if (three) {
+
+
+                    third.post('statuses/update', {status: subject})
+                        .catch(function (err) {
+                            s3 = false;
+                            console.log(err);
+                        });
+
+                    //Facebook Posting
+                    facebook.post('/'+config.facebook.pageID_year3+'/feed', accessToken, {message: subject + " " + message}, function (error, res) {
+                        if (error) {
+                            s3 = false;
+                            console.log(res); //json response
+                        }
+                    });
+
+
                 }
                 if (four) {
+
+
                     fourth.post('statuses/update', {status: subject})
                         .catch(function (err) {
                             s4 = false;
                             console.log(err);
-                        })
-                        .then(function (result) {
-                            s4 = true;
-                        })
+                        });
+
+                    //Facebook Posting
+                    facebook.post('/'+config.facebook.pageID_year4+'/feed', accessToken, {message: subject + " " + message}, function (error, res) {
+                        if (error) {
+                            s4 = false;
+                            console.log(res); //json response
+                        }
+                    });
+
+
                 }
                 if (five) {
+
+
                     fifth.post('statuses/update', {status: subject})
                         .catch(function (err) {
                             s5 = false;
                             console.log(err);
-                        })
-                        .then(function (result) {
-                            s5 = true;
-                        })
+                        });
+
+                    //Facebook Posting
+                    facebook.post('/'+config.facebook.pageID_year5+'feed', accessToken, {message: subject + " " + message}, function (error, res) {
+                        if (error) {
+                            s5 = false;
+                            console.log(res); //json response
+                        }
+                    });
+
+
                 }
                 if (six) {
+
+
                     phd.post('statuses/update', {status: subject})
                         .catch(function (err) {
                             s6 = false;
                             console.log(err);
-                        })
-                        .then(function (result) {
-                            s6 = true;
-                        })
+                        });
+
+                    //Facebook Posting
+                    facebook.post('/'+config.facebook.pageID_yearPhD+'/feed', accessToken, {message: subject + " " + message}, function (error, res) {
+                        if (error) {
+                            s6 = false;
+                            console.log(res); //json response
+                        }
+                    });
+
+
                 }
 
             }
