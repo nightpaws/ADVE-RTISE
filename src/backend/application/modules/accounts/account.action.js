@@ -5,7 +5,6 @@
 var q = require('q');
 var deferred = q.defer();
 var config = require('../../../config');
-//var jsonwebtoken = require('./JWT'); //wrong location set
 
 //Database logging components
 var messageModel = require('../../models/message.model');
@@ -65,7 +64,12 @@ var phd = new Twit({
 });
 
 //Access Token for Facebook
-var accessToken = config.facebook.accessToken;
+var accessToken1 = config.facebook.accessToken1;
+var accessToken2 = config.facebook.accessToken2;
+var accessToken3 = config.facebook.accessToken3;
+var accessToken4 = config.facebook.accessToken4;
+var accessToken5 = config.facebook.accessToken5;
+var accessTokenPhD = config.facebook.accessTokenPhD;
 
 var accounts = {
     submit: function (subject, message, recipients, sender) {
@@ -122,12 +126,13 @@ var accounts = {
                         });
 
                     //Facebook Posting
-                    facebook.post('/'+config.facebook.pageID_year1+'/feed', accessToken, {message: subject + " " + message}, function (error, res) {
+                    facebook.post('/'+config.facebook.pageID_year1+'/feed', accessToken1, {message: subject + " " + message}, function (error, res) {
                         if (error) {
                             s1 = false;
                             console.log("error: " + error); //json response
-                            console.log("response: "+ res);
                         }
+                        console.log("response: "+ res);
+
                     });
 
 
@@ -142,7 +147,7 @@ var accounts = {
                         });
 
                     //Facebook Posting
-                    facebook.post('/'+config.facebook.pageID_year2+'/feed', accessToken, {message: subject + " " + message}, function (error, res) {
+                    facebook.post('/'+config.facebook.pageID_year2+'/feed', accessToken2, {message: subject + " " + message}, function (error, res) {
                         if (error) {
                             s2 = false;
                             console.log("error: " + error); //json response
@@ -162,7 +167,7 @@ var accounts = {
                         });
 
                     //Facebook Posting
-                    facebook.post('/'+config.facebook.pageID_year3+'/feed', accessToken, {message: subject + " " + message}, function (error, res) {
+                    facebook.post('/'+config.facebook.pageID_year3+'/feed', accessToken3, {message: subject + " " + message}, function (error, res) {
                         if (error) {
                             s3 = false;
                             console.log("error: " + error); //json response
@@ -182,7 +187,7 @@ var accounts = {
                         });
 
                     //Facebook Posting
-                    facebook.post('/'+config.facebook.pageID_year4+'/feed', accessToken, {message: subject + " " + message}, function (error, res) {
+                    facebook.post('/'+config.facebook.pageID_year4+'/feed', accessToken4, {message: subject + " " + message}, function (error, res) {
                         if (error) {
                             s4 = false;
                             console.log("error: " + error); //json response
@@ -202,7 +207,7 @@ var accounts = {
                         });
 
                     //Facebook Posting
-                    facebook.post('/'+config.facebook.pageID_year5+'feed', accessToken, {message: subject + " " + message}, function (error, res) {
+                    facebook.post('/'+config.facebook.pageID_year5+'feed', accessToken5, {message: subject + " " + message}, function (error, res) {
                         if (error) {
                             s5 = false;
                             console.log("error: " + error); //json response
@@ -222,7 +227,7 @@ var accounts = {
                         });
 
                     //Facebook Posting
-                    facebook.post('/'+config.facebook.pageID_yearPhD+'/feed', accessToken, {message: subject + " " + message}, function (error, res) {
+                    facebook.post('/'+config.facebook.pageID_yearPhD+'/feed', accessTokenPhD, {message: subject + " " + message}, function (error, res) {
                         if (error) {
                             s6 = false;
                             console.log("error: " + error); //json response
@@ -232,7 +237,6 @@ var accounts = {
 
 
                 }
-
             }
         });
 
