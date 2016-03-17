@@ -16,6 +16,7 @@
     "q": "^1.4.1",
     "serve-favicon": "^2.3.0",
     "string.prototype.startswith": "^0.2.0",
+    "tiny-facebook-wrapper": "0.0.7",
     "twit": "^2.2.3"
   },
   "devDependencies": {},
