@@ -92,16 +92,18 @@ var config = {
     //
     //The PageID can be found in the About Section of the profile you wish to post to.
     //Requires manage_pages & publish_pages permissions
-    //status_update is required in API 2.5 as it was developed by a moron.
+    //status_update may be required in API 2.5 as it was developed by a moron.
     facebook: {
-        //Page Access Token
-        accessToken1: 'CAAWYaD6yiUsBAMYZAXhYhx8epu6dyt5EuWX6xc1XsUUDqHXyKreiZCsZCFKZAg7qtQEDscWa2J26ZATPFWEMfDg1hnVEZBMKVa7GL0JTFdYUqs5S2WAET6434Mivgbrf595apHY6HFebmaFZCOoDBOZAcBqY87ccMykyZBmoOUnYcgLetPIcqj6V5ZBcq4TQZA5SnIZD',
+        //Using pages to post requires individual page access tokens.
+        groups:false,
+        //Page Access Token - Use ones that never expire
+        accessToken1: 'CAACEdEose0cBAMpirSarxdpDZBTLU1fwHMavZBE3LwmcbaDxZBhC0NWwZCPTFLE8qWnxPTPYT8M5H6Jcvv7eJKnjIdDCAi1ycQ40ptU0EDuXOEbbBMKbRUoihqZA1PduJKT5gtmkjxhPgpwpuuZAloxZCkEXtwPgD0vESLPUKZAOyjqzPqK72Md3GGhQjuFAaihWQlEpXYuUpT6fV05Rav4V',
         accessToken2: '',
         accessToken3:'',
         accessToken4:'',
         accessToken5:'',
 
-        //Prod Pages
+        //Page IDs
         pageID_year1: '762007797268470',
         pageID_year2: '',
         pageID_year3: '',
@@ -112,6 +114,15 @@ var config = {
         //The alternative approach makes use of groups instead of pages. This better ties in with student use of groups
         //on facebook to communicate. However I was not able to make groups for testing (since I was running in a production
         //facebook environment.
+        //groups:true,
+        //accessToken:'';
+        //
+        //page_year1: '',
+        //page_year2: '',
+        //page_year3: '',
+        //page_year4: '',
+        //page_year5: '',
+        //page_yearPhD: ''
 
     },
 
