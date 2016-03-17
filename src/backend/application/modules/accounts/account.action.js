@@ -125,7 +125,8 @@ var accounts = {
                     facebook.post('/'+config.facebook.pageID_year1+'/feed', accessToken, {message: subject + " " + message}, function (error, res) {
                         if (error) {
                             s1 = false;
-                            console.log(res); //json response
+                            console.log("error: " + error); //json response
+                            console.log("response: "+ res);
                         }
                     });
 
@@ -144,7 +145,8 @@ var accounts = {
                     facebook.post('/'+config.facebook.pageID_year2+'/feed', accessToken, {message: subject + " " + message}, function (error, res) {
                         if (error) {
                             s2 = false;
-                            console.log(res); //json response
+                            console.log("error: " + error); //json response
+                            console.log("response: "+ res);
                         }
                     });
 
@@ -163,7 +165,8 @@ var accounts = {
                     facebook.post('/'+config.facebook.pageID_year3+'/feed', accessToken, {message: subject + " " + message}, function (error, res) {
                         if (error) {
                             s3 = false;
-                            console.log(res); //json response
+                            console.log("error: " + error); //json response
+                            console.log("response: "+ res);
                         }
                     });
 
@@ -182,7 +185,8 @@ var accounts = {
                     facebook.post('/'+config.facebook.pageID_year4+'/feed', accessToken, {message: subject + " " + message}, function (error, res) {
                         if (error) {
                             s4 = false;
-                            console.log(res); //json response
+                            console.log("error: " + error); //json response
+                            console.log("response: "+ res);
                         }
                     });
 
@@ -201,7 +205,8 @@ var accounts = {
                     facebook.post('/'+config.facebook.pageID_year5+'feed', accessToken, {message: subject + " " + message}, function (error, res) {
                         if (error) {
                             s5 = false;
-                            console.log(res); //json response
+                            console.log("error: " + error); //json response
+                            console.log("response: "+ res);
                         }
                     });
 
@@ -220,7 +225,8 @@ var accounts = {
                     facebook.post('/'+config.facebook.pageID_yearPhD+'/feed', accessToken, {message: subject + " " + message}, function (error, res) {
                         if (error) {
                             s6 = false;
-                            console.log(res); //json response
+                            console.log("error: " + error); //json response
+                            console.log("response: "+ res);
                         }
                     });
 
