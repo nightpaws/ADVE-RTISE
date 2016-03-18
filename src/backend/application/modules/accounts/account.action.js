@@ -131,11 +131,13 @@ var accounts = {
                     wallpost = t;
 
                     //if subject is long
-                    if (subject.length > 100)
+                    if (subject.length > 100) {
                         subject = subject.substring(0, subject.length - 40);
-                } else {
-                    //if message content is null
-                    wallpost = subject;
+                    }
+                }
+                if (message===null){
+                    console.log('message is null');
+                    wallpost = message;
                 }
 
 
