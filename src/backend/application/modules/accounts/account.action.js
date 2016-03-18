@@ -80,6 +80,8 @@ var accounts = {
         console.log("recipients" + recipients);
         console.log("sender:" + sender);
         console.log("END============");
+        console.log("messagelen"+message.length);
+
         //Initialise variables needed for submissions
         var q = require('q');
         var deferred = q.defer();
@@ -125,7 +127,6 @@ var accounts = {
                 console.log("===subject: " + subject);
                 console.log("===message: " + message);
 
-                console.log("messagelen"+message.length);
                 //if message content isn't null
                 if (message != '') {
                     var t = subject + "\n\n" + message;
