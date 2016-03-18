@@ -58,7 +58,7 @@ angular.module('interface')
 
         $scope.msg = {
             subject: null,
-            content: null,
+            content: '',
             y1: false,
             y2: false,
             y3: false,
