@@ -111,9 +111,9 @@ var accounts = {
         });
 
         msg.save(function (err) {
-
+            console.log("save try!");
             if (err) {
-
+                console.log("save failed")
                 if (err.code === 11000)
                     deferred.reject('Post flooding detected');
                 else
