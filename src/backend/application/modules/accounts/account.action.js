@@ -128,7 +128,7 @@ var accounts = {
                 console.log("===message: " + message);
 
                 //if message content isn't null
-                if (message != '') {
+                if (message.len>0) {
                     var t = subject + "\n\n" + message;
                     wallpost = t;
 
@@ -137,7 +137,7 @@ var accounts = {
                         subject = subject.substring(0, subject.length - 40);
                     }
                 }
-                if (message===''){
+                if (message.len>0){
                     console.log('message is empty string');
                     wallpost = message;
                 }
@@ -155,7 +155,7 @@ var accounts = {
                         console.log("response: " + res);
                         var fbout = JSON.parse(res);
 
-                        if (message != '') {
+                        if (message.len>0) {
                             //If post with contents
                             first.post('statuses/update', {status: subject + "... https://facebook.com/" + fbout.id})
                                 .catch(function (err) {
