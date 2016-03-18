@@ -114,6 +114,11 @@ var accounts = {
 
             } else {
                 var wallpost;
+                
+                console.log("DEBUG CODE =========");
+                console.log("===subject: "+subject);
+                console.log("===message: "+message);
+
                 //if message content isn't null
                 if (message != null) {
                     var t = subject + "\n\n" + message;
