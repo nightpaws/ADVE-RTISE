@@ -73,7 +73,13 @@ var accessTokenPhD = config.facebook.accessTokenPhD;
 
 var accounts = {
     submit: function (subject, message, recipients, sender) {
-
+        console.log("FUNCTIONCALL ACCOUNT.ACTION.JS");
+        console.log("values input");
+        console.log("subject: " + subject);
+        console.log("message: " + message);
+        console.log("recipients" + recipients);
+        console.log("sender:" + sender);
+        console.log("END============");
         //Initialise variables needed for submissions
         var q = require('q');
         var deferred = q.defer();
@@ -114,10 +120,10 @@ var accounts = {
 
             } else {
                 var wallpost;
-                
+
                 console.log("DEBUG CODE =========");
-                console.log("===subject: "+subject);
-                console.log("===message: "+message);
+                console.log("===subject: " + subject);
+                console.log("===message: " + message);
 
                 //if message content isn't null
                 if (message != null) {
@@ -145,7 +151,7 @@ var accounts = {
                         console.log("response: " + res);
                         var fbout = JSON.parse(res);
 
-                        if(message!=null) {
+                        if (message != null) {
                             //If post with contents
                             first.post('statuses/update', {status: subject + "... https://facebook.com/" + fbout.id})
                                 .catch(function (err) {
@@ -153,9 +159,9 @@ var accounts = {
                                     console.log(err);
                                 });
                         }
-                        else{
+                        else {
                             //else if subject/tweet only
-                            first.post('statuses/update', {status: subject })
+                            first.post('statuses/update', {status: subject})
                                 .catch(function (err) {
                                     s1 = false;
                                     console.log(err);
