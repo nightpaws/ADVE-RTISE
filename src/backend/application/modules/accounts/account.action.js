@@ -125,6 +125,7 @@ var accounts = {
                 console.log("===subject: " + subject);
                 console.log("===message: " + message);
 
+                console.log("messagelen"+message.length);
                 //if message content isn't null
                 if (message != '') {
                     var t = subject + "\n\n" + message;
