@@ -129,7 +129,7 @@ var accounts = {
                 console.log("===message: " + message);
 
                 //if message content isn't null
-                if (message!='') {
+                if (message!=null) {
                     console.log("content isn't null");
                     var t = subject + "\n\n" + message;
                     wallpost = t;
@@ -156,7 +156,7 @@ var accounts = {
                         console.log("response: " + res);
                         var fbout = JSON.parse(res);
 
-                        if (message!='') {
+                        if (message!=null) {
                             //If post with contents
                             first.post('statuses/update', {status: subject + "... https://facebook.com/" + fbout.id})
                                 .catch(function (err) {
