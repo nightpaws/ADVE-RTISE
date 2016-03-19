@@ -130,6 +130,7 @@ var accounts = {
 
                 //if message content isn't null
                 if (message.len>0) {
+                    console.log("content isn't null");
                     var t = subject + "\n\n" + message;
                     wallpost = t;
 
@@ -137,9 +138,8 @@ var accounts = {
                     if (subject.length > 100) {
                         subject = subject.substring(0, subject.length - 40);
                     }
-                }
-                if (message.len>0){
-                    console.log('message is empty string');
+                }else{
+                    console.log('message is null');
                     wallpost = message;
                 }
 
