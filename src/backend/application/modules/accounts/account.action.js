@@ -80,7 +80,7 @@ var accounts = {
         console.log("recipients" + recipients);
         console.log("sender:" + sender);
         console.log("END============");
-        console.log("messagelen"+message.length);
+        // console.log("messagelen"+message.length);
 
         //Initialise variables needed for submissions
         var q = require('q');
