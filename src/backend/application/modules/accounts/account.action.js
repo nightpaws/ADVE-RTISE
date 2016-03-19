@@ -140,7 +140,7 @@ var accounts = {
                     }
                 }else{
                     console.log('message is null');
-                    wallpost = message;
+                    wallpost = subject;
                 }
 
 
