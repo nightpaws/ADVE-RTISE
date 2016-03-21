@@ -1,6 +1,12 @@
 /**
  * Created by Nightpaws on 20/01/2016.
  */
+require('pmx').init({
+	http:true,
+	network:true,
+	ports:true
+});
+
 var app = require('./application/app')(),
     config = require('./config'),
     fs = require('fs'),
