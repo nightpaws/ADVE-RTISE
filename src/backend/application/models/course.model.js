@@ -1,4 +1,3 @@
-
 /**
  * Created by Nightpaws on 24/02/2016.
  */
@@ -11,7 +10,7 @@ var course = new mongoose.Schema({
         required: true,
         unique: false
     },
-    name:{
+    name: {
         type: String,
         required: true,
         unique: false
@@ -23,6 +22,6 @@ var course = new mongoose.Schema({
     }
 });
 
-course.index({ code: 'text', uid: 'text'});
+course.index({code: 'text', uid: 'text'});
 
 module.exports = mongoose.model('course', course);

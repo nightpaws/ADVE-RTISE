@@ -6,7 +6,5 @@ var deferred = q.defer();
 var mongoose = require('mongoose');
 var config = require('../../../config');
 
-var accounts = {
-
-};
+var accounts = {};
 module.exports = accounts;

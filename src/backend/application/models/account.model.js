@@ -12,10 +12,10 @@ var account = new mongoose.Schema({
     },
     yearGroup: {
         type: Number,
-        required:true,
-        unique:false
+        required: true,
+        unique: false
     },
-    username:{
+    username: {
         type: String,
         required: true,
         unique: false

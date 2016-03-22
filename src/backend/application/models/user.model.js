@@ -6,44 +6,44 @@ var config = require('../../config');
 
 var user = new mongoose.Schema({
     username: {
-        type : String,
+        type: String,
         required: true,
         unique: true
     },
     sn: {
-        type : String,
+        type: String,
         required: false,
         unique: false,
         default: 'N.G.'
     },
     password: {
-        type : String,
+        type: String,
         required: true,
         unique: false
     },
     givenName: {
-        type : String,
+        type: String,
         required: false,
         unique: false,
         default: 'N.G.'
     },
-    cn:{
-        type : String,
+    cn: {
+        type: String,
         required: false,
         unique: false,
         default: 'N.G.'
     },
-    email:{
+    email: {
         type: String,
         required: true,
         unique: true
     },
-    isAdmin:{
+    isAdmin: {
         type: Boolean,
         required: true,
         default: false
     },
-    isActive:{
+    isActive: {
         type: Boolean,
         required: true,
         default: false

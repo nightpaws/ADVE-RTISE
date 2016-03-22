@@ -2,14 +2,14 @@
  * Created by nightpaws on 10/02/2016.
  */
 angular.module('interface')
-    .controller('interface.main.controller', ['$scope', 'interface.request.factory', '$uibModal', 'toastr', '$state','user.service', function ($scope, requestHelper, $uibModal, toastr, $state, userService) {
+    .controller('interface.main.controller', ['$scope', 'interface.request.factory', '$uibModal', 'toastr', '$state', 'user.service', function ($scope, requestHelper, $uibModal, toastr, $state, userService) {
 
         $scope.interface = [];
 
         console.log("main controller called");
 
-        $scope.lecturerTest = function() {
-            if(userService.getLecturer()){
+        $scope.lecturerTest = function () {
+            if (userService.getLecturer()) {
                 return true;
             }
             return false;
@@ -24,19 +24,19 @@ angular.module('interface')
             });
 
             modal.result.then(function (msg) {
-                toastr.info("Message Processing...","Information");
+                toastr.info("Message Processing...", "Information");
                 requestHelper.sendMessage(msg.subject, msg.content, msg.y1, msg.y2, msg.y3, msg.y4, msg.y5, msg.y6)
                     .then(function (data) {
                         if (data.data.successful) {
                             //toastr.info("Debug point reached!", "successful!");
                             var year = 1;
-                            for (var yearval in data.data.result){
-                                if(!yearval){
-                                    toastr.error("Sending to "+year+" failed","Submission Error");
+                            for (var yearval in data.data.result) {
+                                if (!yearval) {
+                                    toastr.error("Sending to " + year + " failed", "Submission Error");
                                 }
                                 year++;
                             }
-                            toastr.success("Processing Completed","Information");
+                            toastr.success("Processing Completed", "Information");
                         } else {
                             toastr.error("Server response: " + data.data.message, 'Error');
                         }

@@ -5,7 +5,7 @@
 var mongoose = require('mongoose')
     , csv = require('fast-csv');
 
-module.exports.importFile = function(filePath, fileHeaders, modelName) {
+module.exports.importFile = function (filePath, fileHeaders, modelName) {
     csv
         .fromPath(filePath, {headers: fileHeaders})
         .on('data', function (data) {

@@ -12,7 +12,7 @@
     <meta name="description" content="Social Media Integration Platform">
     <meta name="keywords" content="social_media,twitter,facebook,integration,platform,api,university,strathclyde">
     <meta name="copyright" content="Craig Morrison">
-
+    <meta name="detectify-verification" content="91e53b5c948e32dcae706beab8c80869" />
     <!-- On mobile devices, serve the app an icon -->
     <link rel="icon" sizes="192x192" href="image/advertise-4x.png">
     <link rel="apple-touch-icon" href="image/advertise-4x.png">
@@ -21,14 +21,15 @@
     <!-- bower:css -->
     <!-- endbower -->
     <link href='https://fonts.googleapis.com/css?family=Ubuntu:700,400' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"
+          integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
     <!-- inject:css -->
     <!-- endinject -->
 </head>
 <body ng-app="advertise">
 <div class="full-height" id="body-loaded">
-<header ui-view="header" ng-if="app.showHeader"></header>
-    <div id="body-wrapper" ng-class="{'full-height cancel-header' : !app.showNav, 'show-menu': app.showMenu}" >
+    <header ui-view="header" ng-if="app.showHeader"></header>
+    <div id="body-wrapper" ng-class="{'full-height cancel-header' : !app.showNav, 'show-menu': app.showMenu}">
 
         <nav ui-view="nav" ng-if="app.showNav">
 
@@ -42,9 +43,6 @@
 </div>
 
 
-
-
-
 <!--Will use angular to make this pretty-->
 <div id="body-loading" class="full-height" ng-class="{'fadeout': app.loaded}">
 
@@ -52,7 +50,8 @@
         <h1 class="border-underline-cyan">ADVE:RTISE</h1>
         <p>Version 0.7.3</p>
         <div class="loader">If you can see this, something has gone wrong. Try clearing your cache and reload.<br/>
-            If you have blocked scripting or are running an adblocker you may need to disable this too.</div>
+            If you have blocked scripting or are running an adblocker you may need to disable this too.
+        </div>
     </div>
 
 </div>
@@ -65,7 +64,7 @@
 
 <!--Time for our script-->
 <!--<script src = "/application/app/app.js"></script>-->
-<script src = "/app/app.js"></script>
+<script src="/app/app.js"></script>
 
 </body>
 </html>

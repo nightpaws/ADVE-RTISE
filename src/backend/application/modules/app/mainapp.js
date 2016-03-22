@@ -8,7 +8,7 @@ var config = require('../../../config');
 
 var mainapp = {
 
-    getApp: function(user){
+    getApp: function (user) {
 
         deferred = q.defer();
 
@@ -21,11 +21,11 @@ var mainapp = {
 
         userModel
             .findOne({username: user.username})
-            .exec(function(err, user){
+            .exec(function (err, user) {
 
-                if(err || !user){
+                if (err || !user) {
                     deferred.reject('Error finding your user profile');
-                }else{
+                } else {
 
                     var response = {
                         warnings: [],

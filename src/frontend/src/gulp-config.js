@@ -32,7 +32,7 @@ module.exports = function () {
             dir: ['!./bower_components/**/*', '!./node_modules/**/*']
         },
         index: 'index.html',
-        image:{
+        image: {
             dir: ['./image/**']
         },
         js: {

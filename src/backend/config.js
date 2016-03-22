@@ -95,13 +95,13 @@ var config = {
     //status_update may be required in API 2.5 as it was developed by a moron.
     facebook: {
         //Using pages to post requires individual page access tokens.
-        groups:false,
+        groups: false,
         //Page Access Token - Use ones that never expire
         accessToken1: 'CAAWYaD6yiUsBAOIat6XTGOc6ZAM29WN6vYKhYIB9aTZAHAvggbBSl1KwgHDfEWZCyknmZAuyBPlkzZAli9fCldvTiOP2ZAForhu9voBkLZCK9js68Ewl3wEVtcjClDuuy62RCvBDP5crUCAgYQtxlkAycn8GZBDrnXZCEFAqWE59qA1uH4kyoVcPHRSN9ds11l8IZD',
         accessToken2: '',
-        accessToken3:'',
-        accessToken4:'',
-        accessToken5:'',
+        accessToken3: '',
+        accessToken4: '',
+        accessToken5: '',
         accessTokenPhD: '',
 
         //Page IDs

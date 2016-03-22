@@ -5,17 +5,17 @@ var config = require('../../config');
 
 require('string.prototype.startswith');
 
-var Entitlements = function(req, res, next){
+var Entitlements = function (req, res, next) {
 
     var noAuth = false;
-    config.protect.ignore.map(function(item){
+    config.protect.ignore.map(function (item) {
 
-        if(req.path.startsWith(item)){
+        if (req.path.startsWith(item)) {
 
             noAuth = true;
         }
     });
-    if(noAuth){
+    if (noAuth) {
         next();
         return;
     }

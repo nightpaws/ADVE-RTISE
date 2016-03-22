@@ -79,12 +79,12 @@
 
   #posting {
     width: 95%;
-    margin-left:2.5%;
-    -webkit-margin-left:2.5%;
+    margin-left: 2.5%;
+    -webkit-margin-left: 2.5%;
   }
 
   textarea {
-    resize:none;
+    resize: none;
   }
 
   .control-label {
@@ -96,10 +96,10 @@
   //home
 
   #btnBox {
-    text-align:center;
+    text-align: center;
   }
 
- #submitBtn #scheduleBtn{
+  #submitBtn #scheduleBtn {
     width: 50%;
   }
 
@@ -108,12 +108,9 @@
     padding: 3rem;
     margin: 0.5rem;
 
-
   }
 
-
 }
-
 
 @media screen and (max-width: 850px) {
 

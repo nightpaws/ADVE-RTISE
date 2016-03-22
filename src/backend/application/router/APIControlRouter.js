@@ -5,7 +5,7 @@
 var express = require('express'),
     bodyParser = require('body-parser');
 
-var APIControl = function(){
+var APIControl = function () {
 
     var APIControl = express.Router();
 
@@ -16,12 +16,12 @@ var APIControl = function(){
     APIControl.use('/interface', interfaceRouter);
 
     var accountRouter = require('./account')();
-    APIControl.use('/account',accountRouter);
+    APIControl.use('/account', accountRouter);
 
     var scheduleRouter = require('./schedule')();
-    APIControl.use('/schedule',scheduleRouter);
+    APIControl.use('/schedule', scheduleRouter);
 
-    APIControl.use('*', function(req, res){
+    APIControl.use('*', function (req, res) {
 
         res.status(404).send('api not found');
 

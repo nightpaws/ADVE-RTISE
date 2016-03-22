@@ -102,6 +102,7 @@ button input textarea {
   -webkit-animation: load6 1.7s infinite ease;
   animation: load6 1.7s infinite ease;
 }
+
 @-webkit-keyframes load6 {
   0% {
     -webkit-transform: rotate(0deg);
@@ -128,6 +129,7 @@ button input textarea {
     box-shadow: 0 -0.83em 0 -0.4em #00FFFF, 0 -0.83em 0 -0.42em #00FFFF, 0 -0.83em 0 -0.44em #00FFFF, 0 -0.83em 0 -0.46em #00FFFF, 0 -0.83em 0 -0.477em #00FFFF;
   }
 }
+
 @keyframes load6 {
   0% {
     -webkit-transform: rotate(0deg);
@@ -155,7 +157,6 @@ button input textarea {
   }
 }
 
-
 /*
  * Modal css
  */
@@ -163,8 +164,7 @@ button input textarea {
 .modal-dialog {
   margin-top: 4.2rem;
 
-
-textarea{
+  textarea {
     resize: none;
   }
 }
@@ -175,7 +175,7 @@ textarea{
 
 }
 
-.modal-header{
+.modal-header {
   background: black;
   border-radius: 0.5rem 0.5rem 0rem 0rem;
   text-align: center;
@@ -190,12 +190,8 @@ textarea{
 #recipients td {
   padding: 0.1rem;
   width: 50%;
-  text-align:right;
+  text-align: right;
 }
-
-
-
-
 
 /*
  * Tiles

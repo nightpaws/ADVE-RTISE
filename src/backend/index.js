@@ -2,9 +2,9 @@
  * Created by Nightpaws on 20/01/2016.
  */
 require('pmx').init({
-	http:true,
-	network:true,
-	ports:true
+    http: true,
+    network: true,
+    ports: true
 });
 
 var app = require('./application/app')(),
@@ -24,7 +24,6 @@ var credentials = {key: privateKey, cert: certificate};
 
 var httpsServer = https.createServer(credentials, app);
 httpsServer.listen(config.ports.https, '127.0.0.1');
-
 
 
 //Create server and configure for local access only

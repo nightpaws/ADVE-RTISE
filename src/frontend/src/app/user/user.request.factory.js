@@ -2,11 +2,11 @@
  * Created by Nightpaws on 11/02/2016.
  */
 angular.module('user')
-    .factory('user.request.factory', ['$http', 'config', function($http, config){
+    .factory('user.request.factory', ['$http', 'config', function ($http, config) {
 
         var requestHelper = {};
 
-        requestHelper.login = function(username, password){
+        requestHelper.login = function (username, password) {
 
 
             return $http({
@@ -20,7 +20,7 @@ angular.module('user')
 
         };
 
-        requestHelper.register = function(username, email, password){
+        requestHelper.register = function (username, email, password) {
 
             return $http({
                 method: 'POST',

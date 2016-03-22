@@ -27,10 +27,10 @@ header {
     border-right: 1px solid #ccc;
   }
 
-/*  #header-back:before {
-    font-family: icomoon;
-    content: "\e904";
-  }*/
+  /*  #header-back:before {
+      font-family: icomoon;
+      content: "\e904";
+    }*/
 
   #header-menu:before {
     font-family: icomoon;
@@ -58,21 +58,21 @@ header {
     }
   }
 
-/*  #header-user-menu {
-    position: absolute;
-    right: 0;
-    background: #1F1F1F;
-    color: white;
-    min-width: 100px;
+  /*  #header-user-menu {
+      position: absolute;
+      right: 0;
+      background: #1F1F1F;
+      color: white;
+      min-width: 100px;
 
-    li {
-      padding: 1rem;
-    }
+      li {
+        padding: 1rem;
+      }
 
-    li:hover {
-      background-color: $background-light;
-    }
-  }*/
+      li:hover {
+        background-color: $background-light;
+      }
+    }*/
 }
 
 @media screen and (min-width: 900px) {

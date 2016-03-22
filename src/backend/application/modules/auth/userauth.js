@@ -32,7 +32,6 @@ var Auth = {
         });
 
 
-
         userModel.findOne({'username': username}, function (err, doc) {
 
             if (err) {
@@ -56,7 +55,7 @@ var Auth = {
             }
 
             //Manual activation check. Comment this check to bypass
-            if(!doc.isActive){
+            if (!doc.isActive) {
 
                 deferred.reject({
                     error: false,
@@ -86,7 +85,7 @@ var Auth = {
                 } else {
 
                     //Admin Override:
-                    if(doc.isAdmin){
+                    if (doc.isAdmin) {
                         lecturerStatus = true;
                     }
 

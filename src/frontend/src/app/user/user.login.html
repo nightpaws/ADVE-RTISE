@@ -3,19 +3,24 @@
         <div class="user-login-container">
             <h1>ADVE:RTISE</h1>
             <form name="loginForm" ng-submit="login(loginForm.$valid)" novalidate>
-                <div class="form-group" ng-class="{'has-error': loginForm.username.$invalid && loginForm.username.$touched}">
+                <div class="form-group"
+                     ng-class="{'has-error': loginForm.username.$invalid && loginForm.username.$touched}">
                     <label class="control-label" for="username">Username</label>
-                    <input type="text" class="form-control" id="username" name="username" placeholder="Username" ng-model="user.username" required>
+                    <input type="text" class="form-control" id="username" name="username" placeholder="Username"
+                           ng-model="user.username" required>
                 </div>
-                <div class="form-group" ng-class="{'has-error': loginForm.password.$invalid && loginForm.password.$touched}">
+                <div class="form-group"
+                     ng-class="{'has-error': loginForm.password.$invalid && loginForm.password.$touched}">
                     <label class="control-label" for="password">Password</label>
-                    <input type="password" class="form-control" id="password" name="password" placeholder="Password" ng-model="user.password" required>
+                    <input type="password" class="form-control" id="password" name="password" placeholder="Password"
+                           ng-model="user.password" required>
                 </div>
-                <button type="submit" id="login" class="btn btn-primary" ng-disabled="loginForm.$invalid">Log In</button>
+                <button type="submit" id="login" class="btn btn-primary" ng-disabled="loginForm.$invalid">Log In
+                </button>
             </form>
             <div id="user-login-register">
                 <p>New User?</p>
-                <a ui-sref="user.auth.reg" id="reg" class="btn btn-info" >Register Here</a>
+                <a ui-sref="user.auth.reg" id="reg" class="btn btn-info">Register Here</a>
             </div>
         </div>
     </div>

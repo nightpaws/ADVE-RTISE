@@ -15,7 +15,6 @@
   border-radius: 0.75rem;
   box-shadow: 0.2em 0.2em 0.5em #010101;
 
-
   h1 {
     text-align: center;
     padding-bottom: 2rem;
@@ -38,29 +37,29 @@
   }
 
   #username #password #login #reg {
-    -webkit-border-radius:0.5rem;
-    -moz-border-radius:0.5rem;
+    -webkit-border-radius: 0.5rem;
+    -moz-border-radius: 0.5rem;
     border-radius: 0.5rem;
   }
 
   #user-login-register {
     margin-top: 1rem;
 
-  p {
-    text-align: center;
-    margin-bottom: 1rem;
-  }
+    p {
+      text-align: center;
+      margin-bottom: 1rem;
+    }
 
-  a {
-    display: block;
-    width: 100%;
-  }
+    a {
+      display: block;
+      width: 100%;
+    }
   }
 }
 
-@media (min-width: 850px){
-  .user-login-container{
-  width: 600px;
+@media (min-width: 850px) {
+  .user-login-container {
+    width: 600px;
   }
 }
 
@@ -68,23 +67,23 @@
  * Below is the user profile
  */
 
-#user-profile{
-  #basic-info{
+#user-profile {
+  #basic-info {
 
-  padding: 1rem 0.5rem;
-  border-bottom: 1px solid #0dd;
+    padding: 1rem 0.5rem;
+    border-bottom: 1px solid #0dd;
 
-  img{
-    float: left;
-    margin-right: 1rem;
-  }
+    img {
+      float: left;
+      margin-right: 1rem;
+    }
 
-  li{
+    li {
       padding: 0 1rem 0.5rem 0.5rem;
-  }
-  
-  p:first-of-type{
-    font-weight: bold;
-  }
+    }
+
+    p:first-of-type {
+      font-weight: bold;
+    }
   }
 }

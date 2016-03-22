@@ -7,15 +7,15 @@ var config = require('../../../config');
 
 var JWT = {
 
-    generateAuth: function(data){
+    generateAuth: function (data) {
 
 
         var cert = fs.readFileSync(config.userAuth.privateKey);
-        return jsonwebtok.sign(data, cert, { algorithm: 'RS256'});
+        return jsonwebtok.sign(data, cert, {algorithm: 'RS256'});
 
     },
 
-    validateToken: function(token){
+    validateToken: function (token) {
 
         var cert = fs.readFileSync(config.userAuth.publicKey);
 
@@ -23,7 +23,7 @@ var JWT = {
 
             return jsonwebtok.verify(token, cert, {algorithms: ['RS256']});
 
-        }catch(err){
+        } catch (err) {
             return;
         }
     }
