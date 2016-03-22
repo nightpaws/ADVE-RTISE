@@ -31,6 +31,7 @@
     "ng-device-detector": "~2.0.3",
     "ngInfiniteScroll": "~1.2.2",
     "blueimp-md5": "^2.1.0",
-    "angular-bootstrap-checkbox": "^0.4.0"
+    "angular-bootstrap-checkbox": "^0.4.0",
+    "angulartics-google-analytics": "^0.1.4"
   }
 }
