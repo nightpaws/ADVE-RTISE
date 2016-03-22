@@ -18,8 +18,8 @@ var APIControl = function () {
     var accountRouter = require('./account')();
     APIControl.use('/account', accountRouter);
 
-    var scheduleRouter = require('./schedule')();
-    APIControl.use('/schedule', scheduleRouter);
+    var messageRouter = require('./message')();
+    APIControl.use('/message', messageRouter);
 
     APIControl.use('*', function (req, res) {
 

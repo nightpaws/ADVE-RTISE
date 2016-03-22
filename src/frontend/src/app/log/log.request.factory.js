@@ -6,21 +6,21 @@ angular.module('log')
 
         var requestHelper = {};
 
-        requestHelper.getInterfaceInfo = function () {
-
-            var url = config.API_URL + '/schedule';
-
-            //should maybe be using https
-            //return $http({
-            //    method: 'GET',
-            //    url: url
-            //})
-
-        };
+        // requestHelper.getInterfaceInfo = function () {
+        //
+        //     var url = config.API_URL + '/schedule';
+        //
+        //     //should maybe be using https
+        //     //return $http({
+        //     //    method: 'GET',
+        //     //    url: url
+        //     //})
+        //
+        // };
 
         requestHelper.getMessages = function () {
 
-            var url = config.API_URL + '/interface/get/messages';
+            var url = config.API_URL + '/message/get/';
 
             return $http({
                 method: 'GET',

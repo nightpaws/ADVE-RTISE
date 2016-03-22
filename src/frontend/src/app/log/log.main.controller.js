@@ -24,7 +24,7 @@ angular.module('log')
         requestHelper.getInterfaceInfo()
             .then(function (data) {
                 if (data.data.successful) {
-                    $scope.results = data.data.result;
+                    $scope.results = data.data.meta; //amends
                     toastr.info("Breakpoint hit!", "DEVNOTE");
 
 

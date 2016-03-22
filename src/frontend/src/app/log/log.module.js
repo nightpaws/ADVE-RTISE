@@ -6,8 +6,8 @@ angular.module('log', [])
 
         $stateProvider
             .state('page.log', {
-                url: 'logging/',
-                templateUrl: 'app/logging/log.main.html',
+                url: 'log/',
+                templateUrl: 'app/log/log.main.html',
                 controller: 'log.main.controller',
                 onEnter: function ($rootScope) {
                     $rootScope.app.stateTitle = 'Message Log';

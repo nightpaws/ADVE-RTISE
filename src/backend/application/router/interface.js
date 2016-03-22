@@ -10,7 +10,6 @@ var interface = function () {
     var interfaceRouter = express.Router();
 
 
-    //Possible placement for splitting social media
     interfaceRouter.route('/post')
         .post(function (req, res) {
             var data = req.body;
