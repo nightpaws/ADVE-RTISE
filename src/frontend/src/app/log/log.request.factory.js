@@ -8,7 +8,7 @@ angular.module('log')
 
         requestHelper.getMessages = function () {
 
-            var url = config.API_URL + '/message/get/';
+            var url = config.API_URL + '/message/get';
 
             return $http({
                 method: 'GET',

@@ -5,7 +5,7 @@ var express = require('express'),
     responseFactory = require('./../response/response');
 
 var message = function () {
-    
+
     var messageRouter = express.Router();
 
 
@@ -16,19 +16,19 @@ var message = function () {
 
 
     messageRouter.route('/message/get')
-        .get(function(req,res){
+        .get(function (req, res) {
             var message = require('../modules/message/messages');
             var promise = message.getTable();
             var response = responseFactory();
 
             promise
-                .then(function(data){
+                .then(function (data) {
                     response.setSuccessful(true);
                     response.setMeta(data.meta);
                     response.setResult(data.warnings);
                     res.json(response.getResponse());
                 })
-                .fail(function(data){
+                .fail(function (data) {
                     response.setSuccessful(false);
                     response.setMessage(data);
                     res.json(response.getResponse());
