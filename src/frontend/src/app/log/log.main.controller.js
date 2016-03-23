@@ -36,6 +36,7 @@ angular.module('log')
             })
             .catch(function (data) {
                 toastr.error('An error occurred while connecting to the server.', 'Error');
+                console.log(data);
             })
 
 
