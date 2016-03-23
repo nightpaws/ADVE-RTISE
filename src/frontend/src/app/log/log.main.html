@@ -19,29 +19,29 @@
                 <td>{{message.postDate}}</td>
                 <td>
                     <table class="msgYear">
-                        <tr>
+                        <tr ng-if="message.year.first==true">
                             <td>1st Year</td>
-                            <td>{{message.year.first}}</td>
+                            <!--<td>{{message.year.first}}</td>-->
                         </tr>
-                        <tr>
+                        <tr ng-if="message.year.second==true">
                             <td>2nd Year</td>
-                            <td>{{message.year.second}}</td>
+                            <!--<td>{{message.year.second}}</td>-->
                         </tr>
-                        <tr>
+                        <tr ng-if="message.year.third==true">
                             <td>3rd Year</td>
-                            <td>{{message.year.third}}</td>
+                            <!--<td>{{message.year.third}}</td>-->
                         </tr>
-                        <tr>
+                        <tr ng-if="message.year.fourth==true">
                             <td>4th Year</td>
-                            <td>{{message.year.fourth}}</td>
+                            <!--<td>{{message.year.fourth}}</td>-->
                         </tr>
-                        <tr>
+                        <tr ng-if="message.year.fifth==true">
                             <td>5th Year</td>
-                            <td>{{message.year.fifth}}</td>
+                            <!--<td>{{message.year.fifth}}</td>-->
                         </tr>
-                        <tr>
+                        <tr ng-if="message.year.phd==true">
                             <td>PHd Year</td>
-                            <td>{{message.year.phd}}</td>
+                            <!--<td>{{message.year.phd}}</td>-->
                         </tr>
                     </table>
                 </td>
