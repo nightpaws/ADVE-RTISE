@@ -24,13 +24,13 @@ var messages = {
             }
             else
             {
-                for (docs in docs){
-                   var date = Date(docs.postDate);
+                for (var i = 0; i<docs.length;i++){
+                   var date = Date(docs[i].postDate);
                     var hours = date.getHours();
                     var minutes = "0" + date.getMinutes();
                     var seconds = "0" + date.getSeconds();
                     var formattedTime = hours + ':' + minutes.substr(-2) + ':' + seconds.substr(-2) + " " + date.getDate() + "/"+ date.getMonth() +"/"+date.getYear();
-                    docs.postDate = formattedTime;
+                    docs[i].postDate = formattedTime;
                 }
 
                 var response = docs;
