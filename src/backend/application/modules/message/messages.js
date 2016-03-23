@@ -15,7 +15,7 @@ var messages = {
         var messageModel = require('../../models/message.model');
 
 
-        var query = messageModel.find().limit(20).sort({__id:-1});
+        var query = messageModel.find().limit(20).sort({__id:1});
         
         var promise = query.exec();
         promise.onResolve(function(err,docs) {
