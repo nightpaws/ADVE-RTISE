@@ -17,7 +17,7 @@ var message = function () {
 
     messageRouter.route('/message/get')
         .get(function(req,res){
-            var message = require('../modules/messages/messages');
+            var message = require('../modules/message/messages');
             var promise = message.getTable();
             var response = responseFactory();
 

@@ -8,8 +8,8 @@ var config = require('../../../config');
 
 var messages = {
     
-    // getTable:function(){
-    //    
-    // }
+    getTable:function(){
+       
+    }
 };
 module.exports = messages;

@@ -6,20 +6,21 @@ angular.module('log')
 
         $scope.results = [];
 
-        $scope.msg = {
-            subject: null,
-            content: null,
-            sender: null,
-            year: {
-                y1: false,
-                y2: false,
-                y3: false,
-                y4: false,
-                y5: false,
-                y6: false
-            },
-            postDate: null
-        };
+        //Serverside?
+        // $scope.msg = {
+        //     subject: null,
+        //     content: null,
+        //     sender: null,
+        //     year: {
+        //         y1: false,
+        //         y2: false,
+        //         y3: false,
+        //         y4: false,
+        //         y5: false,
+        //         y6: false
+        //     },
+        //     postDate: null
+        // };
 
         requestHelper.getMessages()
             .then(function (data) {
