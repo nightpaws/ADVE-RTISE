@@ -24,8 +24,7 @@ var message = function () {
             promise
                 .then(function (data) {
                     response.setSuccessful(true);
-                    response.setMeta(data.meta);
-                    response.setResult(data.warnings);
+                    response.setResult(data);
                     res.json(response.getResponse());
                 })
                 .fail(function (data) {

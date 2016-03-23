@@ -24,9 +24,7 @@ var messages = {
             }
             else
             {
-                var response = {
-                  meta: docs
-                };
+                var response = docs;
 
 
                 if (response!=null){

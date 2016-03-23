@@ -25,9 +25,13 @@ angular.module('log')
         requestHelper.getMessages()
             .then(function (data) {
                 if (data.data.successful) {
-                    $scope.results = data.data.meta; //amends
-                    toastr.info("Breakpoint hit!", "DEVNOTE");
+                    $scope.results = data.data.result;
 
+                    toastr.info("Check console","DEVLOG");
+
+                    console.log("TESTRESULTS BELOW:");
+                    console.log($scope.results);
+                    console.log("TESTRESULTS END");
 
                 } else {
                     toastr.error(data.data.message, 'Error');
