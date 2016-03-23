@@ -21,7 +21,7 @@ angular.module('log')
             postDate: null
         };
 
-        requestHelper.getInterfaceInfo()
+        requestHelper.getMessages()
             .then(function (data) {
                 if (data.data.successful) {
                     $scope.results = data.data.meta; //amends
