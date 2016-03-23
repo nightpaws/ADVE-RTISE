@@ -1,3 +1,15 @@
 #log-main {
 
+  #log-container {
+    text-align: center;
+  }
+  table,th,td {
+    border: 1px solid dimgray;
+  }
+
+  table {
+    width: 95%;
+    border-collapse:collapse;
+
+  }
 }
