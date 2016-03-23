@@ -13,8 +13,30 @@
     }
 
     #msgTbl {
-      width: 90%;
+      width: 80%;
       border-collapse: collapse;
+      margin:0.5rem;
+      
+      #col1{
+        width:12%;
+
+      }
+      #col2 {
+        width:32%;
+
+      }
+      #col3 {
+        width:12%;
+
+      }
+      #col4 {
+        width:12%;
+
+      }
+      #col5 {
+        width:12%;
+
+      }
 
     }
   }
