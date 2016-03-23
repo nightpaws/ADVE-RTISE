@@ -1,5 +1,5 @@
 /*
- * This file is contains the awesome header stylings
+ * Header Stylings
  */
 header {
 
@@ -27,11 +27,6 @@ header {
     border-right: 1px solid #ccc;
   }
 
-  /*  #header-back:before {
-      font-family: icomoon;
-      content: "\e904";
-    }*/
-
   #header-menu:before {
     font-family: icomoon;
     content: "\e9bd";
@@ -58,21 +53,6 @@ header {
     }
   }
 
-  /*  #header-user-menu {
-      position: absolute;
-      right: 0;
-      background: #1F1F1F;
-      color: white;
-      min-width: 100px;
-
-      li {
-        padding: 1rem;
-      }
-
-      li:hover {
-        background-color: $background-light;
-      }
-    }*/
 }
 
 @media screen and (min-width: 900px) {

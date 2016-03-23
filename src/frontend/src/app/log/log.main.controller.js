@@ -10,14 +10,9 @@ angular.module('log')
             .then(function (data) {
                 if (data.data.successful) {
                     $scope.results = data.data.result;
-
-                    toastr.info("Check console","DEVLOG");
-                    
-
                 } else {
                     toastr.error(data.data.message, 'Error');
                 }
-
             })
             .catch(function (data) {
                 toastr.error('An error occurred while connecting to the server.', 'Error');
