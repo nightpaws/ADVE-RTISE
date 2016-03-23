@@ -27,9 +27,14 @@ var messages = {
                 var response = {
                   meta: docs
                 };
-                console.log('------DOCS------');
-                console.log(docs);
-                console.log('----------------');
+                console.log("MESSAGE START");
+                console.log("m:" + docs.message);
+                console.log("s:" + docs.subject);
+                console.log("u" + docs.uid);
+                console.log("p" + docs.postDate);
+                console.log("y" + docs.year);
+                console.log("MESSAGE END");
+
             }
         });
 
