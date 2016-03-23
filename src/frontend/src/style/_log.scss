@@ -2,15 +2,20 @@
 
   .log-container {
     text-align: center;
-  }
 
-  table,th,td {
-    border: 1px solid dimgray;
-  }
+    p{
+      padding: 1em;
+    }
 
-  table {
-    width: 95%;
-    border-collapse:collapse;
+    table, th, td {
+      border: 1px solid dimgray;
+      text-align: center;
+    }
 
+    table {
+      width: 95%;
+      border-collapse: collapse;
+
+    }
   }
 }
