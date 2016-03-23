@@ -73,14 +73,6 @@ var accessTokenPhD = config.facebook.accessTokenPhD;
 
 var accounts = {
     submit: function (subject, message, recipients, sender) {
-        console.log("FUNCTIONCALL ACCOUNT.ACTION.JS");
-        console.log("values input");
-        console.log("subject: " + subject);
-        console.log("message: " + message);
-        console.log("recipients" + recipients);
-        console.log("sender:" + sender);
-        console.log("END============");
-        // console.log("messagelen"+message.length);
 
         //Initialise variables needed for submissions
         var q = require('q');
@@ -124,13 +116,8 @@ var accounts = {
             } else {
                 var wallpost;
 
-                console.log("DEBUG CODE =========");
-                console.log("===subject: " + subject);
-                console.log("===message: " + message);
-
                 //if message content isn't null
                 if (message != null) {
-                    console.log("content isn't null");
                     var t = subject + "\n\n" + message;
                     wallpost = t;
 
@@ -139,7 +126,6 @@ var accounts = {
                         subject = subject.substring(0, subject.length - 40);
                     }
                 } else {
-                    console.log('message is null');
                     wallpost = subject;
                 }
 
