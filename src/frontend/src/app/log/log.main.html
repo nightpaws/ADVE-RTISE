@@ -13,7 +13,7 @@
             </tr>
             </thead>
             <tbody id="tblBody">
-            <tr ng-repeat="message in results|orderBy:['__id']">
+            <tr ng-repeat="message in results|orderBy:['-postDate']">
                 <td id="col1">{{message.subject}}</td>
                 <td id="col2">{{message.message}}</td>
                 <td id="col3">{{message.uid}}</td>
