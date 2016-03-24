@@ -2,6 +2,7 @@
 
   .log-container {
     text-align: center;
+    overflow:scroll;
 
     p{
       padding: 1em;
@@ -41,7 +42,7 @@
     }
 
 
-
+    //https://css-tricks.com/responsive-data-tables/
     /*
 Max width before this PARTICULAR table gets nasty
 This query will take effect for any screen smaller than 760px
