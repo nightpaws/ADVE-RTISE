@@ -17,34 +17,16 @@
                 <td id="col1">{{message.subject}}</td>
                 <td id="col2">{{message.message}}</td>
                 <td id="col3">{{message.uid}}</td>
-                <td id="col4">{{message.postDate| date:'HH:mm:ss yyyy-MM-dd'}}</td>
+                <td id="col4">{{message.postDate| date:'HH:mm:ss dd-MM-yy'}}</td>
                 <td id="col5">
-                    <table class="msgYear">
-                        <tr ng-if="message.year.first==true">
-                            <td>1st Year</td>
-                            <!--<td>{{message.year.first}}</td>-->
-                        </tr>
-                        <tr ng-if="message.year.second==true">
-                            <td>2nd Year</td>
-                            <!--<td>{{message.year.second}}</td>-->
-                        </tr>
-                        <tr ng-if="message.year.third==true">
-                            <td>3rd Year</td>
-                            <!--<td>{{message.year.third}}</td>-->
-                        </tr>
-                        <tr ng-if="message.year.fourth==true">
-                            <td>4th Year</td>
-                            <!--<td>{{message.year.fourth}}</td>-->
-                        </tr>
-                        <tr ng-if="message.year.fifth==true">
-                            <td>5th Year</td>
-                            <!--<td>{{message.year.fifth}}</td>-->
-                        </tr>
-                        <tr ng-if="message.year.phd==true">
-                            <td>PHd Year</td>
-                            <!--<td>{{message.year.phd}}</td>-->
-                        </tr>
-                    </table>
+                    <div class="msgYear">
+                        <p ng-if="message.year.first==true">1st Year</p>
+                        <p ng-if="message.year.second==true">2nd Year</p>
+                        <p ng-if="message.year.third==true">3rd Year</p>
+                        <p ng-if="message.year.fourth==true">4th Year</p>
+                        <p ng-if="message.year.fifth==true">5th Year</p>
+                        <p ng-if="message.year.phd==true">PhD Year</p>
+                    </div>
                 </td>
             </tr>
             </tbody>
