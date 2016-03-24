@@ -6,8 +6,6 @@ angular.module('interface')
 
         $scope.interface = [];
 
-        console.log("main controller called");
-
         $scope.lecturerTest = function () {
             if (userService.getLecturer()) {
                 return true;

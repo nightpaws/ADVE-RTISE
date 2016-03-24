@@ -49,7 +49,7 @@ header {
 
     img {
       width: $header-height;
-      height: $header-height;
+      height: calc(#{$header-height});
     }
   }
 
@@ -64,13 +64,13 @@ header {
 
     #header-name {
       display: block;
-      width: calc(#{$nav-width} - 1px);
+      width: calc(#{$nav-width});
       font-size: 1.5rem;
       padding: 1rem 0.7rem;
     }
 
     #header-content {
-      left: calc(#{$nav-width} - 1px);
+      left: calc(#{$nav-width});
       width: calc(100% - 3.5rem - #{nav-width});
     }
   }
