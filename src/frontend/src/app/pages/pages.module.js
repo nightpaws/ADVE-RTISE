@@ -19,5 +19,12 @@ angular.module('pages', [])
                     $rootScope.app.stateTitle = 'Help';
                 }
             })
+            .state('page.classes', {
+                url: 'classes/',
+                templateUrl: 'app/pages/classes.html',
+                onEnter: function ($rootScope) {
+                    $rootScope.app.stateTitle = 'Classes';
+                }
+            })
 
     }]);
