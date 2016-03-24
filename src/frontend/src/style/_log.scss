@@ -8,7 +8,6 @@
     }
 
     table, th, td {
-      border: 1px solid dimgray;
       text-align: center;
     }
 
@@ -92,7 +91,7 @@ and also iPads specifically.
       td:nth-of-type(2):before { content: "Content"; }
       td:nth-of-type(3):before { content: "User ID"; }
       td:nth-of-type(4):before { content: "Date"; }
-      td:nth-of-type(5):before { content: "Target"; }
+      td:nth-of-type(5):before { content: "Targets"; }
 
     }
 

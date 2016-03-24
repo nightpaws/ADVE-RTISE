@@ -79,6 +79,7 @@ var accounts = {
         var deferred = q.defer();
         var one, two, three, four, five, six;
         var s1 = true, s2 = true, s3 = true, s4 = true, s5 = true, s6 = true;
+        var dbmessage = null;
 
         one = recipients[0];
         two = recipients[1];
@@ -87,11 +88,19 @@ var accounts = {
         five = recipients[4];
         six = recipients[5];
 
+
+        //Prepost nullcheck
+        if(message==null){
+            dbmessage = "No Message Provided";
+        }else{
+            dbmessage = message;
+        }
+
         //Message posting attempted! Log to database
         var msg = new messageModel({
             uid: sender,
             subject: subject,
-            message: message,
+            message: dbmessage,
             year: {
                 first: recipients[0],
                 second: recipients[1],
