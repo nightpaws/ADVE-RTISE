@@ -5,7 +5,7 @@ angular.module('log')
     .controller('log.main.controller', ['$scope', 'log.request.factory', 'toastr', function ($scope, requestHelper, toastr) {
 
         $scope.results = [];
-        
+
         requestHelper.getMessages()
             .then(function (data) {
                 if (data.data.successful) {

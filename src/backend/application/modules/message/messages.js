@@ -15,21 +15,20 @@ var messages = {
         var messageModel = require('../../models/message.model');
 
 
-        var query = messageModel.find().limit(20).sort({__id:1});
-        
+        var query = messageModel.find().limit(20).sort({__id: 1});
+
         var promise = query.exec();
-        promise.onResolve(function(err,docs) {
-            if(err){
+        promise.onResolve(function (err, docs) {
+            if (err) {
                 console.log("Failed database call" + err);
             }
-            else
-            {
+            else {
                 var response = docs;
 
-                if (response!=null){
+                if (response != null) {
                     deferred.resolve(response);
                 }
-               
+
 
             }
         });

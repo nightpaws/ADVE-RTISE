@@ -1,36 +1,32 @@
 <div id="log-main" class="scrollable">
-    <div class="log-container">
-        <p>The table below records recent messages sent to students using this application.</p>
-       <div class="table-responsive">
-        <table class="table table-striped" id="msgTbl" align="right">
-            <thead id="tblHead">
-            <tr>
-                <th>Subject</th>
-                <th>Content</th>
-                <th>User ID</th>
-                <th>Date</th>
-                <th>Targets</th>
-            </tr>
-            </thead>
-            <tbody id="tblBody">
-            <tr ng-repeat="message in results|orderBy:['-postDate']">
-                <td id="col1">{{message.subject}}</td>
-                <td id="col2">{{message.message}}</td>
-                <td id="col3">{{message.uid}}</td>
-                <td id="col4">{{message.postDate| date:'HH:mm:ss dd-MM-yy'}}</td>
-                <td id="col5">
-                    <div class="msgYear">
-                        <p ng-if="message.year.first==true">1st Year</p>
-                        <p ng-if="message.year.second==true">2nd Year</p>
-                        <p ng-if="message.year.third==true">3rd Year</p>
-                        <p ng-if="message.year.fourth==true">4th Year</p>
-                        <p ng-if="message.year.fifth==true">5th Year</p>
-                        <p ng-if="message.year.phd==true">PhD Year</p>
-                    </div>
-                </td>
-            </tr>
-            </tbody>
-        </table>
-       </div>
-    </div>
+    <p>The table below records recent messages sent to students using this application.</p>
+    <table class="table table-striped" id="msgTbl" align="right">
+        <thead id="tblHead">
+        <tr>
+            <th>Subject</th>
+            <th>Content</th>
+            <th>User ID</th>
+            <th>Date</th>
+            <th>Targets</th>
+        </tr>
+        </thead>
+        <tbody id="tblBody">
+        <tr ng-repeat="message in results|orderBy:['-postDate']">
+            <td id="col1">{{message.subject}}</td>
+            <td id="col2">{{message.message}}</td>
+            <td id="col3">{{message.uid}}</td>
+            <td id="col4">{{message.postDate| date:'HH:mm:ss dd-MM-yy'}}</td>
+            <td id="col5">
+                <div class="msgYear">
+                    <p ng-if="message.year.first==true">1st Year</p>
+                    <p ng-if="message.year.second==true">2nd Year</p>
+                    <p ng-if="message.year.third==true">3rd Year</p>
+                    <p ng-if="message.year.fourth==true">4th Year</p>
+                    <p ng-if="message.year.fifth==true">5th Year</p>
+                    <p ng-if="message.year.phd==true">PhD Year</p>
+                </div>
+            </td>
+        </tr>
+        </tbody>
+    </table>
 </div>

@@ -90,9 +90,9 @@ var accounts = {
 
 
         //Prepost nullcheck
-        if(message==null){
+        if (message == null) {
             dbmessage = "No Message Provided";
-        }else{
+        } else {
             dbmessage = message;
         }
 
