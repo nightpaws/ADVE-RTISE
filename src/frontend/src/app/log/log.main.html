@@ -17,7 +17,7 @@
                 <td id="col1">{{message.subject}}</td>
                 <td id="col2">{{message.message}}</td>
                 <td id="col3">{{message.uid}}</td>
-                <td id="col4">{{message.postDate}}</td>
+                <td id="col4">{{message.postDate| date:'HH:mm:ss yyyy-MM-dd'}}</td>
                 <td id="col5">
                     <table class="msgYear">
                         <tr ng-if="message.year.first==true">

@@ -24,30 +24,12 @@ var messages = {
             }
             else
             {
-                for (var i = 0; i<docs.length;i++){
-                   var date = Date(docs[i].postDate);
-                    var hours = date.getHours();
-                    var minutes = "0" + date.getMinutes();
-                    var seconds = "0" + date.getSeconds();
-                    var formattedTime = hours + ':' + minutes.substr(-2) + ':' + seconds.substr(-2) + " " + date.getDate() + "/"+ date.getMonth() +"/"+date.getYear();
-                    docs[i].postDate = formattedTime;
-                }
-
                 var response = docs;
-
 
                 if (response!=null){
                     deferred.resolve(response);
                 }
-                // console.log("MESSAGE START");
-                // console.log("m:" + docs.message);
-                // console.log("s:" + docs.subject);
-                // console.log("u" + docs.uid);
-                // console.log("p" + docs.postDate);
-                // console.log("y" + docs.year);
-                // console.log("MESSAGE END");
-
-
+               
 
             }
         });
