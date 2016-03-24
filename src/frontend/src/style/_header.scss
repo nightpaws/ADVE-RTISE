@@ -49,7 +49,7 @@ header {
 
     img {
       width: $header-height;
-      height: calc(#{$header-height} - 1px);
+      height: $header-height;
     }
   }
 

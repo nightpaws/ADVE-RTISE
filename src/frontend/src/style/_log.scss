@@ -94,18 +94,27 @@
     */
     .tbld:nth-of-type(1):before {
       content: "Subject";
+      font-weight:bold;
+
     }
     .tbld:nth-of-type(2):before {
       content: "Content";
+      font-weight:bold;
+
     }
     .tbld:nth-of-type(3):before {
       content: "User ID";
+      font-weight:bold;
     }
     .tbld:nth-of-type(4):before {
       content: "Date";
+      font-weight:bold;
+
     }
     .tbld:nth-of-type(5):before {
       content: "Targets";
+      font-weight:bold;
+
     }
   }
 }
