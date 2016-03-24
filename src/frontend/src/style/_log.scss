@@ -47,22 +47,22 @@
   (min-device-width: 768px) and (max-device-width: 1024px) {
 
     /* Force table to not be like tables anymore */
-    table, thead, tbody, th, td, tr {
+    #msgTbl, .tblHead, .tblBody, .theading, .tbld, .tblrow {
       display: block;
     }
 
     /* Hide table headers (but not display: none;, for accessibility) */
-    thead tr {
+    .tblHead .tblrow {
       position: absolute;
       top: -9999px;
       left: -9999px;
     }
 
-    tr {
+    .tblrow {
       border: 1px solid #ccc;
     }
 
-    td {
+    .tbld {
       /* Behave  like a "row" */
       border: none;
       border-bottom: 1px solid #eee;
@@ -70,7 +70,7 @@
       padding-left: 50%;
     }
 
-    td:before {
+    .tbld:before {
       /* Now like a table header */
       position: absolute;
       /* Top/left values mimic padding */
@@ -84,19 +84,19 @@
     /*
     Label the data
     */
-    td:nth-of-type(1):before {
+    .tbld:nth-of-type(1):before {
       content: "Subject";
     }
-    td:nth-of-type(2):before {
+    .tbld:nth-of-type(2):before {
       content: "Content";
     }
-    td:nth-of-type(3):before {
+    .tbld:nth-of-type(3):before {
       content: "User ID";
     }
-    td:nth-of-type(4):before {
+    .tbld:nth-of-type(4):before {
       content: "Date";
     }
-    td:nth-of-type(5):before {
+    .tbld:nth-of-type(5):before {
       content: "Targets";
     }
   }
