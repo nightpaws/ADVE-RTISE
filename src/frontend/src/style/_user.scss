@@ -76,10 +76,7 @@
     margin-bottom: 1rem;
 
     img {
-      //float: left;
-      border: 1px solid #0dd;
-      margin: 0 1rem 0.5rem 0.5rem;
-
+      margin: 0.5rem 1rem 0.5rem 0.5rem;
     }
 
     li {
@@ -93,7 +90,5 @@
 }
 
 .grav-tile {
-  padding-top: 1rem;
-  padding-bottom: 1rem;
-  border-bottom: 1px solid #0dd;
+  margin-left: 1rem;
 }
