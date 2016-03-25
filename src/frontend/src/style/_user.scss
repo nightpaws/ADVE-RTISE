@@ -76,11 +76,10 @@
     margin-bottom: 1rem;
 
     img {
-      float: right;
-      margin-right: 1rem;
-      margin-top: 1rem;
-      border-color: #0dd;
-      border-radius: 100%;
+      //float: left;
+      border: 1px solid #0dd;
+      margin: 0 1rem 0.5rem 0.5rem;
+
     }
 
     li {
@@ -96,5 +95,5 @@
 .grav-tile {
   padding-top: 1rem;
   padding-bottom: 1rem;
-  border-top: 1px solid #0dd;
+  border-bottom: 1px solid #0dd;
 }
