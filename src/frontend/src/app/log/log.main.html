@@ -18,12 +18,12 @@
             <td class="tbld" id="col4">{{message.postDate| date:'HH:mm:ss dd-MM-yy'}}</td>
             <td class="tbld" id="col5">
                 <div class="msgYear">
-                    <p ng-if="message.year.first==true">1st Year</p>
-                    <p ng-if="message.year.second==true">2nd Year</p>
-                    <p ng-if="message.year.third==true">3rd Year</p>
-                    <p ng-if="message.year.fourth==true">4th Year</p>
-                    <p ng-if="message.year.fifth==true">5th Year</p>
-                    <p ng-if="message.year.phd==true">PhD Year</p>
+                    <a ng-if="message.year.first==true">1st </a>
+                    <a ng-if="message.year.second==true">2nd </a>
+                    <a ng-if="message.year.third==true">3rd </a>
+                    <a ng-if="message.year.fourth==true">4th </a>
+                    <a ng-if="message.year.fifth==true">5th </a>
+                    <a ng-if="message.year.phd==true">PhD </a>
                 </div>
             </td>
         </tr>
