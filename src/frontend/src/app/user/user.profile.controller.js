@@ -13,4 +13,14 @@ angular.module('user')
         $scope.isAdmin = user.isAdmin;
         $scope.createdOn = user.createdOn;
         $scope.imageurl = user.imageurl;
+
+        //https://stackoverflow.com/questions/24611455/how-to-display-yes-no-instead-of-true-false-in-angularjs
+        app.filter('true_false', function () {
+            return function (text, length, end) {
+                if (text) {
+                    return 'Yes';
+                }
+                return 'No';
+            }
+        });
     }]);
