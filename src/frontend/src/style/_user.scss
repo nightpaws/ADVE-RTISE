@@ -76,9 +76,11 @@
     margin-bottom: 1rem;
 
     img {
-
-      float: left;
+      float: right;
       margin-right: 1rem;
+      margin-top: 1rem;
+      border-color: #0dd;
+      border-radius: 100%;
     }
 
     li {
@@ -89,4 +91,10 @@
       font-weight: bold;
     }
   }
+}
+
+.grav-tile {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  border-top: 1px solid #0dd;
 }
