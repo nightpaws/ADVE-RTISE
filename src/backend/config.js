@@ -15,40 +15,40 @@ var config = {
         //In the below sections, consumer_Key and consumer_secret can be removed if a global login provider is connected.
         //If using separate apps list app keys below. Some editing of account.action.js is required to swap to a single app key.
         first: {
-            consumer_key: 'vO5NiCxKZWa2KmNQaLBFwX2Cj',
-            consumer_secret: 'NlbGlBgPmfMPgViOUo21ylNvfp5kEKYlmpfz03IVD5Ic3geQjY',
-            access_token_key: '705761066924560384-kqAVsk3JnydZyoJnp6nVzxiudQwxaIF',
-            access_token_secret: 'eEusbHEuXFsACj8zpAbcPsWRinbo2ESknvdIf74eXZZN1'
+            consumer_key: '',
+            consumer_secret: '',
+            access_token_key: '',
+            access_token_secret: ''
         },
         second: {
-            consumer_key: 'A13u1FWu4SnzgXTpgjszZnAc5',
-            consumer_secret: 'CLZCmUsRL2VKuKgo2IB8tQhwdG1s0xII3Q0ddeXoKEU7kXRewc',
-            access_token_key: '709400515550044160-Q2BUp4XBcPnmiHL7pIkJgp9WGbnm26u',
-            access_token_secret: 'Q9dshfCZUJ51pllqLB7bTTRNdPZRSADksgkL4O28H8hdj'
+            consumer_key: '',
+            consumer_secret: '',
+            access_token_key: '',
+            access_token_secret: ''
         },
         third: {
-            consumer_key: 'UZm5U7h3WOasa0eX8knndVm8H',
-            consumer_secret: 'heONsErtMd9PYglzrsDjugDLCUVRzLwljIIqr1rAx5BkibBHw0',
-            access_token_key: '709403379848638464-18iGYoTQKlTqKZeApgTC8c4WhpD7OWz',
-            access_token_secret: 'd3oPCBF2pfvvuWojhMBhOpVmEwWjcPEBzQVKM1uP9pGPw'
+            consumer_key: '',
+            consumer_secret: '',
+            access_token_key: '',
+            access_token_secret: ''
         },
         fourth: {
-            consumer_key: 'ATB6TWupdzOBp9THKdDLw2DD4',
-            consumer_secret: 'HfLeiMdWW6Wae8GPzjQDRsRFW0yg1iVrpBCG1nqxA4ds0tlpm9',
-            access_token_key: '709404974757847041-oqSncjhSE1FyIfEPe31Tg7uk7EYBnSc',
-            access_token_secret: 'zsLhBttl2MU4NP1DJ1mpTldEHXMUhKy53bTGTvwjQEsQa'
+            consumer_key: '',
+            consumer_secret: '',
+            access_token_key: '',
+            access_token_secret: ''
         },
         fifth: {
-            consumer_key: 'lRkCacDqMMntTc1oeC4xcTntK',
-            consumer_secret: 'STTBFAfhYobSw3mTxGuU2olvSf1lCXJ5p3uOlZhAOhS2Ak2PZO',
-            access_token_key: '709406162349903873-bPoNxva9hWreKIhc4KnRgtB7y077afW',
-            access_token_secret: '70vNW4K703Et3sx4r9gvYzJ0elMEyrkDdVIA9OPzWCQhK'
+            consumer_key: '',
+            consumer_secret: '',
+            access_token_key: '',
+            access_token_secret: ''
         },
         phd: {
-            consumer_key: 'u0Q7vNBrPlTLxYl3GlJMr51PS',
-            consumer_secret: 'JyFdXh6L72ayELlAXRCDbEjX140sPCUy5eG7UdoSOKy6VuITLe',
-            access_token_key: '709408440377073664-Gsow4NWknR6FDhoJggA586T1PsLAzyq',
-            access_token_secret: 'TdZqviE9uI3siAOnGxvE3mO6agGQlrmyleoPzFGBgi5Td'
+            consumer_key: '',
+            consumer_secret: '',
+            access_token_key: '',
+            access_token_secret: ''
         }
     },
 
@@ -63,20 +63,20 @@ var config = {
         //Using pages to post requires individual page access tokens.
         groups: false,
         //Page Access Token - Use ones that never expire
-        accessToken1: 'CAAWYaD6yiUsBAOIat6XTGOc6ZAM29WN6vYKhYIB9aTZAHAvggbBSl1KwgHDfEWZCyknmZAuyBPlkzZAli9fCldvTiOP2ZAForhu9voBkLZCK9js68Ewl3wEVtcjClDuuy62RCvBDP5crUCAgYQtxlkAycn8GZBDrnXZCEFAqWE59qA1uH4kyoVcPHRSN9ds11l8IZD',
-        accessToken2: 'CAAWYaD6yiUsBAKxGWsVYBxrzuD7ki2bJkGW0gMaZAGAuBxxH2ZBkz3jfPq4HfNEZC68BfuyNZCW2ZA178H9cud2P25oxIcZBZAN8ufM5AiUcJCYr7Nq3XaK6MsLhOQsaes3UPapo09GbWPRKaOmb7IuRCWFtKGpf90INZAfJja2uZB7gtvsptzheQ',
-        accessToken3: 'CAAWYaD6yiUsBAODRoTXvztFzvx1biAG35pBvMGnAbNHaZCqbiX6XPNgDdyXrnvNCJJG9iVjRBkTS40TZCA5uNpofYOlJDZBIsGPQIAdLFNWA4J1tRfr6LFpaJ67cCDxALWfMfbo6Tkub40wdNZCFsluGEJl2lsXXFsZCBPwPwKzwQZAeKZCu1Ax',
-        accessToken4: 'CAAWYaD6yiUsBAPVj4n2Vd3ZCUOnyTwanA277pZCbSlDZBWsSlR52z7bUeT5kRZAANwG64bTJn7ntaZBMEoEIo2QrgwXZBvLAyfvEjo1VGJXZCnNqFmRhutQcJFZCRUMQZC7ZARw8wsR1mODphYnY8ZA8ZCi0oM7SktirONID7ioH3WMu6Twuu0EAoz76',
-        accessToken5: 'CAAWYaD6yiUsBAOCdThcPQKIJUBcIZCyANReQSBLpQfrZBIxiTbe3BOpNwpkC89ARf8ChiZCHIk5LubvVz5PqMBEOMSObPlZB7NeBCqszxZB1POELDugvnmwW4R3iFUhqar9jludUJ0GjMdyiPE5yd6RNst4Av480asUDH1etmMHE4S8ReENnZCgjxJC7KVQpwZD',
-        accessTokenPhD: 'CAAWYaD6yiUsBAHvjGHtDztnmnw8HuFCNtieUZAldbOSpfZBZBZAbJZBgHGZB9ChUJEic0HPfXM5ZBR8t5oId0HNT5l3PafPgFPIOkkqHZB8Se0S0XAAKoELIB3zE4hJkYEGILbhydSYb6JBGaC8E686UCkODpRKCVvZAO7qXLSYEvkfBs6rXG1AJLNBmcv45HqzIZD',
+        accessToken1: '',
+        accessToken2: '',
+        accessToken3: '',
+        accessToken4: '',
+        accessToken5: '',
+        accessTokenPhD: '',
 
         //Page IDs
-        pageID_year1: '762007797268470',
-        pageID_year2: '1719417448331009',
-        pageID_year3: '201430360232307',
-        pageID_year4: '480998938761456',
-        pageID_year5: '1662619010625370',
-        pageID_yearPhD: '163126030746039'
+        pageID_year1: '',
+        pageID_year2: '',
+        pageID_year3: '',
+        pageID_year4: '',
+        pageID_year5: '',
+        pageID_yearPhD: ''
 
         //The alternative approach makes use of groups instead of pages. This better ties in with student use of groups
         //on facebook to communicate. Though was not possible to test.
