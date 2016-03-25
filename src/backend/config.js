@@ -2,40 +2,6 @@
  * Created by Nightpaws on 28/01/2016.
  */
 var config = {
-    //Constructing the Node Server.
-
-    ports: {
-        https: 3001,
-        http: 3000
-    },
-
-    ssl: {
-        format: 'utf8',
-        https: true,
-        privateKey: './ssl/server.key',
-        certSrc: './ssl/server.crt'
-    },
-
-    favicon: {
-        src: 'public/favicon.ico'
-    },
-
-    mongoDB: {
-        string: 'mongodb://localhost/advertise'
-    },
-
-    protect: {
-        ignore: [
-            '/users/auth',
-            '/users/register'
-        ]
-    },
-
-    userAuth: {
-        privateKey: './ssl/server.key',
-        publicKey: './ssl/server.crt'
-    },
-
     twitter: {
         //If login is implemented this app can be used to auth for all users. otherwise separate apps required per account.
         //Generate tokens at apps.twitter.com
@@ -98,23 +64,22 @@ var config = {
         groups: false,
         //Page Access Token - Use ones that never expire
         accessToken1: 'CAAWYaD6yiUsBAOIat6XTGOc6ZAM29WN6vYKhYIB9aTZAHAvggbBSl1KwgHDfEWZCyknmZAuyBPlkzZAli9fCldvTiOP2ZAForhu9voBkLZCK9js68Ewl3wEVtcjClDuuy62RCvBDP5crUCAgYQtxlkAycn8GZBDrnXZCEFAqWE59qA1uH4kyoVcPHRSN9ds11l8IZD',
-        accessToken2: '',
-        accessToken3: '',
-        accessToken4: '',
-        accessToken5: '',
-        accessTokenPhD: '',
+        accessToken2: 'CAAWYaD6yiUsBAKxGWsVYBxrzuD7ki2bJkGW0gMaZAGAuBxxH2ZBkz3jfPq4HfNEZC68BfuyNZCW2ZA178H9cud2P25oxIcZBZAN8ufM5AiUcJCYr7Nq3XaK6MsLhOQsaes3UPapo09GbWPRKaOmb7IuRCWFtKGpf90INZAfJja2uZB7gtvsptzheQ',
+        accessToken3: 'CAAWYaD6yiUsBAODRoTXvztFzvx1biAG35pBvMGnAbNHaZCqbiX6XPNgDdyXrnvNCJJG9iVjRBkTS40TZCA5uNpofYOlJDZBIsGPQIAdLFNWA4J1tRfr6LFpaJ67cCDxALWfMfbo6Tkub40wdNZCFsluGEJl2lsXXFsZCBPwPwKzwQZAeKZCu1Ax',
+        accessToken4: 'CAAWYaD6yiUsBAPVj4n2Vd3ZCUOnyTwanA277pZCbSlDZBWsSlR52z7bUeT5kRZAANwG64bTJn7ntaZBMEoEIo2QrgwXZBvLAyfvEjo1VGJXZCnNqFmRhutQcJFZCRUMQZC7ZARw8wsR1mODphYnY8ZA8ZCi0oM7SktirONID7ioH3WMu6Twuu0EAoz76',
+        accessToken5: 'CAAWYaD6yiUsBAOCdThcPQKIJUBcIZCyANReQSBLpQfrZBIxiTbe3BOpNwpkC89ARf8ChiZCHIk5LubvVz5PqMBEOMSObPlZB7NeBCqszxZB1POELDugvnmwW4R3iFUhqar9jludUJ0GjMdyiPE5yd6RNst4Av480asUDH1etmMHE4S8ReENnZCgjxJC7KVQpwZD',
+        accessTokenPhD: 'CAAWYaD6yiUsBAHvjGHtDztnmnw8HuFCNtieUZAldbOSpfZBZBZAbJZBgHGZB9ChUJEic0HPfXM5ZBR8t5oId0HNT5l3PafPgFPIOkkqHZB8Se0S0XAAKoELIB3zE4hJkYEGILbhydSYb6JBGaC8E686UCkODpRKCVvZAO7qXLSYEvkfBs6rXG1AJLNBmcv45HqzIZD',
 
         //Page IDs
         pageID_year1: '762007797268470',
-        pageID_year2: '',
-        pageID_year3: '',
-        pageID_year4: '',
-        pageID_year5: '',
-        pageID_yearPhD: ''
+        pageID_year2: '1719417448331009',
+        pageID_year3: '201430360232307',
+        pageID_year4: '480998938761456',
+        pageID_year5: '1662619010625370',
+        pageID_yearPhD: '163126030746039'
 
         //The alternative approach makes use of groups instead of pages. This better ties in with student use of groups
-        //on facebook to communicate. However I was not able to make groups for testing (since I was running in a production
-        //facebook environment.
+        //on facebook to communicate. Though was not possible to test.
         //groups:true,
         //accessToken:'';
         //
@@ -136,6 +101,42 @@ var config = {
     logs: {
         dir: './logs',
         file: '/conn.log'
+    },
+
+
+    /* DO NOT MODIFY BELOW THIS LINE UNLESS YOU ARE CERTAIN OF WHAT YOU ARE DOING. CHANGES HERE MAY CAUSE THE PROGRAM
+     * TO STOP FUNCTIONING. MODIFY AT YOUR OWN RISK. (Thanks!)
+     */
+    ports: {
+        https: 3001,
+        http: 3000
+    },
+
+    ssl: {
+        format: 'utf8',
+        https: true,
+        privateKey: './ssl/server.key',
+        certSrc: './ssl/server.crt'
+    },
+
+    favicon: {
+        src: 'public/favicon.ico'
+    },
+
+    mongoDB: {
+        string: 'mongodb://localhost/advertise'
+    },
+
+    protect: {
+        ignore: [
+            '/users/auth',
+            '/users/register'
+        ]
+    },
+
+    userAuth: {
+        privateKey: './ssl/server.key',
+        publicKey: './ssl/server.crt'
     }
 };
 
