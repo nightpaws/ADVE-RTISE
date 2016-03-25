@@ -1,0 +1,5 @@
+Please place your SSL keys in this directory.
+You should have the following files:
+
+- server.crt - Certificate File
+- server.key - RSA Private Key

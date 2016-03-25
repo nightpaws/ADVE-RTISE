@@ -32,5 +32,5 @@
 #Completion Notice
  echo ------------------------------------------------------------$
  echo Setup Completed!
- echo You may now create certificates, insert a custom config or
+ echo Please insert custom config files now, add certificates, and
  echo run \"cd build\" \& \"node index.js\" to launch the application.

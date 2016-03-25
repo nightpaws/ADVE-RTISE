@@ -15,3 +15,14 @@ Since the above specification is very open-ended some of the following project t
 - VERSATILITY [Virtual Environments Reinforcing Student Attention in Teaching with Immersive Learning Innovations and Technologies like YouTube]
 - ALERTED [Advanced Learning Environment to Reinforce Educational Development]
 - RATIO:SN [Reinforce Attention with Teaching Innovations and Originality: Social Networking]
+
+
+###Installation Instructions
+If you wish to test the application. Installation instructions are available within /docs/Sample Installation/Setup Instructions
+
+##Dependencies
+Prior to installing and using the provided test data, please ensure you have installed:
+- Node and NPM
+- MongoDB v3.2 minimum
+- NGINX (or Apache)
+- Let's Encrypt Client application (or have own SSL certificates)

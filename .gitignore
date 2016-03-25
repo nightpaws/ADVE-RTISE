@@ -50,7 +50,8 @@ tmp/*
 /src/frontend/build
 
 **/logs
-/src/backend/ssl/*
+/src/backend/ssl/*.key
+/src/backend/ssl/*.crt
 /src/backend/doc
 /src/backend/public
 .idea

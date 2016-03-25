@@ -1,0 +1,76 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1404\cocoasubrtf460
+{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww10800\viewh8400\viewkind0
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f0\b\fs24 \cf0 \ul \ulc0 Installation Instructions\
+
+\b0 \ulnone \
+These instructions describe the process required to configure your server to be able to launch the application. They assume you already have Node, and MongoDB installed as prerequisites, and are running NGINX.
+\b \ul \
+
+\i \
+Web Server Configuration
+\i0 \
+
+\b0 \ulnone When configuring the node application for use, you need to provide a method of communication outwith the local system. In order to do this, you need to configure either Apache or NGINX (preferred) to forward requests.\
+\
+A sample NGINX config file has been provided in \'93/docs/System Configs/advertisenpeu\'94 which enforces HTTPS and modern encryption standards.\
+\
+\
+
+\i\b \ul Automation Configuration\
+
+\i0\b0 \ulnone If you are using the mongo-express module for database access, you are advised to add the following under the application user crontab if running in a linux or OS X based installation;\
+\
+\'93@reboot pm2 start mongo-express --watch\'94\
+\
+This will ensure that mongo-express starts on system reboot, and that PM2 will ensure that it relaunches in the event of a crash or hang.\
+\
+If you are using Let\'92s Encrypt for SSL support you will also need to add the following script to your root user crontab in order for their python application to renew your certificates:\
+\
+\'9330 2 * * 1 /usr/sbin/le-renew-webroot >> /var/log/le-renewal.log\'94\
+\
+Full Instructions for configuring Let\'92s Encrypt are available here:\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+{\field{\*\fldinst{HYPERLINK "https://letsencrypt.org/getting-started/"}}{\fldrslt \cf0 https://letsencrypt.org/getting-started/}}\
+\
+\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\i\b \cf0 \ul Building the application
+\i0\b0 \ulnone \
+In order to install prerequisites to run the application you must run the prebuild script as an administrator or root user. In windows this requires the running of \'93prebuild.cmd\'94 from the command prompt or powershell as administrator. Or for Linux/OS X run \'93sudo ./prebuild.sh\'94 from terminal.\
+\
+Following this, as the user that will run the application, run \'93build.cmd\'94 on windows, or \'93./build.sh\'94 on Linux/OS X and wait for the process to complete.\
+\
+Upon completion follow the instructions (in more detail below) to configure and then launch the application in a cluster by running;\
+\
+\'93pm2 start index.js --name "ADVE:RTISE" -i 2\'94\
+\
+- Monitoring of the application can be done in console via \'93pm2 status\'94\
+- More processes can be added to the cluster by increasing the value of -i\
+- stop the program by running \'93pm2 stop ADVE:RTISE\'94\
+\
+
+\i\b \ul Config File locations
+\i0 \
+
+\b0 \ulnone The following files are required to be modified prior to launching the program. Insert completed versions to provide the application with knowledge of the environment it is being deployed in, and to give it permission to post to your social media streams.\
+\
+- classes.html		\'93/build/public/app/pages/classes.html\'94\
+- config.js			\'93/build/config.js\'94\
+- classes.csv		\'93/build/application/classes.csv/\'93\
+\
+Sample versions of these files are available in \'93/docs/Sample Installation/App Configs/\'93\
+\
+\
+
+\i\b \ul SSL Configuration\
+
+\i0\b0 \ulnone In order to securely run the application, SSL should be used to handle the connection from NGINX to the Node server. In order to use this, place the following files, and forward traffic to port 3001. Insecure connections should be made to port 3000. These should be self-signed as they are not externally visible but can be signed if desired.\
+\
+- server.key		\'93/build/ssl/server.key\'94		(Server Private Key)\
+- server.crt		\'93/build/ssl/server.crt\'94		(Server Certificate File)\
+}
