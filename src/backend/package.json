@@ -12,7 +12,6 @@
     "jsonwebtoken": "^5.5.4",
     "mongoose": "^4.4.5",
     "morgan": "^1.6.1",
-    "mysql": "^2.10.2",
     "pmx": "^0.6.1",
     "q": "^1.4.1",
     "serve-favicon": "^2.3.0",

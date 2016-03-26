@@ -2,11 +2,6 @@
  * Created by Nightpaws on 20/01/2016.
  */
 
-// var gulp    = require('gulp'),
-//     $       = require('gulp-load-plugins')({lazy: true}),
-//     config  = require('./gulp-config')(),
-//     del = require('del');
-
 var gulp = require('gulp');
 var del = require('del');
 var util = require('gulp-util');
@@ -49,10 +44,7 @@ gulp.task('build', ['clearBuild', 'copyServer', 'copyApp', 'copyClean'], functio
 
 });
 
-/////////////////////////////////////////////////
-/*
- * Handy helper functions of helpfulness
- */
+// https://gist.github.com/johnpapa/32dd849ec6f5b2bd3862#file-gulpfile-js
 
 function log(msg) {
     if (typeof(msg) === 'object') {
