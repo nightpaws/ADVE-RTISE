@@ -1,9 +1,9 @@
-erver {
+server {
     listen   80;
     listen   [::]:80;
     server_name advertise.nightpaws.eu;
 
-    # Lets encrypt magic bumph
+    # Lets encrypt magic
     #letsencrypt-auto certonly -a webroot --webroot-path=/tmp/letsencrypt-auto --rsa-key-size 4096 --agree-tos -d www.nightpaws.eu -d nightpaws.eu
     location '/.well-known/acme-challenge' {
         default_type "text/plain";
